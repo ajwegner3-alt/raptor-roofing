@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Omaha homeowner trusts Raptor Roofing over every competitor within 10 seconds of landing
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Phase 3 — Homepage Composition
 
 ## Current Position
 
-Phase: 2 of 8 (Global Components)
-Plan: 1 of 2 in current phase — 02-01 COMPLETE, next: 02-02
-Status: Phase 2 in progress
-Last activity: 2026-04-14 — Completed 02-01-PLAN.md (Header + MobileMenuButton + Footer)
+Phase: 2 of 8 (Global Components) — COMPLETE (pending gsd-verifier)
+Plan: 2 of 2 in current phase — 02-01 COMPLETE, 02-02 COMPLETE
+Status: Phase 2 all plans complete; Phase 3 (Homepage Composition) ready to begin
+Last activity: 2026-04-14 — Completed 02-02-PLAN.md (StickyMobileCTA + TrustStrip + layout wiring, stubs deleted)
 
-Progress: [███░░░░░░░] 17% (4/24 plans complete)
+Progress: [████░░░░░░] 21% (5/24 plans complete)
 
 ## Performance Metrics
 
@@ -28,9 +28,10 @@ Progress: [███░░░░░░░] 17% (4/24 plans complete)
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | Phase 1 (Foundation) | 3/3 | ~45 min | ~15 min |
+| Phase 2 (Global Components) | 2/2 | ~30 min | ~15 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (13 min), 01-02 (18 min), 01-03 (parallel)
+- Last 5 plans: 01-01 (13 min), 01-02 (18 min), 01-03 (parallel), 02-01 (~18 min), 02-02 (~12 min)
 - Trend: Consistent ~15 min/plan
 
 *Updated after each plan completion*
@@ -42,6 +43,11 @@ Progress: [███░░░░░░░] 17% (4/24 plans complete)
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
+- Phase 2: next/link Link required for all internal page navigation — raw `<a>` on page routes triggers @next/next/no-html-link-for-pages lint error
+- Phase 2: env(safe-area-inset-bottom) for fixed bottom bars must use inline style, not Tailwind arbitrary value
+- Phase 2: --sticky-cta-height defined on :root (plain CSS), NOT in @theme (not a Tailwind token)
+- Phase 2: TrustStrip authored in Phase 2 but NOT mounted in marketing layout — homepage page.tsx renders it (Phase 3)
+- Phase 2: StickyMobileCTA is RSC (no 'use client') — no state needed, static siteConfig values
 - Phase 2: lucide-react installed version lacks Facebook/Instagram icons — use ExternalLink/Share2 as social placeholders until Phase 8 brand asset pass
 - Phase 2: SiteConfig address fields are .state + .zip (not .region + .postalCode) — adapt footer/any component consuming address accordingly
 - Phase 2: Sunday hours entry uses open: "" + closed: true boolean — hours guard must check h.closed || h.open === ""
@@ -57,12 +63,10 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Phase 2 plan 01 COMPLETE — Header, MobileMenuButton, Footer built and committed
-- Plan 02-02 must: update app/(marketing)/layout.tsx imports from stubs → layout components, then delete src/components/stubs/
-- Phase 1 foundation COMPLETE — Phase 2 (Component Library) can now begin
-- src/content/* types available for import by all downstream components
-- Stub components in src/components/stubs/ must be replaced in Phase 2 (grep "PHASE 1 STUB")
+- Phase 2 COMPLETE — all 5 layout components built and committed (Header, MobileMenuButton, Footer, StickyMobileCTA, TrustStrip)
+- Phase 3 (Homepage Composition) ready to begin
 - (marketing)/page.tsx placeholder must be replaced in Phase 3 with full homepage
+- Phase 3 homepage must import TrustStrip from @/components/layout/TrustStrip and render below hero
 - Use buildMetadata() from @/lib/metadata for all page generateMetadata exports (Phase 3+)
 - Use <JsonLd data={localBusinessSchema()} /> in homepage (Phase 3)
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
@@ -78,5 +82,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-04-14
-Stopped at: Completed 02-01-PLAN.md (Header + MobileMenuButton + Footer, typecheck + lint green)
+Stopped at: Completed 02-02-PLAN.md (StickyMobileCTA + TrustStrip + layout wiring, stubs deleted)
 Resume file: None
