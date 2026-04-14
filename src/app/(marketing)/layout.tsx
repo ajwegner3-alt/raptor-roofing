@@ -1,25 +1,17 @@
-// src/app/(marketing)/layout.tsx
+import type { ReactNode } from "react"
+import { Header } from "@/components/layout/Header"
+import { Footer } from "@/components/layout/Footer"
+import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA"
 
-// Phase 1 stubs — replaced with real components in Phase 2
-// These exist so the (marketing) layout shell can be tested in Phase 1
-// without component implementation blocking progress
-import Header from "@/components/stubs/Header";
-import Footer from "@/components/stubs/Footer";
-import StickyMobileCTA from "@/components/stubs/StickyMobileCTA";
-
-export default function MarketingLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function MarketingLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />
-      <main id="main-content">
+      <main id="main-content" className="pb-[var(--sticky-cta-height)] md:pb-0">
         {children}
       </main>
       <Footer />
       <StickyMobileCTA />
     </>
-  );
+  )
 }
