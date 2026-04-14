@@ -5,6 +5,7 @@ import type {
   FAQPage,
   BreadcrumbList,
   WithContext,
+  DayOfWeek,
 } from "schema-dts";
 import { siteConfig } from "@/content/site";
 import type { Service } from "@/content/services";
@@ -68,8 +69,9 @@ export function localBusinessSchema(): WithContext<HomeAndConstructionBusiness> 
     openingHoursSpecification: siteConfig.hours
       .filter((h) => !h.closed)
       .map((h) => ({
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: `https://schema.org/${h.day}`,
+        "@type": "OpeningHoursSpecification" as const,
+        // schema-dts v2: cast day name to DayOfWeek type (accepts "Monday" short form)
+        dayOfWeek: h.day as DayOfWeek,
         opens: h.open,
         closes: h.close,
       })),
