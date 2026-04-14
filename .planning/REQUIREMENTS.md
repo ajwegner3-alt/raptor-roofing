@@ -19,6 +19,7 @@
 - [ ] **FND-08**: `app/(marketing)/layout.tsx` route group wrapping public pages with Header/Footer/StickyMobileCTA
 - [ ] **FND-09**: Global `focus-visible` styles restored in `globals.css` (Tailwind preflight strips them)
 - [ ] **FND-10**: Form input base styles set to 16px minimum font size (prevents iOS Safari auto-zoom)
+- [ ] **FND-11**: Brand color tokens in `@theme` derived directly from the Raptor Roofing logo — dark slate-teal as primary (raptor body), warm red/crimson as accent (raptor eye + rooftop chevron), black as wordmark/neutral, wood-brown as supporting warm neutral (hammer handle), white/cream as background. Every surface, button, CTA, heading, and hover state on the site must resolve to tokens from this palette — no off-brand accent colors introduced in components.
 
 ### Global Components (GLB)
 
@@ -208,6 +209,7 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | FND-08 | Phase 1: Foundation | Pending |
 | FND-09 | Phase 1: Foundation | Pending |
 | FND-10 | Phase 1: Foundation | Pending |
+| FND-11 | Phase 1: Foundation | Pending |
 | GLB-01 | Phase 2: Global Components | Pending |
 | GLB-02 | Phase 2: Global Components | Pending |
 | GLB-03 | Phase 2: Global Components | Pending |
@@ -297,10 +299,10 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | HDF-04 | Phase 8: Manual QA + Handoff | Pending |
 
 **Coverage:**
-- v1 requirements: 97 total (note: header previously said 93 — actual count is 97 across all 12 categories)
-- Mapped to phases: 97
+- v1 requirements: 98 total
+- Mapped to phases: 98
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-13 — traceability populated by gsd-roadmapper*
+*Last updated: 2026-04-13 — added FND-11 (brand color tokens derived from logo)*

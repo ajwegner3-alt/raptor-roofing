@@ -63,7 +63,7 @@ An Omaha homeowner — whether they have urgent storm damage or a planned re-roo
 - Hours: Mon–Sat 7am–7pm, closed Sundays
 - Services: roofing install/repair, siding, gutters, 24/7 emergency tarping
 - Free estimates, financing available
-- Logo: cartoon velociraptor holding a hammer, dark teal/green body, bold black "RAPTOR ROOFING" wordmark
+- Logo: cartoon velociraptor holding a hammer, with brand palette derived directly from the logo image — dark slate-teal (raptor body, primary), warm crimson/red (raptor eye + rooftop chevron, accent), black (wordmark, neutral), wood-brown (hammer handle, supporting warm neutral), white/cream (background). Every token in the site's design system must resolve to this palette.
 
 **Existing site weaknesses (from audit):**
 - Repeated heading text suggesting poor implementation

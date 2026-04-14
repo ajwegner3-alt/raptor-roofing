@@ -26,10 +26,10 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 ### Phase 1: Foundation
 **Goal**: The project runs locally, tokens are set, content data files are loaded, and every subsequent phase can import from a stable, typed base without revisiting scaffolding decisions.
 **Depends on**: Nothing (first phase)
-**Requirements**: FND-01, FND-02, FND-03, FND-04, FND-05, FND-06, FND-07, FND-08, FND-09, FND-10
+**Requirements**: FND-01, FND-02, FND-03, FND-04, FND-05, FND-06, FND-07, FND-08, FND-09, FND-10, FND-11
 **Success Criteria** (what must be TRUE):
   1. Andrew can run `npm run dev` and see a blank page at localhost:3000 with no TypeScript or ESLint errors
-  2. Brand color tokens and typography are visible in the Tailwind `@theme` block and apply correctly to a test element
+  2. Brand color tokens in the Tailwind `@theme` block are sampled from the Raptor logo (slate-teal primary, crimson accent, black neutral, wood-brown warm neutral) — no placeholder colors; apply correctly to a test element
   3. `src/content/` files exist with typed exports for site info, services, testimonials, FAQs, and service areas — importable with full IntelliSense
   4. `buildMetadata()` and all schema factory functions are importable from `src/lib/` and produce valid-shaped objects
   5. The `(marketing)` route group layout shell renders without errors (even if Header/Footer are stubs)
