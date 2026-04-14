@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Phone } from "lucide-react"
 import { siteConfig } from "@/content/site"
 
@@ -17,12 +18,12 @@ export function StickyMobileCTA() {
         <Phone className="h-5 w-5" aria-hidden="true" />
         Call Now
       </a>
-      <a
+      <Link
         href="/#estimate-form"
         className="flex flex-1 items-center justify-center gap-2 px-4 py-4 font-display text-base font-bold uppercase tracking-wide"
       >
         Free Estimate
-      </a>
+      </Link>
     </div>
   )
 }
