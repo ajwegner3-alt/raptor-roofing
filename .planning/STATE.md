@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 ## Current Position
 
 Phase: 1 of 8 (Foundation)
-Plan: 2 of 3 in current phase (01-02 complete; 01-03 complete per parallel wave)
-Status: In progress — Phase 1 wave 2 complete
-Last activity: 2026-04-14 — Completed 01-02-PLAN.md (content data files)
+Plan: 3 of 3 in current phase — PHASE 1 COMPLETE
+Status: Phase complete — ready for Phase 2 (Component Library)
+Last activity: 2026-04-14 — Completed 01-03-PLAN.md (app shell + metadata/schema helpers)
 
 Progress: [██░░░░░░░░] 12% (3/24 plans complete)
 
@@ -46,13 +46,20 @@ Recent decisions affecting current work:
 - Phase 1: Tailwind v4 CSS-first config in globals.css `@theme` block — no tailwind.config.js
 - Phase 1: ESLint flat config (eslint.config.mjs) — `next lint` removed in Next.js 16, lint script = `eslint .`
 - Phase 1: Scaffold strategy = sibling temp dir (cp -rn) due to non-empty project root
+- Phase 1: schema.tsx (not .ts) — JsonLd component uses JSX syntax, requires .tsx extension
+- Phase 1: schema-dts v2 DayOfWeek cast — must cast h.day as DayOfWeek type (short form "Monday" accepted)
+- Phase 1: metadataBase fallback is https://raptor-roofing.vercel.app (not localhost) for absolute OG URLs
 - Phase 5: Form handler choice (n8n webhook vs Formspree) deferred to Phase 5 planning — resolve at 05-02 plan time
 - Phase 7: Deploy target is Vercel preview URL only; do NOT submit to Google Search Console during pitch
 
 ### Pending Todos
 
-- Phase 1 foundation complete — Phase 2 (Component Library) can now begin
-- src/content/* types are available for import by all downstream components
+- Phase 1 foundation COMPLETE — Phase 2 (Component Library) can now begin
+- src/content/* types available for import by all downstream components
+- Stub components in src/components/stubs/ must be replaced in Phase 2 (grep "PHASE 1 STUB")
+- (marketing)/page.tsx placeholder must be replaced in Phase 3 with full homepage
+- Use buildMetadata() from @/lib/metadata for all page generateMetadata exports (Phase 3+)
+- Use <JsonLd data={localBusinessSchema()} /> in homepage (Phase 3)
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
 ### Blockers/Concerns
@@ -66,5 +73,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-04-14
-Stopped at: Completed 01-02-PLAN.md (content data files, all gates green)
+Stopped at: Completed 01-03-PLAN.md (app shell + metadata/schema helpers, all gates green)
 Resume file: None
