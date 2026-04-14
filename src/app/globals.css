@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --sticky-cta-height: 64px;
+}
+
 @theme {
   /* ==========================================
      BRAND COLORS — Sampled from Raptor Logo
