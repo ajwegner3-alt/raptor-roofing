@@ -10,7 +10,7 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 - Integer phases (1–8): Planned milestone work
 - Decimal phases (e.g., 2.1): Urgent insertions (marked INSERTED)
 
-- [ ] **Phase 1: Foundation** — Scaffold, brand tokens, content model, helpers, layout shells
+- [x] **Phase 1: Foundation** ✓ — Scaffold, brand tokens, content model, helpers, layout shells (completed 2026-04-14)
 - [ ] **Phase 2: Global Components** — Header, Footer, StickyMobileCTA, TrustStrip
 - [ ] **Phase 3: Homepage** — Full homepage compose with all sections and schema
 - [ ] **Phase 4: Service Pages** — Four dedicated service pages from shared template
@@ -36,9 +36,9 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Scaffold Next.js 15 App Router project (TypeScript, Tailwind v4, ESLint, src/ dir) and configure `@theme` brand tokens
-- [ ] 01-02: Create `src/content/` typed data files (site.ts, services.ts, testimonials.ts, faqs.ts, service-areas.ts)
-- [ ] 01-03: Create `src/lib/metadata.ts` + `src/lib/schema.ts` helpers, configure `app/layout.tsx` + `app/(marketing)/layout.tsx`, set globals.css baseline styles
+- [x] 01-01: Scaffold Next.js 16 App Router project (TypeScript, Tailwind v4, ESLint flat config, src/ dir) and configure `@theme` brand tokens ✓
+- [x] 01-02: Create `src/content/` typed data files (site.ts, services.ts, testimonials.ts, faqs.ts, service-areas.ts) ✓
+- [x] 01-03: Create `src/lib/metadata.ts` + `src/lib/schema.tsx` helpers, configure `app/layout.tsx` + `app/(marketing)/layout.tsx`, set globals.css baseline styles ✓
 
 ---
 
@@ -180,7 +180,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Not started | - |
+| 1. Foundation | 3/3 | ✓ Complete | 2026-04-14 |
 | 2. Global Components | 0/2 | Not started | - |
 | 3. Homepage | 0/4 | Not started | - |
 | 4. Service Pages | 0/3 | Not started | - |
