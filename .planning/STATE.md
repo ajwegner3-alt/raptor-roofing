@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 
 ## Current Position
 
-Phase: 1 of 8 (Foundation)
-Plan: 3 of 3 in current phase — PHASE 1 COMPLETE
-Status: Phase complete — ready for Phase 2 (Component Library)
-Last activity: 2026-04-14 — Completed 01-03-PLAN.md (app shell + metadata/schema helpers)
+Phase: 2 of 8 (Global Components)
+Plan: 1 of 2 in current phase — 02-01 COMPLETE, next: 02-02
+Status: Phase 2 in progress
+Last activity: 2026-04-14 — Completed 02-01-PLAN.md (Header + MobileMenuButton + Footer)
 
-Progress: [██░░░░░░░░] 12% (3/24 plans complete)
+Progress: [███░░░░░░░] 17% (4/24 plans complete)
 
 ## Performance Metrics
 
@@ -42,6 +42,9 @@ Progress: [██░░░░░░░░] 12% (3/24 plans complete)
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
+- Phase 2: lucide-react installed version lacks Facebook/Instagram icons — use ExternalLink/Share2 as social placeholders until Phase 8 brand asset pass
+- Phase 2: SiteConfig address fields are .state + .zip (not .region + .postalCode) — adapt footer/any component consuming address accordingly
+- Phase 2: Sunday hours entry uses open: "" + closed: true boolean — hours guard must check h.closed || h.open === ""
 - Phase 1: **Next.js 16.2.3** (not 15) App Router + Tailwind v4.2.2 — confirmed via create-next-app@latest on 2026-04-14
 - Phase 1: Tailwind v4 CSS-first config in globals.css `@theme` block — no tailwind.config.js
 - Phase 1: ESLint flat config (eslint.config.mjs) — `next lint` removed in Next.js 16, lint script = `eslint .`
@@ -54,6 +57,8 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
+- Phase 2 plan 01 COMPLETE — Header, MobileMenuButton, Footer built and committed
+- Plan 02-02 must: update app/(marketing)/layout.tsx imports from stubs → layout components, then delete src/components/stubs/
 - Phase 1 foundation COMPLETE — Phase 2 (Component Library) can now begin
 - src/content/* types available for import by all downstream components
 - Stub components in src/components/stubs/ must be replaced in Phase 2 (grep "PHASE 1 STUB")
@@ -73,5 +78,5 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-04-14
-Stopped at: Completed 01-03-PLAN.md (app shell + metadata/schema helpers, all gates green)
+Stopped at: Completed 02-01-PLAN.md (Header + MobileMenuButton + Footer, typecheck + lint green)
 Resume file: None
