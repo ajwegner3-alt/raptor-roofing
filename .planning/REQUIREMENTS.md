@@ -194,17 +194,113 @@ Deferred to post-signing. Tracked but not in current roadmap.
 
 ## Traceability
 
-Empty until roadmap creation. `gsd-roadmapper` will populate this section when mapping requirements to phases.
+Populated by `gsd-roadmapper` on 2026-04-13.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (TBD — roadmapper populates) | | |
+| FND-01 | Phase 1: Foundation | Pending |
+| FND-02 | Phase 1: Foundation | Pending |
+| FND-03 | Phase 1: Foundation | Pending |
+| FND-04 | Phase 1: Foundation | Pending |
+| FND-05 | Phase 1: Foundation | Pending |
+| FND-06 | Phase 1: Foundation | Pending |
+| FND-07 | Phase 1: Foundation | Pending |
+| FND-08 | Phase 1: Foundation | Pending |
+| FND-09 | Phase 1: Foundation | Pending |
+| FND-10 | Phase 1: Foundation | Pending |
+| GLB-01 | Phase 2: Global Components | Pending |
+| GLB-02 | Phase 2: Global Components | Pending |
+| GLB-03 | Phase 2: Global Components | Pending |
+| GLB-04 | Phase 2: Global Components | Pending |
+| GLB-05 | Phase 2: Global Components | Pending |
+| GLB-06 | Phase 2: Global Components | Pending |
+| GLB-07 | Phase 2: Global Components | Pending |
+| HME-01 | Phase 3: Homepage | Pending |
+| HME-02 | Phase 3: Homepage | Pending |
+| HME-03 | Phase 3: Homepage | Pending |
+| HME-04 | Phase 3: Homepage | Pending |
+| HME-05 | Phase 3: Homepage | Pending |
+| HME-06 | Phase 3: Homepage | Pending |
+| HME-07 | Phase 3: Homepage | Pending |
+| HME-08 | Phase 3: Homepage | Pending |
+| HME-09 | Phase 3: Homepage | Pending |
+| HME-10 | Phase 3: Homepage | Pending |
+| HME-11 | Phase 3: Homepage | Pending |
+| HME-12 | Phase 3: Homepage | Pending |
+| HME-13 | Phase 3: Homepage | Pending |
+| HME-14 | Phase 3: Homepage | Pending |
+| HME-15 | Phase 3: Homepage | Pending |
+| HME-16 | Phase 3: Homepage | Pending |
+| SVC-01 | Phase 4: Service Pages | Pending |
+| SVC-02 | Phase 4: Service Pages | Pending |
+| SVC-03 | Phase 4: Service Pages | Pending |
+| SVC-04 | Phase 4: Service Pages | Pending |
+| SVC-05 | Phase 4: Service Pages | Pending |
+| SVC-06 | Phase 4: Service Pages | Pending |
+| SVC-07 | Phase 4: Service Pages | Pending |
+| SVC-08 | Phase 4: Service Pages | Pending |
+| SVC-09 | Phase 4: Service Pages | Pending |
+| SVC-10 | Phase 4: Service Pages | Pending |
+| ABT-01 | Phase 5: About + Contact | Pending |
+| ABT-02 | Phase 5: About + Contact | Pending |
+| ABT-03 | Phase 5: About + Contact | Pending |
+| ABT-04 | Phase 5: About + Contact | Pending |
+| CNT-01 | Phase 5: About + Contact | Pending |
+| CNT-02 | Phase 5: About + Contact | Pending |
+| CNT-03 | Phase 5: About + Contact | Pending |
+| CNT-04 | Phase 5: About + Contact | Pending |
+| CNT-05 | Phase 5: About + Contact | Pending |
+| CNT-06 | Phase 5: About + Contact | Pending |
+| CNT-07 | Phase 5: About + Contact | Pending |
+| CNT-08 | Phase 5: About + Contact | Pending |
+| SEO-01 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-02 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-03 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-04 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-05 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-06 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-07 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-08 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-09 | Phase 6: SEO + Performance + Accessibility | Pending |
+| A11Y-01 | Phase 6: SEO + Performance + Accessibility | Pending |
+| A11Y-02 | Phase 6: SEO + Performance + Accessibility | Pending |
+| A11Y-03 | Phase 6: SEO + Performance + Accessibility | Pending |
+| A11Y-04 | Phase 6: SEO + Performance + Accessibility | Pending |
+| A11Y-05 | Phase 6: SEO + Performance + Accessibility | Pending |
+| A11Y-06 | Phase 6: SEO + Performance + Accessibility | Pending |
+| PRF-01 | Phase 6: SEO + Performance + Accessibility | Pending |
+| PRF-02 | Phase 6: SEO + Performance + Accessibility | Pending |
+| PRF-03 | Phase 6: SEO + Performance + Accessibility | Pending |
+| PRF-04 | Phase 6: SEO + Performance + Accessibility | Pending |
+| PRF-05 | Phase 6: SEO + Performance + Accessibility | Pending |
+| PRF-06 | Phase 6: SEO + Performance + Accessibility | Pending |
+| PRF-07 | Phase 6: SEO + Performance + Accessibility | Pending |
+| PRF-08 | Phase 6: SEO + Performance + Accessibility | Pending |
+| DPL-01 | Phase 7: Deploy | Pending |
+| DPL-02 | Phase 7: Deploy | Pending |
+| DPL-03 | Phase 7: Deploy | Pending |
+| DPL-04 | Phase 7: Deploy | Pending |
+| DPL-05 | Phase 7: Deploy | Pending |
+| DPL-06 | Phase 7: Deploy | Pending |
+| DPL-07 | Phase 7: Deploy | Pending |
+| DPL-08 | Phase 7: Deploy | Pending |
+| QA-01 | Phase 8: Manual QA + Handoff | Pending |
+| QA-02 | Phase 8: Manual QA + Handoff | Pending |
+| QA-03 | Phase 8: Manual QA + Handoff | Pending |
+| QA-04 | Phase 8: Manual QA + Handoff | Pending |
+| QA-05 | Phase 8: Manual QA + Handoff | Pending |
+| QA-06 | Phase 8: Manual QA + Handoff | Pending |
+| QA-07 | Phase 8: Manual QA + Handoff | Pending |
+| HDF-01 | Phase 8: Manual QA + Handoff | Pending |
+| HDF-02 | Phase 8: Manual QA + Handoff | Pending |
+| HDF-03 | Phase 8: Manual QA + Handoff | Pending |
+| HDF-04 | Phase 8: Manual QA + Handoff | Pending |
 
 **Coverage:**
-- v1 requirements: 93 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 93 ⚠️
+- v1 requirements: 97 total (note: header previously said 93 — actual count is 97 across all 12 categories)
+- Mapped to phases: 97
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-13*
-*Last updated: 2026-04-13 after initial definition*
+*Last updated: 2026-04-13 — traceability populated by gsd-roadmapper*
