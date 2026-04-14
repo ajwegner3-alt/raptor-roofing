@@ -68,8 +68,23 @@ Recent decisions affecting current work:
 - (marketing)/page.tsx placeholder must be replaced in Phase 3 with full homepage
 - Phase 3 homepage must import TrustStrip from @/components/layout/TrustStrip and render below hero
 - Use buildMetadata() from @/lib/metadata for all page generateMetadata exports (Phase 3+)
-- Use <JsonLd data={localBusinessSchema()} /> in homepage (Phase 3)
+- Use <JsonLd data={localBusinessSchema()} /> in homepage (Phase 3) — but note LocalBusiness is already mounted in Footer, do NOT duplicate
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
+
+### Post-Phase-2 layout-chrome SEO + Conversion audit (2026-04-14)
+
+Audit of shipped Phase 1+2 chrome. Phase 3 content NOT yet assessed (doesn't exist).
+
+SEO gaps flagged (non-blocking for Phase 3, owned by later phases):
+- Phase 6 (06-01): Add app/sitemap.ts + app/robots.ts — currently missing, Google has no crawl map
+- Phase 3+: Every page metadata MUST set alternates.canonical via buildMetadata() — critical for duplicate-content prevention on service-area pages (canonical helper may need to be added to @/lib/metadata if not present)
+- Phase 8 handoff: Header logo is currently a placeholder "R" div, not a real logo file with alt text — replace with real Raptor logo asset
+- Phase 7 deploy gate: If client buys a real domain, update NEXT_PUBLIC_SITE_URL before indexing (currently defaults to raptor-roofing.vercel.app)
+
+Conversion observations:
+- Three redundant paths to phone are working (header icon, mobile menu Call Now, sticky CTA) — phone reachability is the site's strongest conversion feature
+- Free Estimate button href="/#estimate-form" is a forward reference — the anchor target does NOT exist until Phase 3 ships LeadForm with id="estimate-form". Tapping Free Estimate before Phase 3 = no-op scroll. Self-resolves in Phase 3.
+- No "Open now / Closed now" live indicator in Footer hours — intentionally omitted, conflicts with anti-chaser no-urgency stance. Leave as-is.
 
 ### Blockers/Concerns
 
