@@ -11,7 +11,7 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 - Decimal phases (e.g., 2.1): Urgent insertions (marked INSERTED)
 
 - [x] **Phase 1: Foundation** ✓ — Scaffold, brand tokens, content model, helpers, layout shells (completed 2026-04-14)
-- [ ] **Phase 2: Global Components** — Header, Footer, StickyMobileCTA, TrustStrip
+- [x] **Phase 2: Global Components** ✓ — Header, Footer, StickyMobileCTA, TrustStrip (completed 2026-04-14)
 - [ ] **Phase 3: Homepage** — Full homepage compose with all sections and schema
 - [ ] **Phase 4: Service Pages** — Four dedicated service pages from shared template
 - [ ] **Phase 5: About + Contact** — About narrative, contact form, API handler, end-to-end test
@@ -55,8 +55,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Build `Header` (sticky, click-to-call, mobile-safe) and `Footer` (NAP, hours, service areas, license, schema anchor)
-- [ ] 02-02: Build `StickyMobileCTA` (mobile-only bottom bar) and `TrustStrip` (badges row); wire all into `(marketing)/layout.tsx`
+- [x] 02-01: Build `Header` (sticky, click-to-call, mobile-safe) and `Footer` (NAP, hours, service areas, license, schema anchor) ✓
+- [x] 02-02: Build `StickyMobileCTA` (mobile-only bottom bar) and `TrustStrip` (badges row); wire all into `(marketing)/layout.tsx` ✓
 
 ---
 
@@ -181,7 +181,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-04-14 |
-| 2. Global Components | 0/2 | Not started | - |
+| 2. Global Components | 2/2 | ✓ Complete | 2026-04-14 |
 | 3. Homepage | 0/4 | Not started | - |
 | 4. Service Pages | 0/3 | Not started | - |
 | 5. About + Contact | 0/3 | Not started | - |

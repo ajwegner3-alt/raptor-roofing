@@ -9,10 +9,10 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 
 ## Current Position
 
-Phase: 2 of 8 (Global Components) — COMPLETE (pending gsd-verifier)
-Plan: 2 of 2 in current phase — 02-01 COMPLETE, 02-02 COMPLETE
-Status: Phase 2 all plans complete; Phase 3 (Homepage Composition) ready to begin
-Last activity: 2026-04-14 — Completed 02-02-PLAN.md (StickyMobileCTA + TrustStrip + layout wiring, stubs deleted)
+Phase: 2 of 8 (Global Components) — ✓ COMPLETE (verified 17/17 must_haves)
+Plan: 2 of 2 in current phase — 02-01 ✓, 02-02 ✓
+Status: Phase 2 verified; Phase 3 (Homepage) ready to begin
+Last activity: 2026-04-14 — gsd-verifier passed Phase 2 (VERIFICATION.md on disk)
 
 Progress: [████░░░░░░] 21% (5/24 plans complete)
 

@@ -23,13 +23,13 @@
 
 ### Global Components (GLB)
 
-- [ ] **GLB-01**: `Header` component with logo, nav links, and click-to-call phone number visible at all viewports
-- [ ] **GLB-02**: Header is sticky with no layout shift and phone number remains visible when mobile nav is collapsed
-- [ ] **GLB-03**: `Footer` component with NAP, service areas, business hours, license number, social links, schema anchor
-- [ ] **GLB-04**: `StickyMobileCTA` component with phone + "Get Estimate" buttons, mobile-only, pinned to viewport bottom
-- [ ] **GLB-05**: `TrustStrip` component rendering review stars, BBB, license/bonded/insured, years in business, manufacturer cert badges
-- [ ] **GLB-06**: All CTAs meet 48×48px minimum tap target
-- [ ] **GLB-07**: Phone number uses `tel:` link with click-to-call and is never under 48px tap target
+- [x] **GLB-01**: `Header` component with logo, nav links, and click-to-call phone number visible at all viewports
+- [x] **GLB-02**: Header is sticky with no layout shift and phone number remains visible when mobile nav is collapsed
+- [x] **GLB-03**: `Footer` component with NAP, service areas, business hours, license number, social links, schema anchor
+- [x] **GLB-04**: `StickyMobileCTA` component with phone + "Get Estimate" buttons, mobile-only, pinned to viewport bottom
+- [x] **GLB-05**: `TrustStrip` component rendering review stars, BBB, license/bonded/insured, years in business, manufacturer cert badges
+- [x] **GLB-06**: All CTAs meet 48×48px minimum tap target
+- [x] **GLB-07**: Phone number uses `tel:` link with click-to-call and is never under 48px tap target
 
 ### Homepage (HME)
 
@@ -210,13 +210,13 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | FND-09 | Phase 1: Foundation | ✓ Complete |
 | FND-10 | Phase 1: Foundation | ✓ Complete |
 | FND-11 | Phase 1: Foundation | ✓ Complete |
-| GLB-01 | Phase 2: Global Components | Pending |
-| GLB-02 | Phase 2: Global Components | Pending |
-| GLB-03 | Phase 2: Global Components | Pending |
-| GLB-04 | Phase 2: Global Components | Pending |
-| GLB-05 | Phase 2: Global Components | Pending |
-| GLB-06 | Phase 2: Global Components | Pending |
-| GLB-07 | Phase 2: Global Components | Pending |
+| GLB-01 | Phase 2: Global Components | Complete |
+| GLB-02 | Phase 2: Global Components | Complete |
+| GLB-03 | Phase 2: Global Components | Complete |
+| GLB-04 | Phase 2: Global Components | Complete |
+| GLB-05 | Phase 2: Global Components | Complete |
+| GLB-06 | Phase 2: Global Components | Complete |
+| GLB-07 | Phase 2: Global Components | Complete |
 | HME-01 | Phase 3: Homepage | Pending |
 | HME-02 | Phase 3: Homepage | Pending |
 | HME-03 | Phase 3: Homepage | Pending |
