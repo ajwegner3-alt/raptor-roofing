@@ -12,7 +12,7 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 
 - [x] **Phase 1: Foundation** ✓ — Scaffold, brand tokens, content model, helpers, layout shells (completed 2026-04-14)
 - [x] **Phase 2: Global Components** ✓ — Header, Footer, StickyMobileCTA, TrustStrip (completed 2026-04-14)
-- [ ] **Phase 3: Homepage** — Full homepage compose with all sections and schema
+- [x] **Phase 3: Homepage** ✓ — Full homepage compose with all sections and schema (completed 2026-04-14)
 - [ ] **Phase 4: Service Pages** — Four dedicated service pages from shared template
 - [ ] **Phase 5: About + Contact** — About narrative, contact form, API handler, end-to-end test
 - [ ] **Phase 6: SEO + Performance + Accessibility** — Sitewide audit, sitemap/robots, schema validation, a11y pass
@@ -73,10 +73,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 03-01: Build `Hero` section (static photo, dark overlay, headline, micro-trust line, dual CTAs, priority image load)
-- [ ] 03-02: Build `ServiceGrid`/`ServiceCard`, `WhyNotChaser` section, and insurance claim 3-step visual
-- [ ] 03-03: Build `TestimonialCarousel` (5+ items, [PLACEHOLDER] banners), `FaqAccordion` + FAQPage JSON-LD, insurance logo row, financing callout
-- [ ] 03-04: Build `LeadForm` section (4 fields, trust signals adjacent), inject `LocalBusiness` JSON-LD, compose all sections into `app/(marketing)/page.tsx`
+- [x] 03-01: Build `Hero` section (static photo, dark overlay, headline, micro-trust line, dual CTAs, priority image load) ✓
+- [x] 03-02: Build `ServiceGrid`/`ServiceCard`, `WhyNotChaser` section, and insurance claim 3-step visual ✓
+- [x] 03-03: Build `TestimonialCarousel` (5+ items, [PLACEHOLDER] banners), `FaqAccordion` + FAQPage JSON-LD, insurance logo row, financing callout ✓
+- [x] 03-04: Build `LeadForm` section (4 fields, trust signals adjacent), compose all sections into `app/(marketing)/page.tsx` (LocalBusiness JSON-LD already mounted in Footer from Phase 2 — not re-mounted) ✓
 
 ---
 
@@ -182,7 +182,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-04-14 |
 | 2. Global Components | 2/2 | ✓ Complete | 2026-04-14 |
-| 3. Homepage | 0/4 | Not started | - |
+| 3. Homepage | 4/4 | ✓ Complete | 2026-04-14 |
 | 4. Service Pages | 0/3 | Not started | - |
 | 5. About + Contact | 0/3 | Not started | - |
 | 6. SEO + Performance + Accessibility | 0/3 | Not started | - |

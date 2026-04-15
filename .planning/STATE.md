@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Omaha homeowner trusts Raptor Roofing over every competitor within 10 seconds of landing
-**Current focus:** Phase 3 — Homepage Composition
+**Current focus:** Phase 4 — Service Pages (Phase 3 complete, deploying to Vercel for pitch preview)
 
 ## Current Position
 
-Phase: 2 of 8 (Global Components) — ✓ COMPLETE (verified 17/17 must_haves)
-Plan: 2 of 2 in current phase — 02-01 ✓, 02-02 ✓
-Status: Phase 2 verified; Phase 3 (Homepage) ready to begin
-Last activity: 2026-04-14 — gsd-verifier passed Phase 2 (VERIFICATION.md on disk)
+Phase: 3 of 8 (Homepage) — ✓ COMPLETE (verified 5/5 must_haves, 19/19 hard-gate greps)
+Plan: 4 of 4 in Phase 3 — 03-01 ✓, 03-02 ✓, 03-03 ✓, 03-04 ✓
+Status: Phase 3 verified; human_needed items deferred to Phase 8 real-device QA. Pushed to GitHub for Vercel deployment.
+Last activity: 2026-04-14 — gsd-verifier passed Phase 3, pushed to GitHub
 
 Progress: [████░░░░░░] 21% (5/24 plans complete)
 

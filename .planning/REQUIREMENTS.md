@@ -33,22 +33,22 @@
 
 ### Homepage (HME)
 
-- [ ] **HME-01**: Single static real-photo hero (no carousel, no autoplay video) with priority/preload set
-- [ ] **HME-02**: Hero headline that leads with locality + longevity, not urgency (anti-chaser copy rule)
-- [ ] **HME-03**: Hero has dark overlay on photo ensuring 4.5:1 contrast on all text
-- [ ] **HME-04**: Micro-trust line directly under headline: "15 Years Local · No Subs · Licensed & Insured"
-- [ ] **HME-05**: Hero has exactly 2 primary CTAs: click-to-call phone + "Get a Free Estimate"
-- [ ] **HME-06**: Trust Strip rendered immediately below hero, not in footer
-- [ ] **HME-07**: Service grid with 4 cards (Roofing, Siding, Gutters, Emergency Tarping), each linking to its service page
-- [ ] **HME-08**: "Why We're Not a Storm Chaser" dedicated section — anti-chaser narrative with 15yr story and no-subs explainer
-- [ ] **HME-09**: 3-step insurance claim visual (Inspection → We Meet Your Adjuster → Repair)
-- [ ] **HME-10**: Testimonial carousel with at least 5 testimonials, each showing name + city + quote + rating
-- [ ] **HME-11**: Every placeholder testimonial displays a visible amber "[PLACEHOLDER — Replace with real review before launch]" banner (FTC compliance)
-- [ ] **HME-12**: FAQ accordion with 6+ questions and `FAQPage` JSON-LD injected inline
-- [ ] **HME-13**: Lead form section with 4 fields (Name, Phone, Service, ZIP) and trust signals adjacent
-- [ ] **HME-14**: `LocalBusiness` JSON-LD injected in homepage head via schema helper
-- [ ] **HME-15**: Insurance carrier logo row (State Farm, Allstate, Farmers, USAA)
-- [ ] **HME-16**: Financing callout ("as low as $X/mo") with placeholder label near estimate CTA
+- [x] **HME-01**: Single static real-photo hero (no carousel, no autoplay video) with priority/preload set
+- [x] **HME-02**: Hero headline that leads with locality + longevity, not urgency (anti-chaser copy rule)
+- [x] **HME-03**: Hero has dark overlay on photo ensuring 4.5:1 contrast on all text
+- [x] **HME-04**: Micro-trust line directly under headline: "15 Years Local · No Subs · Licensed & Insured"
+- [x] **HME-05**: Hero has exactly 2 primary CTAs: click-to-call phone + "Get a Free Estimate"
+- [x] **HME-06**: Trust Strip rendered immediately below hero, not in footer
+- [x] **HME-07**: Service grid with 4 cards (Roofing, Siding, Gutters, Emergency Tarping), each linking to its service page
+- [x] **HME-08**: "Why We're Not a Storm Chaser" dedicated section — anti-chaser narrative with 15yr story and no-subs explainer
+- [x] **HME-09**: 3-step insurance claim visual (Inspection → We Meet Your Adjuster → Repair)
+- [x] **HME-10**: Testimonial carousel with at least 5 testimonials, each showing name + city + quote + rating
+- [x] **HME-11**: Every placeholder testimonial displays a visible amber "[PLACEHOLDER — Replace with real review before launch]" banner (FTC compliance)
+- [x] **HME-12**: FAQ accordion with 6+ questions and `FAQPage` JSON-LD injected inline
+- [x] **HME-13**: Lead form section with 4 fields (Name, Phone, Service, ZIP) and trust signals adjacent
+- [x] **HME-14**: `LocalBusiness` JSON-LD injected in homepage head via schema helper
+- [x] **HME-15**: Insurance carrier logo row (State Farm, Allstate, Farmers, USAA)
+- [x] **HME-16**: Financing callout ("as low as $X/mo") with placeholder label near estimate CTA
 
 ### Service Pages (SVC)
 
@@ -217,22 +217,22 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | GLB-05 | Phase 2: Global Components | Complete |
 | GLB-06 | Phase 2: Global Components | Complete |
 | GLB-07 | Phase 2: Global Components | Complete |
-| HME-01 | Phase 3: Homepage | Pending |
-| HME-02 | Phase 3: Homepage | Pending |
-| HME-03 | Phase 3: Homepage | Pending |
-| HME-04 | Phase 3: Homepage | Pending |
-| HME-05 | Phase 3: Homepage | Pending |
-| HME-06 | Phase 3: Homepage | Pending |
-| HME-07 | Phase 3: Homepage | Pending |
-| HME-08 | Phase 3: Homepage | Pending |
-| HME-09 | Phase 3: Homepage | Pending |
-| HME-10 | Phase 3: Homepage | Pending |
-| HME-11 | Phase 3: Homepage | Pending |
-| HME-12 | Phase 3: Homepage | Pending |
-| HME-13 | Phase 3: Homepage | Pending |
-| HME-14 | Phase 3: Homepage | Pending |
-| HME-15 | Phase 3: Homepage | Pending |
-| HME-16 | Phase 3: Homepage | Pending |
+| HME-01 | Phase 3: Homepage | Complete |
+| HME-02 | Phase 3: Homepage | Complete |
+| HME-03 | Phase 3: Homepage | Complete |
+| HME-04 | Phase 3: Homepage | Complete |
+| HME-05 | Phase 3: Homepage | Complete |
+| HME-06 | Phase 3: Homepage | Complete |
+| HME-07 | Phase 3: Homepage | Complete |
+| HME-08 | Phase 3: Homepage | Complete |
+| HME-09 | Phase 3: Homepage | Complete |
+| HME-10 | Phase 3: Homepage | Complete |
+| HME-11 | Phase 3: Homepage | Complete |
+| HME-12 | Phase 3: Homepage | Complete |
+| HME-13 | Phase 3: Homepage | Complete |
+| HME-14 | Phase 3: Homepage | Complete |
+| HME-15 | Phase 3: Homepage | Complete |
+| HME-16 | Phase 3: Homepage | Complete |
 | SVC-01 | Phase 4: Service Pages | Pending |
 | SVC-02 | Phase 4: Service Pages | Pending |
 | SVC-03 | Phase 4: Service Pages | Pending |
