@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Omaha homeowner trusts Raptor Roofing over every competitor within 10 seconds of landing
-**Current focus:** Phase 4 — Service Pages (Phase 3 complete, deploying to Vercel for pitch preview)
+**Current focus:** Phase 5 — Lead Forms & Backend (Phase 4 complete — all 4 service pages live)
 
 ## Current Position
 
-Phase: 4 of 8 (Service Pages) — In progress
-Plan: 2 of 3 in Phase 4 — 04-01 ✓, 04-02 ✓ (siding + gutters routes)
-Status: 04-02 complete; /services/siding and /services/gutters shipping as static pages; 04-03 (emergency-tarping) is the final service page
-Last activity: 2026-04-15 — Completed 04-02-PLAN.md (siding + gutters static routes + SVC-10 near-duplicate audit)
+Phase: 4 of 8 (Service Pages) — COMPLETE
+Plan: 3 of 3 in Phase 4 — 04-01 ✓, 04-02 ✓, 04-03 ✓ (emergency-tarping + Phase 4 final audit)
+Status: Phase 4 complete; all 4 service pages built and pushed; SVC-01 through SVC-10 all PASS; anti-chaser hard-gate PASSED
+Last activity: 2026-04-15 — Completed 04-03-PLAN.md (emergency-tarping route + Phase 4 SVC audit)
 
-Progress: [█████░░░░░] 29% (7/24 plans complete)
+Progress: [█████░░░░░] 33% (8/24 plans complete)
 
 ## Performance Metrics
 
@@ -69,9 +69,9 @@ Recent decisions affecting current work:
 
 - Phase 2 COMPLETE — all 5 layout components built and committed (Header, MobileMenuButton, Footer, StickyMobileCTA, TrustStrip)
 - Phase 3 COMPLETE — Homepage live with all sections, pushed to GitHub for Vercel deployment
-- Phase 4 IN PROGRESS — 04-01 ✓, 04-02 ✓ (siding + gutters). Next: 04-03 (emergency-tarping)
-- 04-03: import ServicePageTemplate directly, pass service/faqs/testimonials/relatedServices — NO template modifications needed; isEmergency=true activates tap-to-call hero branch
-- Phase 6 (06-01): Add app/sitemap.ts + app/robots.ts — must include /services/roofing (and sibling pages once built)
+- Phase 4 COMPLETE — all 4 service pages built: /services/roofing, /services/siding, /services/gutters, /services/emergency-tarping
+- Phase 5 NEXT — Lead form backend (n8n webhook vs Formspree decision deferred to 05-02 plan time)
+- Phase 6 (06-01): Add app/sitemap.ts + app/robots.ts — must include all 4 service routes
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
 ### Post-Phase-2 layout-chrome SEO + Conversion audit (2026-04-14)
@@ -100,6 +100,6 @@ Conversion observations:
 
 ## Session Continuity
 
-Last session: 2026-04-15T01:46:00Z
-Stopped at: Completed 04-02-PLAN.md (/services/siding + /services/gutters static routes + SVC-10 near-duplicate audit)
+Last session: 2026-04-15T01:45:10Z
+Stopped at: Completed 04-03-PLAN.md (emergency-tarping route + Phase 4 SVC-01–SVC-10 final audit — Phase 4 COMPLETE)
 Resume file: None
