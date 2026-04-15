@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 ## Current Position
 
 Phase: 4 of 8 (Service Pages) — In progress
-Plan: 1 of 3 in Phase 4 — 04-01 ✓ (roofing template + shared components)
-Status: 04-01 complete; ServicePageTemplate ready for 04-02 (siding/gutters) and 04-03 (emergency-tarping)
-Last activity: 2026-04-15 — Completed 04-01-PLAN.md (foundation + roofing template + /services/roofing route)
+Plan: 2 of 3 in Phase 4 — 04-01 ✓, 04-02 ✓ (siding + gutters routes)
+Status: 04-02 complete; /services/siding and /services/gutters shipping as static pages; 04-03 (emergency-tarping) is the final service page
+Last activity: 2026-04-15 — Completed 04-02-PLAN.md (siding + gutters static routes + SVC-10 near-duplicate audit)
 
-Progress: [████░░░░░░] 25% (6/24 plans complete)
+Progress: [█████░░░░░] 29% (7/24 plans complete)
 
 ## Performance Metrics
 
@@ -69,8 +69,8 @@ Recent decisions affecting current work:
 
 - Phase 2 COMPLETE — all 5 layout components built and committed (Header, MobileMenuButton, Footer, StickyMobileCTA, TrustStrip)
 - Phase 3 COMPLETE — Homepage live with all sections, pushed to GitHub for Vercel deployment
-- Phase 4 IN PROGRESS — 04-01 complete (ServicePageTemplate + /services/roofing). Next: 04-02 (siding + gutters), 04-03 (emergency-tarping)
-- 04-02 and 04-03: import ServicePageTemplate directly, pass service/faqs/testimonials/relatedServices — NO template modifications needed
+- Phase 4 IN PROGRESS — 04-01 ✓, 04-02 ✓ (siding + gutters). Next: 04-03 (emergency-tarping)
+- 04-03: import ServicePageTemplate directly, pass service/faqs/testimonials/relatedServices — NO template modifications needed; isEmergency=true activates tap-to-call hero branch
 - Phase 6 (06-01): Add app/sitemap.ts + app/robots.ts — must include /services/roofing (and sibling pages once built)
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
@@ -100,6 +100,6 @@ Conversion observations:
 
 ## Session Continuity
 
-Last session: 2026-04-15T01:38:28Z
-Stopped at: Completed 04-01-PLAN.md (service page foundation + roofing template + /services/roofing route)
+Last session: 2026-04-15T01:46:00Z
+Stopped at: Completed 04-02-PLAN.md (/services/siding + /services/gutters static routes + SVC-10 near-duplicate audit)
 Resume file: None
