@@ -83,10 +83,10 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Visual trust signals: Google reviews + License shield */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 lg:justify-start">
+          {/* Visual trust signals — stacked for clean, equal-weight alignment */}
+          <ul className="mt-8 flex flex-col items-center gap-3 lg:items-start">
             {/* Google reviews */}
-            <div className="flex items-center gap-2.5">
+            <li className="flex items-center gap-3">
               <svg
                 width="22"
                 height="22"
@@ -111,87 +111,92 @@ export function Hero() {
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                 />
               </svg>
-              <div className="flex items-center gap-0.5" aria-hidden="true">
+              <span className="flex items-center gap-0.5" aria-hidden="true">
                 {[0, 1, 2, 3, 4].map((i) => (
                   <svg
                     key={i}
-                    width="14"
-                    height="14"
+                    width="13"
+                    height="13"
                     viewBox="0 0 24 24"
                     fill="#FBBC05"
                   >
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="font-display text-sm font-bold text-white">
-                  {siteConfig.reviews.rating} · {siteConfig.reviews.count}{" "}
-                  Reviews
-                </span>
-                <span className="font-body text-[10px] uppercase tracking-widest text-white/60">
-                  Google Reviews · [Placeholder]
-                </span>
-              </div>
-            </div>
+              </span>
+              <span className="font-display text-sm font-semibold text-white">
+                {siteConfig.reviews.rating} · {siteConfig.reviews.count} Google
+                Reviews{" "}
+                <span className="font-normal text-white/50">[Placeholder]</span>
+              </span>
+            </li>
 
             {/* BBB Accredited Business — A- rating */}
-            <svg
-              role="img"
-              aria-label="BBB Accredited Business, A-minus rating"
-              width="158"
-              height="40"
-              viewBox="0 0 158 40"
-              className="shrink-0"
-            >
-              <rect width="158" height="40" rx="3" fill="#00607B" />
-              {/* Torch icon */}
-              <g transform="translate(8, 7)" fill="#ffffff">
-                <path d="M10 0 C7 3 5 6 7 10 C5 9 4 5 6 2 C3 5 2 9 4 13 L16 13 C18 9 17 5 14 2 C16 5 15 9 13 10 C15 6 13 3 10 0 Z" />
-                <rect x="7" y="15" width="6" height="10" rx="0.5" />
-                <rect x="5" y="25" width="10" height="1.5" />
-              </g>
-              {/* BBB wordmark */}
-              <text
-                x="34"
-                y="19"
-                fontFamily="Arial, Helvetica, sans-serif"
-                fontSize="14"
-                fontWeight="900"
-                fill="#ffffff"
-                letterSpacing="-0.3"
+            <li>
+              <svg
+                role="img"
+                aria-label="BBB Accredited Business, A-minus rating"
+                width="158"
+                height="40"
+                viewBox="0 0 158 40"
+                className="shrink-0"
               >
-                BBB
-              </text>
-              {/* ACCREDITED BUSINESS */}
-              <text
-                x="34"
-                y="31"
-                fontFamily="Arial, Helvetica, sans-serif"
-                fontSize="6"
-                fontWeight="700"
-                fill="#ffffff"
-                letterSpacing="0.5"
-              >
-                ACCREDITED BUSINESS
-              </text>
-              {/* Rating badge */}
-              <rect x="118" y="7" width="32" height="26" rx="2" fill="#ffffff" />
-              <text
-                x="134"
-                y="27"
-                fontFamily="Arial, Helvetica, sans-serif"
-                fontSize="16"
-                fontWeight="900"
-                fill="#00607B"
-                textAnchor="middle"
-              >
-                A-
-              </text>
-            </svg>
+                <rect width="158" height="40" rx="3" fill="#00607B" />
+                {/* Torch icon */}
+                <g transform="translate(8, 7)" fill="#ffffff">
+                  <path d="M10 0 C7 3 5 6 7 10 C5 9 4 5 6 2 C3 5 2 9 4 13 L16 13 C18 9 17 5 14 2 C16 5 15 9 13 10 C15 6 13 3 10 0 Z" />
+                  <rect x="7" y="15" width="6" height="10" rx="0.5" />
+                  <rect x="5" y="25" width="10" height="1.5" />
+                </g>
+                {/* BBB wordmark */}
+                <text
+                  x="34"
+                  y="19"
+                  fontFamily="Arial, Helvetica, sans-serif"
+                  fontSize="14"
+                  fontWeight="900"
+                  fill="#ffffff"
+                  letterSpacing="-0.3"
+                >
+                  BBB
+                </text>
+                {/* ACCREDITED BUSINESS */}
+                <text
+                  x="34"
+                  y="31"
+                  fontFamily="Arial, Helvetica, sans-serif"
+                  fontSize="6"
+                  fontWeight="700"
+                  fill="#ffffff"
+                  letterSpacing="0.5"
+                >
+                  ACCREDITED BUSINESS
+                </text>
+                {/* Rating badge */}
+                <rect
+                  x="118"
+                  y="7"
+                  width="32"
+                  height="26"
+                  rx="2"
+                  fill="#ffffff"
+                />
+                <text
+                  x="134"
+                  y="27"
+                  fontFamily="Arial, Helvetica, sans-serif"
+                  fontSize="16"
+                  fontWeight="900"
+                  fill="#00607B"
+                  textAnchor="middle"
+                >
+                  A-
+                </text>
+              </svg>
+            </li>
 
             {/* License & Insured shield */}
-            <div className="flex items-center gap-2.5">
+            <li className="flex items-center gap-3">
               <svg
                 width="22"
                 height="26"
@@ -207,16 +212,13 @@ export function Hero() {
                 <path d="M12 26s9-4.5 9-12V5l-9-3-9 3v9c0 7.5 9 12 9 12z" />
                 <path d="m8 14 3 3 5-6" />
               </svg>
-              <div className="flex flex-col leading-tight">
-                <span className="font-display text-sm font-bold text-white">
-                  Licensed &amp; Insured
-                </span>
-                <span className="font-body text-[10px] uppercase tracking-widest text-white/60">
-                  NE #[Placeholder] · Bonded
-                </span>
-              </div>
-            </div>
-          </div>
+              <span className="font-display text-sm font-semibold text-white">
+                Licensed &amp; Insured · NE #
+                <span className="font-normal text-white/50">[Placeholder]</span>{" "}
+                · Bonded
+              </span>
+            </li>
+          </ul>
         </div>
 
         {/* Right column: Lead capture form card */}
