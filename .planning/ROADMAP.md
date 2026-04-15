@@ -13,7 +13,7 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 - [x] **Phase 1: Foundation** ✓ — Scaffold, brand tokens, content model, helpers, layout shells (completed 2026-04-14)
 - [x] **Phase 2: Global Components** ✓ — Header, Footer, StickyMobileCTA, TrustStrip (completed 2026-04-14)
 - [x] **Phase 3: Homepage** ✓ — Full homepage compose with all sections and schema (completed 2026-04-14)
-- [ ] **Phase 4: Service Pages** — Four dedicated service pages from shared template
+- [x] **Phase 4: Service Pages** ✓ — Four dedicated service pages from shared template (completed 2026-04-14)
 - [ ] **Phase 5: About + Contact** — About narrative, contact form, API handler, end-to-end test
 - [ ] **Phase 6: SEO + Performance + Accessibility** — Sitewide audit, sitemap/robots, schema validation, a11y pass
 - [ ] **Phase 7: Deploy** — GitHub repo, Vercel link, env vars, preview URL verification
@@ -93,9 +93,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Build `ServicePageTemplate` component and `ServiceSchema` JSON-LD factory; implement `/services/roofing` as the authoritative template
-- [ ] 04-02: Adapt template for `/services/siding` and `/services/gutters` with service-specific copy
-- [ ] 04-03: Implement `/services/emergency-tarping` with 24/7 phone prominence; apply `buildMetadata()` and `Service` JSON-LD to all four pages; verify no near-duplicate copy
+- [x] 04-01: Build `ServicePageTemplate` component and `ServiceSchema` JSON-LD factory; implement `/services/roofing` as the authoritative template ✓
+- [x] 04-02: Adapt template for `/services/siding` and `/services/gutters` with service-specific copy ✓
+- [x] 04-03: Implement `/services/emergency-tarping` with 24/7 phone prominence; apply `buildMetadata()` and `Service` JSON-LD to all four pages; verify no near-duplicate copy ✓
 
 ---
 
@@ -183,7 +183,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | 1. Foundation | 3/3 | ✓ Complete | 2026-04-14 |
 | 2. Global Components | 2/2 | ✓ Complete | 2026-04-14 |
 | 3. Homepage | 4/4 | ✓ Complete | 2026-04-14 |
-| 4. Service Pages | 0/3 | Not started | - |
+| 4. Service Pages | 3/3 | ✓ Complete | 2026-04-14 |
 | 5. About + Contact | 0/3 | Not started | - |
 | 6. SEO + Performance + Accessibility | 0/3 | Not started | - |
 | 7. Deploy | 0/2 | Not started | - |

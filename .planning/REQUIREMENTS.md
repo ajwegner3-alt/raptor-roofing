@@ -52,16 +52,16 @@
 
 ### Service Pages (SVC)
 
-- [ ] **SVC-01**: `/services/roofing` page with hero, problem description, process steps, FAQ section, testimonials, CTA
-- [ ] **SVC-02**: `/services/siding` page following roofing template, siding-specific copy
-- [ ] **SVC-03**: `/services/gutters` page following roofing template, gutters-specific copy
-- [ ] **SVC-04**: `/services/emergency-tarping` page with 24/7 phone prominence and urgency-appropriate copy
-- [ ] **SVC-05**: Each service page has its own `Service` JSON-LD via schema factory
-- [ ] **SVC-06**: Each service page has unique title tag, meta description, H1, canonical via `buildMetadata()`
-- [ ] **SVC-07**: Each service page internally links to at least 2 other services and the homepage
-- [ ] **SVC-08**: Each service page has a lead form or clear path to contact page
-- [ ] **SVC-09**: Before/after placeholder image slots with [PLACEHOLDER] labels
-- [ ] **SVC-10**: No near-duplicate copy across service pages (prevents Google thin-content penalty)
+- [x] **SVC-01**: `/services/roofing` page with hero, problem description, process steps, FAQ section, testimonials, CTA
+- [x] **SVC-02**: `/services/siding` page following roofing template, siding-specific copy
+- [x] **SVC-03**: `/services/gutters` page following roofing template, gutters-specific copy
+- [x] **SVC-04**: `/services/emergency-tarping` page with 24/7 phone prominence and urgency-appropriate copy
+- [x] **SVC-05**: Each service page has its own `Service` JSON-LD via schema factory
+- [x] **SVC-06**: Each service page has unique title tag, meta description, H1, canonical via `buildMetadata()`
+- [x] **SVC-07**: Each service page internally links to at least 2 other services and the homepage
+- [x] **SVC-08**: Each service page has a lead form or clear path to contact page
+- [x] **SVC-09**: Before/after placeholder image slots with [PLACEHOLDER] labels
+- [x] **SVC-10**: No near-duplicate copy across service pages (prevents Google thin-content penalty)
 
 ### About (ABT)
 
@@ -233,16 +233,16 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | HME-14 | Phase 3: Homepage | Complete |
 | HME-15 | Phase 3: Homepage | Complete |
 | HME-16 | Phase 3: Homepage | Complete |
-| SVC-01 | Phase 4: Service Pages | Pending |
-| SVC-02 | Phase 4: Service Pages | Pending |
-| SVC-03 | Phase 4: Service Pages | Pending |
-| SVC-04 | Phase 4: Service Pages | Pending |
-| SVC-05 | Phase 4: Service Pages | Pending |
-| SVC-06 | Phase 4: Service Pages | Pending |
-| SVC-07 | Phase 4: Service Pages | Pending |
-| SVC-08 | Phase 4: Service Pages | Pending |
-| SVC-09 | Phase 4: Service Pages | Pending |
-| SVC-10 | Phase 4: Service Pages | Pending |
+| SVC-01 | Phase 4: Service Pages | Complete |
+| SVC-02 | Phase 4: Service Pages | Complete |
+| SVC-03 | Phase 4: Service Pages | Complete |
+| SVC-04 | Phase 4: Service Pages | Complete |
+| SVC-05 | Phase 4: Service Pages | Complete |
+| SVC-06 | Phase 4: Service Pages | Complete |
+| SVC-07 | Phase 4: Service Pages | Complete |
+| SVC-08 | Phase 4: Service Pages | Complete |
+| SVC-09 | Phase 4: Service Pages | Complete |
+| SVC-10 | Phase 4: Service Pages | Complete |
 | ABT-01 | Phase 5: About + Contact | Pending |
 | ABT-02 | Phase 5: About + Contact | Pending |
 | ABT-03 | Phase 5: About + Contact | Pending |
