@@ -5,7 +5,7 @@ import { Phone } from "lucide-react";
 import { services } from "@/content/services";
 import { siteConfig } from "@/content/site";
 
-type Status = "idle" | "success";
+type Status = "idle" | "loading" | "success" | "error";
 type FieldErrors = Partial<Record<"name" | "phone" | "service" | "zip", string>>;
 
 interface LeadFormProps {
@@ -30,15 +30,33 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
     return next;
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const v = validate();
     setErrors(v);
     if (Object.keys(v).length > 0) return;
 
-    // PHASE 5 TODO: replace with fetch() to POST handler (n8n webhook or Formspree)
-    console.log("[Phase 3 stub] lead form data:", { name, phone, service, zip });
-    setStatus("success");
+    setStatus("loading");
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, service, zip }),
+        // NOTE: no recaptchaToken — LeadForm intentionally omits reCAPTCHA so service pages
+        // don't load the reCAPTCHA script. The /api/contact route handles missing token gracefully.
+      });
+      const data = await res.json() as { success: boolean; error?: string };
+      if (data.success) {
+        setStatus("success");
+      } else {
+        console.error('[LeadForm] submit failed', data.error);
+        setStatus("error");
+      }
+    } catch (err) {
+      console.error('[LeadForm] network error', err);
+      setStatus("error");
+    }
   }
 
   return (
@@ -71,6 +89,31 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
             <Phone className="h-4 w-4" aria-hidden="true" />
             Call {siteConfig.phone.display}
           </a>
+        </div>
+      ) : status === "error" ? (
+        <div role="alert" className="mt-8 text-center">
+          <h3 className="font-display text-xl font-bold uppercase tracking-tight text-primary-900">
+            We couldn&apos;t send your request.
+          </h3>
+          <p className="mt-3 font-body text-sm text-neutral-700">
+            Please call us directly — we&apos;ll answer within 2 hours.
+          </p>
+          <a
+            href={siteConfig.phone.href}
+            className="mt-4 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-md bg-accent-600 px-6 py-3 font-display text-sm font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
+          >
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            Call {siteConfig.phone.display}
+          </a>
+          <div className="mt-4">
+            <button
+              type="button"
+              onClick={() => setStatus("idle")}
+              className="font-body text-sm font-semibold text-accent-600 underline-offset-2 hover:underline"
+            >
+              Try again
+            </button>
+          </div>
         </div>
       ) : (
         <form noValidate onSubmit={handleSubmit} className="mt-6">
@@ -222,9 +265,10 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
 
           <button
             type="submit"
-            className="mt-6 flex min-h-[48px] w-full items-center justify-center rounded-md bg-accent-600 px-6 py-4 font-display text-base font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
+            disabled={status === "loading"}
+            className="mt-6 flex min-h-[48px] w-full items-center justify-center rounded-md bg-accent-600 px-6 py-4 font-display text-base font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Get My Free Estimate
+            {status === "loading" ? "Sending\u2026" : "Get My Free Estimate"}
           </button>
 
           <p className="mt-3 text-center font-body text-xs text-neutral-500">
