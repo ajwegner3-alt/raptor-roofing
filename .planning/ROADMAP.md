@@ -112,9 +112,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 05-01: Build `/about` page with narrative sections, trust strip, testimonials, `LocalBusiness` JSON-LD, and `buildMetadata()`
-- [ ] 05-02: Build `ContactForm` Client Component (Name/Phone/Service/ZIP, labels, error states, reCAPTCHA v3, success state) and `app/api/contact/route.ts` (n8n webhook or Formspree — decision at plan time)
-- [ ] 05-03: Build `/contact` page (form + NAP block + hours + Google Map + service areas + `BreadcrumbList` JSON-LD + metadata); run end-to-end test submission, drag to Gmail Primary
+- [ ] 05-01-PLAN.md — Build `/about` page (AboutHero + chronological story + Every-Crew-Is-Raptor + educational anti-chaser section + TrustStrip + TestimonialCarousel + end CTA + BreadcrumbList JSON-LD + `buildMetadata()`). LocalBusiness schema is reused from Footer — NOT duplicated on /about.
+- [ ] 05-02-PLAN.md — Copy `@nsi/email-sender` into `src/lib/email/`, build `app/api/contact/route.ts` (Node.js runtime, Gmail SMTP), build `ContactForm` Client Component (reCAPTCHA v3 wrapped, full state machine), and upgrade `LeadForm`s PHASE 5 TODO stub to fetch POST the same endpoint.
+- [ ] 05-03-PLAN.md — Build `/contact` page (ContactForm + enriched NAP + hours + static Google Maps iframe with [PLACEHOLDER] address label + service-area pill tags + BreadcrumbList JSON-LD + `buildMetadata()`); run manual end-to-end email test against Andrew's Gmail Primary inbox (CHECKPOINT — not autonomous).
 
 ---
 
