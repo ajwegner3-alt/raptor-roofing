@@ -92,6 +92,7 @@ Conversion observations:
 - Open question: Real Google review count and rating unknown — placeholder "4.9 stars / 127 reviews", label clearly (Phase 2)
 - Open question: Financing partner unknown — "as low as $X/mo" placeholder with [PLACEHOLDER] label (Phase 3)
 - RESOLVED: Tailwind v4 version assumption — confirmed v4.2.2 installed (was listed as "^4" in package.json)
+- RESOLVED: BBB accreditation — CONFIRMED A- rating by client on 2026-04-14. Hero displays an inline-SVG BBB seal approximation (teal #00607B torch + BBB wordmark + A- badge) as a visual stand-in. Phase 8 handoff must swap this for the OFFICIAL seal art downloaded from Raptor's accredited business dashboard on BBB.org — only accredited members can legally use the real trademarked mark. Grep `role="img" aria-label="BBB` in src/components/sections/Hero.tsx to find the swap point.
 - FTC risk: Every placeholder testimonial MUST display amber [PLACEHOLDER] banner — no exceptions (Phase 3 onward)
 
 ## Session Continuity
