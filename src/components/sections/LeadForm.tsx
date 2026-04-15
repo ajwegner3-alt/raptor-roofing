@@ -8,10 +8,14 @@ import { siteConfig } from "@/content/site";
 type Status = "idle" | "success";
 type FieldErrors = Partial<Record<"name" | "phone" | "service" | "zip", string>>;
 
-export function LeadForm() {
+interface LeadFormProps {
+  defaultService?: string;
+}
+
+export function LeadForm({ defaultService = "" }: LeadFormProps) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [service, setService] = useState("");
+  const [service, setService] = useState(defaultService);
   const [zip, setZip] = useState("");
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<Status>("idle");

@@ -18,7 +18,8 @@ export interface Service {
   headline: string;       // H1 on service page
   subheadline: string;    // above-fold subtext
   description: string;    // intro paragraph
-  problemCopy: string;    // "what happens when..." section
+  problemCopy: string;    // "what happens when..." section intro
+  problemChecklist: string[]; // homeowner-observable symptom bullets (4-6 items)
   processSteps: ServiceProcessStep[];
   features: string[];     // bullet list of what's included
   relatedSlugs: string[]; // internal links to other services
@@ -41,6 +42,14 @@ export const services: Service[] = [
       "Whether you need a full roof replacement after storm damage or a targeted repair on an aging system, Raptor Roofing brings the same in-house crew and 15-year track record to every job. We work with all major insurance carriers and walk you through the claims process at no extra charge.",
     problemCopy:
       "Most Omaha homeowners don't know their roof is failing until water appears on the ceiling — by which point the damage often extends to decking, insulation, and drywall. A roof inspection costs nothing. Waiting costs significantly more.",
+    problemChecklist: [
+      "Dark circular dents or bruising on shingles after a recent hailstorm",
+      "Granules collecting in gutters or at downspout discharge points",
+      "Shingles curling at the edges or cupping upward in the field",
+      "Daylight visible through the attic decking or rafters",
+      "Water stains on attic ceiling or interior ceilings after rain",
+      "Sagging or spongy feel when walking on the roof deck",
+    ],
     processSteps: [
       {
         step: 1,
@@ -95,6 +104,13 @@ export const services: Service[] = [
       "Hail and wind damage don't stop at your roof. Raptor Roofing installs and repairs vinyl, fiber cement, and LP SmartSide siding using the same in-house crews that handle our roofing work. One contractor, one warranty, one point of contact.",
     problemCopy:
       "Cracked or dented siding is more than a cosmetic issue — moisture penetrates gaps and compromises wall insulation and framing over time. Insurance-covered siding replacement is one of the most common claims in the Omaha market after major storms.",
+    problemChecklist: [
+      "Cracked, dented, or warped panels — especially after hail or high winds",
+      "Fading or chalking surface that no longer holds paint or sheen",
+      "Soft spots when you press on panels, indicating moisture behind the wall",
+      "Panels that feel loose or rattle after a wind event",
+      "Visible gaps at seams where water can enter the wall cavity",
+    ],
     processSteps: [
       {
         step: 1,
@@ -141,6 +157,13 @@ export const services: Service[] = [
       "Damaged or undersized gutters allow water to pool against your foundation, rot fascia boards, and flood window wells. Raptor installs seamless gutters cut on-site for a perfect fit and handles storm-damaged gutter replacement alongside roofing claims.",
     problemCopy:
       "Omaha's intense spring and summer storms deposit significant hail damage on gutters that most homeowners don't notice until a full replacement is needed. A free gutter inspection during your roof inspection catches both issues in one visit.",
+    problemChecklist: [
+      "Gutters overflow at the edges during moderate rain — not just heavy downpours",
+      "Sagging sections pulling away from the fascia board",
+      "Visible rust streaks, seam separation, or holes along the gutter run",
+      "Water pooling near the foundation after rain events",
+      "Detached or missing downspouts leaving exposed drain exits",
+    ],
     processSteps: [
       {
         step: 1,
@@ -186,6 +209,13 @@ export const services: Service[] = [
       "A damaged roof doesn't wait for business hours. Raptor Roofing provides 24/7 emergency tarping and board-up services throughout the Omaha metro. We secure your home against further water intrusion until a permanent repair can be scheduled.",
     problemCopy:
       "Every hour an exposed roof goes uncovered, water damages ceilings, walls, insulation, and contents. Emergency tarping stops the immediate loss — and a professionally installed tarp is required by most insurance policies to maintain coverage for secondary damage.",
+    problemChecklist: [
+      "Missing shingles exposing bare decking after a storm",
+      "Tree branch or debris impact leaving visible holes in the roof",
+      "Water entering the attic or interior ceilings during or after rain",
+      "Wind-lifted roof sections where the decking is visible from the ground",
+      "Structural damage from fallen trees or large branches",
+    ],
     processSteps: [
       {
         step: 1,

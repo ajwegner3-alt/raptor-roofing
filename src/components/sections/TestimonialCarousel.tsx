@@ -2,9 +2,15 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { testimonials } from "@/content/testimonials";
+import { testimonials as allTestimonials } from "@/content/testimonials";
+import type { Testimonial } from "@/content/testimonials";
 
-export function TestimonialCarousel() {
+interface TestimonialCarouselProps {
+  testimonials?: Testimonial[];
+}
+
+export function TestimonialCarousel({ testimonials: propTestimonials }: TestimonialCarouselProps = {}) {
+  const testimonials = propTestimonials ?? allTestimonials;
   const [active, setActive] = useState(0);
   const total = testimonials.length;
   const prev = () => setActive((a) => (a - 1 + total) % total);

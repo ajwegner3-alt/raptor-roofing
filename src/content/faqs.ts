@@ -98,6 +98,108 @@ export const faqs: FAQ[] = [
       "A manufacturer warranty covers defects in the roofing materials themselves — shingles that crack, curl, or fail prematurely under normal conditions. A workmanship warranty covers installation errors — improper flashing, inadequate nailing patterns, or ventilation mistakes that cause premature failure. You need both. Raptor provides both in writing.",
     category: "warranty",
   },
+
+  // Siding FAQs
+  {
+    id: "faq-11",
+    question: "How much does siding replacement cost in Omaha?",
+    answer:
+      "Siding replacement costs vary based on the material chosen, home size, and extent of existing damage. Vinyl is typically the most affordable option; fiber cement and LP SmartSide are more durable but carry a higher material cost. For an accurate range, we provide free written estimates — and if storm damage is involved, your insurance adjuster's estimate is the starting point. [PLACEHOLDER: confirm price ranges once current material costs are available]",
+    category: "process",
+    serviceSlug: "siding",
+  },
+  {
+    id: "faq-12",
+    question: "What siding materials do you install?",
+    answer:
+      "Raptor installs vinyl siding, fiber cement (including James Hardie), and LP SmartSide engineered wood siding. Each has different durability, maintenance, and aesthetic profiles. Vinyl is low-maintenance and widely available; fiber cement holds paint well and resists impact; LP SmartSide offers a wood appearance with better moisture resistance than natural wood. We'll walk you through the options with sample boards during your estimate.",
+    category: "process",
+    serviceSlug: "siding",
+  },
+  {
+    id: "faq-13",
+    question: "How long does a siding replacement take?",
+    answer:
+      "Most residential siding replacements in the Omaha area take two to five days depending on home size, number of stories, and material. Partial replacements for storm-damaged sections can often be completed in one day. Our in-house crew handles removal, moisture barrier installation, and new siding in a continuous sequence — no waiting between subcontractors.",
+    category: "process",
+    serviceSlug: "siding",
+  },
+  {
+    id: "faq-14",
+    question: "What warranty comes with new siding?",
+    answer:
+      "Raptor provides a written workmanship warranty covering installation. Material warranties vary by product: vinyl siding typically carries a lifetime limited warranty from the manufacturer, while fiber cement and LP SmartSide offer [PLACEHOLDER: confirm warranty years] coverage. Both warranties transfer to new homeowners if you sell. We register manufacturer warranties on your behalf and give you written documentation before we leave.",
+    category: "warranty",
+    serviceSlug: "siding",
+  },
+
+  // Gutters FAQs
+  {
+    id: "faq-15",
+    question: "Should I get 5-inch or 6-inch gutters?",
+    answer:
+      "Five-inch K-style gutters are the standard for most Omaha homes and handle typical rainfall volumes without issue. Six-inch gutters are recommended for larger roof surfaces, steeply pitched roofs, or homes that experience overflow with standard gutters during heavy downpours. During your inspection, we assess your roof's drainage area and slope to recommend the right sizing — there's no extra charge for the consultation.",
+    category: "process",
+    serviceSlug: "gutters",
+  },
+  {
+    id: "faq-16",
+    question: "What is the difference between seamless and sectional gutters?",
+    answer:
+      "Sectional gutters come in pre-cut lengths joined with connectors — each seam is a potential leak point. Seamless gutters are fabricated in one continuous piece cut to your home's exact measurements on-site, eliminating interior seams along the run. Raptor installs seamless aluminum gutters exclusively, which reduces maintenance and improves long-term watertightness.",
+    category: "process",
+    serviceSlug: "gutters",
+  },
+  {
+    id: "faq-17",
+    question: "Do you install gutter guards?",
+    answer:
+      "Yes. We offer gutter guard options that reduce debris accumulation in the gutter channel. Guards don't eliminate cleaning entirely, but they significantly extend the interval between maintenance visits. We'll discuss options and pricing during your estimate — gutter guards are an add-on, not a requirement, and we'll give you an honest assessment of whether your home's tree coverage makes them a good investment.",
+    category: "process",
+    serviceSlug: "gutters",
+  },
+  {
+    id: "faq-18",
+    question: "How quickly can you replace storm-damaged gutters?",
+    answer:
+      "Storm-damaged gutter replacements are typically scheduled within one to two weeks of your estimate, depending on the volume of storm claims in the area. Since we fabricate seamless gutters on-site, we don't wait on pre-cut materials — we arrive with the equipment and fabricate to your home's measurements the day of installation. Most full-perimeter replacements are completed in one day.",
+    category: "process",
+    serviceSlug: "gutters",
+  },
+
+  // Emergency Tarping FAQs
+  {
+    id: "faq-19",
+    question: "How quickly can Raptor respond to an emergency roof call?",
+    answer:
+      "We answer the phone 24 hours a day, 7 days a week, including holidays. Response time depends on weather conditions and crew availability — during active storm events across Omaha, response queues can extend. We dispatch as fast as conditions safely allow and keep you updated. Same-day tarp installations are our standard target for calls received before late evening.",
+    category: "process",
+    serviceSlug: "emergency-tarping",
+  },
+  {
+    id: "faq-20",
+    question: "Do you document the damage before tarping?",
+    answer:
+      "Yes, always. When we arrive, we photograph and document all visible damage before any tarping begins. This documentation — including timestamps and detailed photos — is provided to you and can be shared directly with your insurance adjuster. Thorough pre-tarp documentation is one of the most important steps in the claims process, and we do it as a standard part of every emergency response.",
+    category: "process",
+    serviceSlug: "emergency-tarping",
+  },
+  {
+    id: "faq-21",
+    question: "How long will an emergency tarp hold?",
+    answer:
+      "A professionally installed, properly anchored tarp can protect a damaged roof area for several weeks to a few months depending on weather conditions. Our tarps are secured with weighted lumber and anchoring systems designed to resist wind uplift — not just draped in place. That said, tarping is a temporary measure, and we recommend scheduling permanent repairs as soon as possible after weather conditions allow.",
+    category: "process",
+    serviceSlug: "emergency-tarping",
+  },
+  {
+    id: "faq-22",
+    question: "What does emergency tarping cost?",
+    answer:
+      "Emergency tarping costs vary based on the size of the damaged area and roof accessibility. We provide a written estimate before work begins. In many cases, emergency tarping is a covered expense under your homeowner's policy as part of the storm damage claim — your adjuster can confirm what your specific policy covers. [PLACEHOLDER: add current pricing range once confirmed]",
+    category: "process",
+    serviceSlug: "emergency-tarping",
+  },
 ];
 
 export function getFaqsByCategory(category: FaqCategory): FAQ[] {
