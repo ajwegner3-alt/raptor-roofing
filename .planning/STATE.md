@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 ## Current Position
 
 Phase: 5 of 8 (About + Contact) — In progress
-Plan: 1 of 3 in Phase 5 — 05-01 ✓ (/about page complete)
-Status: Phase 5 in progress; /about page live and statically prerendered; hard gates all PASS
-Last activity: 2026-04-15 — Completed 05-01-PLAN.md (/about page + AboutHero Server Component)
+Plan: 2 of 3 in Phase 5 — 05-01 ✓, 05-02 ✓
+Status: 05-02 complete — email backend live (/api/contact Node.js route, ContactForm with reCAPTCHA v3, LeadForm upgraded from stub)
+Last activity: 2026-04-15 — Completed 05-02-PLAN.md (form backend: email-sender tool, /api/contact, ContactForm, LeadForm upgrade)
 
-Progress: [█████░░░░░] 38% (9/24 plans complete)
+Progress: [█████░░░░░] 42% (10/24 plans complete)
 
 ## Performance Metrics
 
@@ -58,7 +58,12 @@ Recent decisions affecting current work:
 - Phase 1: schema.tsx (not .ts) — JsonLd component uses JSX syntax, requires .tsx extension
 - Phase 1: schema-dts v2 DayOfWeek cast — must cast h.day as DayOfWeek type (short form "Monday" accepted)
 - Phase 1: metadataBase fallback is https://raptor-roofing.vercel.app (not localhost) for absolute OG URLs
-- Phase 5: Form handler choice (n8n webhook vs Formspree) deferred to Phase 5 planning — resolve at 05-02 plan time
+- Phase 5: Form handler = Gmail SMTP via nodemailer (resolved at 05-02 plan time — n8n/Formspree both rejected in favor of email-sender tool)
+- Phase 5: export const runtime = 'nodejs' MANDATORY in /api/contact — nodemailer uses net/tls, not available on Vercel Edge Runtime
+- Phase 5: LeadForm has no reCAPTCHA intentionally — service pages must not load 35KB reCAPTCHA script; /api/contact skips verify gracefully when no token
+- Phase 5: ContactForm wraps itself in GoogleReCaptchaProvider — reCAPTCHA only loads on /contact, not sitewide
+- Phase 5: reCAPTCHA score threshold 0.3 (permissive) — minimizes false positives on roofing form submissions
+- Phase 5: .env.local.example force-committed (git add -f) because .gitignore has .env* glob
 - Phase 7: Deploy target is Vercel preview URL only; do NOT submit to Google Search Console during pitch
 - Phase 4: Static route folders (services/roofing/page.tsx) not [slug] dynamic route — four known pages, no generateStaticParams needed
 - Phase 4: ServicePageTemplate faqs+testimonials passed from page file so JSON-LD schema factories receive same data as rendered component
@@ -103,6 +108,6 @@ Conversion observations:
 
 ## Session Continuity
 
-Last session: 2026-04-15T12:49:00Z
-Stopped at: Completed 05-01-PLAN.md (/about page + AboutHero Server Component — Phase 5 plan 1 of 3 done)
+Last session: 2026-04-15T12:42:18Z
+Stopped at: Completed 05-02-PLAN.md (form backend: email-sender tool, /api/contact, ContactForm, LeadForm upgrade — Phase 5 plan 2 of 3 done)
 Resume file: None
