@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { MobileMenuButton } from "./MobileMenuButton";
@@ -7,17 +8,21 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-primary-600 shadow-[var(--shadow-nav)]">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:h-20 lg:px-8">
-        {/* Left: Logo + wordmark */}
+        {/* Left: Logo (mark + wordmark baked into the PNG) */}
         <Link
           href="/"
-          className="flex items-center gap-3"
+          className="flex items-center"
           aria-label="Raptor Roofing home"
         >
-          <div className="h-10 w-10 rounded bg-accent-600 flex items-center justify-center font-display text-white text-xl">
-            R
-          </div>
-          <span className="font-display text-xl font-bold uppercase tracking-wide text-white lg:text-2xl">
-            Raptor Roofing
+          <span className="inline-flex items-center justify-center rounded-md bg-background px-2 py-1 shadow-[var(--shadow-cta)]">
+            <Image
+              src="/images/raptor-roofing-logo.png"
+              alt="Raptor Roofing — Omaha's trusted local roofer"
+              width={305}
+              height={242}
+              priority
+              className="h-10 w-auto lg:h-12"
+            />
           </span>
         </Link>
 

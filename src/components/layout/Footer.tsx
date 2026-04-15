@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink, Share2, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { services } from "@/content/services";
@@ -14,9 +15,16 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Col 1: NAP + hours */}
           <div>
-            <h2 className="font-display text-lg font-bold uppercase tracking-wide text-white">
-              {siteConfig.name}
-            </h2>
+            <h2 className="sr-only">{siteConfig.name}</h2>
+            <span className="inline-flex items-center justify-center rounded-md bg-background px-2 py-1">
+              <Image
+                src="/images/raptor-roofing-logo.png"
+                alt={`${siteConfig.name} — Omaha roofing contractor`}
+                width={305}
+                height={242}
+                className="h-12 w-auto"
+              />
+            </span>
             <address className="mt-4 not-italic font-body text-sm text-white/80 space-y-2">
               <p className="flex items-start gap-2">
                 <MapPin

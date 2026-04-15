@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { siteConfig } from "@/content/site";
 
@@ -89,8 +90,14 @@ export function MobileMenuButton() {
           {/* Backdrop tap closes — root onClick handles empty-space taps.
               Interactive children each call setOpen(false) so bubbling is a no-op. */}
           <div className="flex items-center justify-between px-4 h-16">
-            <span className="font-display text-xl font-bold uppercase tracking-wide text-white">
-              Raptor Roofing
+            <span className="inline-flex items-center justify-center rounded-md bg-background px-2 py-1">
+              <Image
+                src="/images/raptor-roofing-logo.png"
+                alt="Raptor Roofing"
+                width={305}
+                height={242}
+                className="h-10 w-auto"
+              />
             </span>
             <button
               type="button"
