@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 
 ## Current Position
 
-Phase: 3 of 8 (Homepage) — ✓ COMPLETE (verified 5/5 must_haves, 19/19 hard-gate greps)
-Plan: 4 of 4 in Phase 3 — 03-01 ✓, 03-02 ✓, 03-03 ✓, 03-04 ✓
-Status: Phase 3 verified; human_needed items deferred to Phase 8 real-device QA. Pushed to GitHub for Vercel deployment.
-Last activity: 2026-04-14 — gsd-verifier passed Phase 3, pushed to GitHub
+Phase: 4 of 8 (Service Pages) — In progress
+Plan: 1 of 3 in Phase 4 — 04-01 ✓ (roofing template + shared components)
+Status: 04-01 complete; ServicePageTemplate ready for 04-02 (siding/gutters) and 04-03 (emergency-tarping)
+Last activity: 2026-04-15 — Completed 04-01-PLAN.md (foundation + roofing template + /services/roofing route)
 
-Progress: [████░░░░░░] 21% (5/24 plans complete)
+Progress: [████░░░░░░] 25% (6/24 plans complete)
 
 ## Performance Metrics
 
@@ -60,15 +60,18 @@ Recent decisions affecting current work:
 - Phase 1: metadataBase fallback is https://raptor-roofing.vercel.app (not localhost) for absolute OG URLs
 - Phase 5: Form handler choice (n8n webhook vs Formspree) deferred to Phase 5 planning — resolve at 05-02 plan time
 - Phase 7: Deploy target is Vercel preview URL only; do NOT submit to Google Search Console during pitch
+- Phase 4: Static route folders (services/roofing/page.tsx) not [slug] dynamic route — four known pages, no generateStaticParams needed
+- Phase 4: ServicePageTemplate faqs+testimonials passed from page file so JSON-LD schema factories receive same data as rendered component
+- Phase 4: Emergency hero right column = large tel: tap-to-call card (NOT LeadForm) — LeadForm still in section 11
+- Phase 4: TestimonialCarousel section skipped entirely in template if testimonials.length === 0 (no empty widget)
 
 ### Pending Todos
 
 - Phase 2 COMPLETE — all 5 layout components built and committed (Header, MobileMenuButton, Footer, StickyMobileCTA, TrustStrip)
-- Phase 3 (Homepage Composition) ready to begin
-- (marketing)/page.tsx placeholder must be replaced in Phase 3 with full homepage
-- Phase 3 homepage must import TrustStrip from @/components/layout/TrustStrip and render below hero
-- Use buildMetadata() from @/lib/metadata for all page generateMetadata exports (Phase 3+)
-- Use <JsonLd data={localBusinessSchema()} /> in homepage (Phase 3) — but note LocalBusiness is already mounted in Footer, do NOT duplicate
+- Phase 3 COMPLETE — Homepage live with all sections, pushed to GitHub for Vercel deployment
+- Phase 4 IN PROGRESS — 04-01 complete (ServicePageTemplate + /services/roofing). Next: 04-02 (siding + gutters), 04-03 (emergency-tarping)
+- 04-02 and 04-03: import ServicePageTemplate directly, pass service/faqs/testimonials/relatedServices — NO template modifications needed
+- Phase 6 (06-01): Add app/sitemap.ts + app/robots.ts — must include /services/roofing (and sibling pages once built)
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
 ### Post-Phase-2 layout-chrome SEO + Conversion audit (2026-04-14)
@@ -97,6 +100,6 @@ Conversion observations:
 
 ## Session Continuity
 
-Last session: 2026-04-14
-Stopped at: Completed 02-02-PLAN.md (StickyMobileCTA + TrustStrip + layout wiring, stubs deleted)
+Last session: 2026-04-15T01:38:28Z
+Stopped at: Completed 04-01-PLAN.md (service page foundation + roofing template + /services/roofing route)
 Resume file: None
