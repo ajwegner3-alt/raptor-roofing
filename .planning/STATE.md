@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 
 ## Current Position
 
-Phase: 4 of 8 (Service Pages) — COMPLETE
-Plan: 3 of 3 in Phase 4 — 04-01 ✓, 04-02 ✓, 04-03 ✓ (emergency-tarping + Phase 4 final audit)
-Status: Phase 4 complete; all 4 service pages built and pushed; SVC-01 through SVC-10 all PASS; anti-chaser hard-gate PASSED
-Last activity: 2026-04-15 — Completed 04-03-PLAN.md (emergency-tarping route + Phase 4 SVC audit)
+Phase: 5 of 8 (About + Contact) — In progress
+Plan: 1 of 3 in Phase 5 — 05-01 ✓ (/about page complete)
+Status: Phase 5 in progress; /about page live and statically prerendered; hard gates all PASS
+Last activity: 2026-04-15 — Completed 05-01-PLAN.md (/about page + AboutHero Server Component)
 
-Progress: [█████░░░░░] 33% (8/24 plans complete)
+Progress: [█████░░░░░] 38% (9/24 plans complete)
 
 ## Performance Metrics
 
@@ -64,13 +64,16 @@ Recent decisions affecting current work:
 - Phase 4: ServicePageTemplate faqs+testimonials passed from page file so JSON-LD schema factories receive same data as rendered component
 - Phase 4: Emergency hero right column = large tel: tap-to-call card (NOT LeadForm) — LeadForm still in section 11
 - Phase 4: TestimonialCarousel section skipped entirely in template if testimonials.length === 0 (no empty widget)
+- Phase 5: AboutHero is a distinct Server Component (not ServiceHero reuse) — ServiceHero requires Service prop + always renders right-column form; About needs single-column no-form layout
+- Phase 5: BreadcrumbList-only JSON-LD on /about — Footer owns HomeAndConstructionBusiness schema globally; no duplication per RESEARCH.md Pitfall 4
+- Phase 5: /images/about-hero.webp does not exist yet — Next.js Image builds fine but renders broken image until Phase 8 provides real asset
 
 ### Pending Todos
 
 - Phase 2 COMPLETE — all 5 layout components built and committed (Header, MobileMenuButton, Footer, StickyMobileCTA, TrustStrip)
 - Phase 3 COMPLETE — Homepage live with all sections, pushed to GitHub for Vercel deployment
 - Phase 4 COMPLETE — all 4 service pages built: /services/roofing, /services/siding, /services/gutters, /services/emergency-tarping
-- Phase 5 NEXT — Lead form backend (n8n webhook vs Formspree decision deferred to 05-02 plan time)
+- Phase 5 IN PROGRESS — 05-01 (/about) DONE; 05-02 (contact page + form backend) NEXT; form handler choice (n8n webhook vs Formspree) still deferred to 05-02 plan time
 - Phase 6 (06-01): Add app/sitemap.ts + app/robots.ts — must include all 4 service routes
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
@@ -100,6 +103,6 @@ Conversion observations:
 
 ## Session Continuity
 
-Last session: 2026-04-15T01:45:10Z
-Stopped at: Completed 04-03-PLAN.md (emergency-tarping route + Phase 4 SVC-01–SVC-10 final audit — Phase 4 COMPLETE)
+Last session: 2026-04-15T12:49:00Z
+Stopped at: Completed 05-01-PLAN.md (/about page + AboutHero Server Component — Phase 5 plan 1 of 3 done)
 Resume file: None
