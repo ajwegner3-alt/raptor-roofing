@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Omaha homeowner trusts Raptor Roofing over every competitor within 10 seconds of landing
-**Current focus:** Phase 5 — Lead Forms & Backend (Phase 4 complete — all 4 service pages live)
+**Current focus:** Phase 6 — Technical SEO (Phase 5 complete — /about + /contact live, email pipeline verified end-to-end to Gmail Primary)
 
 ## Current Position
 
-Phase: 5 of 8 (About + Contact) — In progress
-Plan: 2 of 3 in Phase 5 — 05-01 ✓, 05-02 ✓
-Status: 05-02 complete — email backend live (/api/contact Node.js route, ContactForm with reCAPTCHA v3, LeadForm upgraded from stub)
-Last activity: 2026-04-15 — Completed 05-02-PLAN.md (form backend: email-sender tool, /api/contact, ContactForm, LeadForm upgrade)
+Phase: 5 of 8 (About + Contact) — COMPLETE
+Plan: 3 of 3 in Phase 5 — 05-01 ✓, 05-02 ✓, 05-03 ✓
+Status: Phase 5 COMPLETE — /about + /contact + email pipeline verified end-to-end to Gmail Primary (approved 2026-04-15)
+Last activity: 2026-04-15 — Completed 05-03-PLAN.md (/contact page + manual Gmail SMTP end-to-end test — email landed in Primary on first try)
 
-Progress: [█████░░░░░] 42% (10/24 plans complete)
+Progress: [█████░░░░░] 46% (11/24 plans complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
+- Total plans completed: 11
 - Average duration: ~15 min
-- Total execution time: ~0.75 hours
+- Total execution time: ~2.75 hours
 
 **By Phase:**
 
@@ -29,6 +29,9 @@ Progress: [█████░░░░░] 42% (10/24 plans complete)
 |-------|-------|-------|----------|
 | Phase 1 (Foundation) | 3/3 | ~45 min | ~15 min |
 | Phase 2 (Global Components) | 2/2 | ~30 min | ~15 min |
+| Phase 3 (Homepage) | 1/1 | ~15 min | ~15 min |
+| Phase 4 (Service Pages) | 3/3 | ~45 min | ~15 min |
+| Phase 5 (About + Contact) | 3/3 | ~35 min | ~12 min (05-03 includes human checkpoint pause) |
 
 **Recent Trend:**
 - Last 5 plans: 01-01 (13 min), 01-02 (18 min), 01-03 (parallel), 02-01 (~18 min), 02-02 (~12 min)
@@ -78,8 +81,8 @@ Recent decisions affecting current work:
 - Phase 2 COMPLETE — all 5 layout components built and committed (Header, MobileMenuButton, Footer, StickyMobileCTA, TrustStrip)
 - Phase 3 COMPLETE — Homepage live with all sections, pushed to GitHub for Vercel deployment
 - Phase 4 COMPLETE — all 4 service pages built: /services/roofing, /services/siding, /services/gutters, /services/emergency-tarping
-- Phase 5 IN PROGRESS — 05-01 (/about) DONE; 05-02 (contact page + form backend) NEXT; form handler choice (n8n webhook vs Formspree) still deferred to 05-02 plan time
-- Phase 6 (06-01): Add app/sitemap.ts + app/robots.ts — must include all 4 service routes
+- Phase 5 COMPLETE — /about + /contact live, email pipeline verified end-to-end to Gmail Primary (approved 2026-04-15). 05-01 ✓, 05-02 ✓, 05-03 ✓
+- Phase 6 NEXT — (06-01): Add app/sitemap.ts + app/robots.ts — must include all routes: /, /about, /contact, all 4 service pages, all 8 service-area pages when created
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
 ### Post-Phase-2 layout-chrome SEO + Conversion audit (2026-04-14)
@@ -105,9 +108,10 @@ Conversion observations:
 - RESOLVED: Tailwind v4 version assumption — confirmed v4.2.2 installed (was listed as "^4" in package.json)
 - RESOLVED: BBB accreditation — CONFIRMED A- rating by client on 2026-04-14. Hero displays an inline-SVG BBB seal approximation (teal #00607B torch + BBB wordmark + A- badge) as a visual stand-in. Phase 8 handoff must swap this for the OFFICIAL seal art downloaded from Raptor's accredited business dashboard on BBB.org — only accredited members can legally use the real trademarked mark. Grep `role="img" aria-label="BBB` in src/components/sections/Hero.tsx to find the swap point.
 - FTC risk: Every placeholder testimonial MUST display amber [PLACEHOLDER] banner — no exceptions (Phase 3 onward)
+- RESOLVED: Form handler choice (n8n webhook vs Formspree vs custom) — RESOLVED at 05-02 plan time. Form handler = Gmail SMTP via @nsi/email-sender tool (not n8n webhook, not Formspree). Confirmed working end-to-end 2026-04-15. Single env var flip (EMAIL_PROVIDER=resend) enables post-launch Resend upgrade with no code changes.
 
 ## Session Continuity
 
-Last session: 2026-04-15T12:42:18Z
-Stopped at: Completed 05-02-PLAN.md (form backend: email-sender tool, /api/contact, ContactForm, LeadForm upgrade — Phase 5 plan 2 of 3 done)
+Last session: 2026-04-15
+Stopped at: Phase 5 COMPLETE — /about + /contact + email pipeline verified. Email landed in Gmail Primary on first try (approved 2026-04-15). Ready for Phase 6 planning.
 Resume file: None
