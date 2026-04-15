@@ -38,52 +38,39 @@ export function LeadForm() {
   }
 
   return (
-    <section
+    <div
       id="estimate-form"
-      aria-label="Request a free estimate"
-      className="scroll-mt-16 lg:scroll-mt-20 bg-primary-600 py-20 lg:py-24"
+      className="scroll-mt-20 lg:scroll-mt-24 w-full rounded-lg bg-surface p-6 shadow-2xl ring-1 ring-black/5 lg:p-8"
     >
-      <div className="mx-auto max-w-2xl px-4 lg:px-8">
-        <div className="text-center">
-          <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">
-            Get a Free Estimate
-          </h2>
-          <p className="mt-4 font-body text-lg text-white/90">
-            Tell us about your roof. We&apos;ll call you within 2 hours — no
-            pressure, no obligation.
-          </p>
-          <p className="mt-2 font-display text-xs font-semibold uppercase tracking-widest text-white/80">
-            Licensed NE #[PLACEHOLDER] · Bonded &amp; Insured
-          </p>
-        </div>
+      <div className="text-center">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-primary-900 sm:text-3xl">
+          Get a Free Estimate
+        </h2>
+        <p className="mt-2 font-body text-sm text-neutral-600 sm:text-base">
+          We&apos;ll call within 2 hours. No pressure, no obligation.
+        </p>
+      </div>
 
-        {status === "success" ? (
-          <div
-            role="status"
-            className="mt-10 rounded-lg bg-surface p-8 text-center shadow-xl"
+      {status === "success" ? (
+        <div role="status" className="mt-8 text-center">
+          <h3 className="font-display text-xl font-bold uppercase tracking-tight text-primary-900">
+            Thanks, {name || "we got it"}!
+          </h3>
+          <p className="mt-3 font-body text-sm text-neutral-700">
+            We&apos;ll call you within 2 hours to schedule your free estimate.
+            Prefer to talk now?
+          </p>
+          <a
+            href={siteConfig.phone.href}
+            className="mt-4 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-md bg-accent-600 px-6 py-3 font-display text-sm font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
           >
-            <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-primary-900">
-              Thanks, {name || "we got it"}!
-            </h3>
-            <p className="mt-4 font-body text-base text-neutral-700">
-              We&apos;ll call you within 2 hours to schedule your free estimate.
-              Prefer to talk now?
-            </p>
-            <a
-              href={siteConfig.phone.href}
-              className="mt-6 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-md bg-accent-600 px-6 py-3 font-display text-base font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
-            >
-              <Phone className="h-5 w-5" aria-hidden="true" />
-              Call {siteConfig.phone.display}
-            </a>
-          </div>
-        ) : (
-          <form
-            noValidate
-            onSubmit={handleSubmit}
-            className="mt-10 rounded-lg bg-surface p-8 shadow-xl"
-          >
-            <div className="space-y-5">
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            Call {siteConfig.phone.display}
+          </a>
+        </div>
+      ) : (
+        <form noValidate onSubmit={handleSubmit} className="mt-6">
+          <div className="space-y-4">
               {/* Name */}
               <div>
                 <label
@@ -229,25 +216,27 @@ export function LeadForm() {
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="mt-8 flex min-h-[48px] w-full items-center justify-center rounded-md bg-accent-600 px-6 py-4 font-display text-base font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
-            >
-              Request Free Estimate
-            </button>
-          </form>
-        )}
-
-        <p className="mt-6 text-center font-body text-sm text-white/80">
-          Prefer to talk?{" "}
-          <a
-            href={siteConfig.phone.href}
-            className="font-semibold text-white underline underline-offset-2 hover:text-accent-300"
+          <button
+            type="submit"
+            className="mt-6 flex min-h-[48px] w-full items-center justify-center rounded-md bg-accent-600 px-6 py-4 font-display text-base font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
           >
-            Call {siteConfig.phone.display}
-          </a>
-        </p>
-      </div>
-    </section>
+            Get My Free Estimate
+          </button>
+
+          <p className="mt-3 text-center font-body text-xs text-neutral-500">
+            Licensed NE #[PLACEHOLDER] · Bonded &amp; Insured
+          </p>
+          <p className="mt-1 text-center font-body text-xs text-neutral-500">
+            Prefer to talk?{" "}
+            <a
+              href={siteConfig.phone.href}
+              className="font-semibold text-accent-600 underline-offset-2 hover:underline"
+            >
+              Call {siteConfig.phone.display}
+            </a>
+          </p>
+        </form>
+      )}
+    </div>
   );
 }

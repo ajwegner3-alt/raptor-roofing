@@ -12,7 +12,8 @@ import { TestimonialCarousel } from "@/components/sections/TestimonialCarousel";
 import { InsuranceLogos } from "@/components/sections/InsuranceLogos";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { FinancingCallout } from "@/components/sections/FinancingCallout";
-import { LeadForm } from "@/components/sections/LeadForm";
+// LeadForm is embedded inside <Hero /> (right column) per hero-section-contractor skill —
+// one form, above the fold, id="estimate-form" still resolves for the sticky CTA anchor.
 
 // SEO metadata — canonical set to site root via path: "/"
 // useAbsoluteTitle bypasses root layout title template to avoid double-branding
@@ -62,7 +63,6 @@ export default function HomePage() {
       <InsuranceLogos />
       <FaqAccordion faqs={homepageFaqs} />
       <FinancingCallout />
-      <LeadForm />
     </>
   );
 }
