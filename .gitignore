@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local editor/agent state (not for shared repo)
+.claude/
+
+# stray local files at repo root
+/Screenshot*.png
