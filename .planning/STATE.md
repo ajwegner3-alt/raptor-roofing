@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 ## Current Position
 
 Phase: 6 of 8 (SEO + Performance + Accessibility) — In progress
-Plan: 1 of N in Phase 6 — 06-01 ✓
-Status: In progress — 06-01 complete (sitemap.xml + robots.txt + canonical + noindex audit)
-Last activity: 2026-04-16 — Completed 06-01-PLAN.md (sitemap.ts + robots.ts created, all SEO metadata verified)
+Plan: 2 of N in Phase 6 — 06-01 ✓, 06-02 ✓
+Status: In progress — 06-02 complete (schema regression guard: scripts/check-no-review-schema.mjs + npm run check:schema)
+Last activity: 2026-04-15 — Completed 06-02-PLAN.md (Node ESM guard catches Review/AggregateRating JSON-LD emission; exits 1 on regression)
 
-Progress: [█████░░░░░] 50% (12/24 plans complete)
+Progress: [██████░░░░] 54% (13/24 plans complete)
 
 ## Performance Metrics
 
@@ -46,6 +46,8 @@ Progress: [█████░░░░░] 50% (12/24 plans complete)
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
+- Phase 6: scripts/check-no-review-schema.mjs uses Node fs/path builtins (NOT execSync+grep) — shell-quoting of double-quoted patterns breaks grep; Node regex avoids the issue entirely
+- Phase 6: npm run check:schema NOT chained into build/lint — runs as explicit manual check; no husky hooks (YAGNI)
 - Phase 2: next/link Link required for all internal page navigation — raw `<a>` on page routes triggers @next/next/no-html-link-for-pages lint error
 - Phase 2: env(safe-area-inset-bottom) for fixed bottom bars must use inline style, not Tailwind arbitrary value
 - Phase 2: --sticky-cta-height defined on :root (plain CSS), NOT in @theme (not a Tailwind token)
