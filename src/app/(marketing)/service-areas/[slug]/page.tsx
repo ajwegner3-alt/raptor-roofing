@@ -36,6 +36,12 @@ export default async function ServiceAreaPage({ params }: PageProps) {
     .filter((a) => a.slug !== area.slug)
     .slice(0, 4);
 
+  // Split description into paragraphs
+  const descriptionParagraphs = area.description
+    .split("\n\n")
+    .map((p) => p.trim())
+    .filter(Boolean);
+
   return (
     <>
       <JsonLd
@@ -58,7 +64,7 @@ export default async function ServiceAreaPage({ params }: PageProps) {
           <p className="text-lg text-neutral-300 max-w-2xl mb-6">
             Raptor Roofing proudly serves {area.name} and surrounding {area.county} County
             communities. Every crew on your property works for us — no subcontractors,
-            no out-of-state storm chasers.
+            no out-of-state crews passing through.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -109,8 +115,111 @@ export default async function ServiceAreaPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Services Available */}
+      {/* Local Context — Description */}
       <section className="py-12 sm:py-16 bg-neutral-50">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-6">
+            Roofing in {area.name}: What We See Every Day
+          </h2>
+          <div className="max-w-3xl space-y-5">
+            {descriptionParagraphs.map((paragraph, i) => (
+              <p key={i} className="text-neutral-700 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          {area.funFact && (
+            <div className="mt-8 p-5 rounded-xl bg-primary-900 text-white max-w-3xl">
+              <p className="text-sm font-semibold text-accent-400 uppercase tracking-wider mb-1">
+                Local Context
+              </p>
+              <p className="text-neutral-200 text-sm leading-relaxed">{area.funFact}</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Housing Context Callout */}
+      <section className="py-8 bg-white border-y border-neutral-200">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="flex gap-4 items-start">
+            <div className="shrink-0 w-10 h-10 rounded-lg bg-accent-100 flex items-center justify-center mt-0.5">
+              <svg
+                className="w-5 h-5 text-accent-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-neutral-900 mb-1">
+                Housing Stock in {area.name}
+              </p>
+              <p className="text-neutral-600 text-sm leading-relaxed">{area.housingContext}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local Roofing Challenges */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2">
+            Common Roofing Challenges in {area.name}
+          </h2>
+          <p className="text-neutral-500 mb-8 max-w-2xl">
+            Every neighborhood has its own set of roofing pressures. Here&apos;s what we encounter
+            most often on {area.name} properties.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {area.localChallenges.map((challenge, i) => (
+              <div
+                key={i}
+                className="flex gap-3 p-5 rounded-xl border border-neutral-200 bg-neutral-50"
+              >
+                <span className="shrink-0 w-6 h-6 rounded-full bg-accent-600 text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <p className="text-neutral-700 text-sm leading-relaxed">{challenge}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Neighborhoods We Serve */}
+      <section className="py-12 sm:py-16 bg-neutral-50">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2">
+            Neighborhoods We Serve in {area.name}
+          </h2>
+          <p className="text-neutral-500 mb-8">
+            Our crews work throughout {area.name} — from established areas to newer
+            subdivisions and everything in between.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {area.neighborhoods.map((neighborhood) => (
+              <span
+                key={neighborhood}
+                className="px-4 py-2 rounded-full bg-white border border-neutral-200 text-neutral-700 text-sm font-medium shadow-sm"
+              >
+                {neighborhood}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Available */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-8">
             Services We Offer in {area.name}
@@ -141,7 +250,7 @@ export default async function ServiceAreaPage({ params }: PageProps) {
 
       {/* ZIP Codes */}
       {area.zipCodes.length > 0 && (
-        <section className="py-12 sm:py-16 bg-white">
+        <section className="py-12 sm:py-16 bg-neutral-50">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <h2 className="text-2xl font-bold text-neutral-900 mb-4">
               ZIP Codes We Serve in {area.name}
@@ -161,7 +270,7 @@ export default async function ServiceAreaPage({ params }: PageProps) {
       )}
 
       {/* Nearby Areas */}
-      <section className="py-12 sm:py-16 bg-neutral-50">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="text-2xl font-bold text-neutral-900 mb-6">
             Also Serving Nearby Communities
