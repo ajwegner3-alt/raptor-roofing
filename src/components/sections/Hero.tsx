@@ -33,7 +33,7 @@ export function Hero() {
     >
       {/* Layer 0: Background photograph */}
       <Image
-        src="/images/hero-placeholder.jpg"
+        src="/images/hero.webp"
         alt="Raptor Roofing crew working on an Omaha home"
         fill
         priority

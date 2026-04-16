@@ -84,7 +84,7 @@ export const services: Service[] = [
       "Clean-up and haul-off of all old materials",
     ],
     relatedSlugs: ["siding", "gutters", "emergency-tarping"],
-    heroImagePath: "/images/roofing-hero-placeholder.jpg", // PLACEHOLDER: replace with real project photo
+    heroImagePath: "/images/roofing-hero.webp", // PLACEHOLDER: replace with real project photo
     heroImageAlt: "Roof replacement in Omaha — example installation", // PLACEHOLDER: update alt with real project details
     iconName: "Home",
     isEmergency: false,
@@ -137,7 +137,7 @@ export const services: Service[] = [
       "Manufacturer warranty included",
     ],
     relatedSlugs: ["roofing", "gutters", "emergency-tarping"],
-    heroImagePath: "/images/siding-hero-placeholder.jpg", // PLACEHOLDER: replace with real project photo
+    heroImagePath: "/images/siding-hero.webp", // PLACEHOLDER: replace with real project photo
     heroImageAlt: "Siding replacement in Omaha — example installation", // PLACEHOLDER
     iconName: "Layers",
     isEmergency: false,
@@ -189,7 +189,7 @@ export const services: Service[] = [
       "Downspout extensions and splash blocks",
     ],
     relatedSlugs: ["roofing", "siding", "emergency-tarping"],
-    heroImagePath: "/images/gutters-hero-placeholder.jpg", // PLACEHOLDER: replace with real project photo
+    heroImagePath: "/images/gutters-hero.webp", // PLACEHOLDER: replace with real project photo
     heroImageAlt: "Seamless gutter installation in Omaha — example project", // PLACEHOLDER
     iconName: "Droplets",
     isEmergency: false,
@@ -250,7 +250,7 @@ export const services: Service[] = [
       "No separate contractor handoff",
     ],
     relatedSlugs: ["roofing", "siding", "gutters"],
-    heroImagePath: "/images/emergency-tarping-placeholder.jpg", // PLACEHOLDER: replace with real emergency response photo
+    heroImagePath: "/images/emergency-tarping-hero.webp", // PLACEHOLDER: replace with real emergency response photo
     heroImageAlt: "Emergency roof tarping in Omaha — example response", // PLACEHOLDER
     iconName: "AlertTriangle",
     isEmergency: true,
