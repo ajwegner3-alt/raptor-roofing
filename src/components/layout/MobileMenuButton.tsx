@@ -3,11 +3,25 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/content/site";
+import { services } from "@/content/services";
+import { serviceAreas } from "@/content/service-areas";
+
+const serviceLinks = services.map((s) => ({
+  label: s.shortTitle,
+  href: `/services/${s.slug}`,
+}));
+
+const areaLinks = serviceAreas.map((a) => ({
+  label: a.name,
+  href: `/service-areas/${a.slug}`,
+}));
 
 export function MobileMenuButton() {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
@@ -57,10 +71,16 @@ export function MobileMenuButton() {
     return () => document.removeEventListener("keydown", handleKey);
   }, [open]);
 
-  // Return focus to hamburger on close
+  // Return focus to hamburger on close + reset accordion state
   useEffect(() => {
-    if (!open) hamburgerRef.current?.focus();
+    if (!open) {
+      hamburgerRef.current?.focus();
+      setServicesOpen(false);
+      setAreasOpen(false);
+    }
   }, [open]);
+
+  const closeAll = () => setOpen(false);
 
   return (
     <>
@@ -83,13 +103,11 @@ export function MobileMenuButton() {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="fixed inset-0 z-[100] flex flex-col bg-primary-900"
+          className="fixed inset-0 z-[100] flex flex-col bg-primary-900 overflow-y-auto"
           style={{ height: "100dvh" }}
-          onClick={() => setOpen(false)}
         >
-          {/* Backdrop tap closes — root onClick handles empty-space taps.
-              Interactive children each call setOpen(false) so bubbling is a no-op. */}
-          <div className="flex items-center justify-between px-4 h-16">
+          {/* Header row */}
+          <div className="flex items-center justify-between px-4 h-16 shrink-0">
             <span className="inline-flex items-center justify-center rounded-md bg-background px-2 py-1">
               <Image
                 src="/images/raptor-roofing-logo.png"
@@ -101,7 +119,7 @@ export function MobileMenuButton() {
             </span>
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={closeAll}
               aria-label="Close navigation menu"
               className="flex h-12 w-12 items-center justify-center rounded-md text-white hover:bg-primary-700"
             >
@@ -109,39 +127,104 @@ export function MobileMenuButton() {
             </button>
           </div>
 
+          {/* Nav items */}
           <nav
             aria-label="Mobile primary"
-            className="flex flex-col gap-2 px-6 py-8"
+            className="flex flex-col px-6 py-6"
+            onClick={(e) => e.stopPropagation()}
           >
-            <Link
-              href="/#services"
-              onClick={() => setOpen(false)}
-              className="flex min-h-[48px] items-center font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
-            >
-              Services
-            </Link>
-            <Link
-              href="/about"
-              onClick={() => setOpen(false)}
-              className="flex min-h-[48px] items-center font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="flex min-h-[48px] items-center font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
-            >
-              Contact
-            </Link>
+            {/* Services accordion */}
+            <div className="border-b border-white/10">
+              <button
+                type="button"
+                onClick={() => setServicesOpen((v) => !v)}
+                aria-expanded={servicesOpen}
+                className="flex w-full min-h-[56px] items-center justify-between font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 rounded"
+              >
+                Services
+                <ChevronDown
+                  className={`h-5 w-5 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {servicesOpen && (
+                <ul className="flex flex-col pb-3 pl-4 gap-1">
+                  {serviceLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        onClick={closeAll}
+                        className="flex min-h-[48px] items-center font-display text-lg font-medium uppercase tracking-wide text-white/80 hover:text-accent-400 transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            {/* Service Areas accordion */}
+            <div className="border-b border-white/10">
+              <button
+                type="button"
+                onClick={() => setAreasOpen((v) => !v)}
+                aria-expanded={areasOpen}
+                className="flex w-full min-h-[56px] items-center justify-between font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 rounded"
+              >
+                Service Areas
+                <ChevronDown
+                  className={`h-5 w-5 transition-transform duration-200 ${areasOpen ? "rotate-180" : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {areasOpen && (
+                <ul className="flex flex-col pb-3 pl-4 gap-1">
+                  {areaLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        onClick={closeAll}
+                        className="flex min-h-[48px] items-center font-display text-lg font-medium uppercase tracking-wide text-white/80 hover:text-accent-400 transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            {/* About */}
+            <div className="border-b border-white/10">
+              <Link
+                href="/about"
+                onClick={closeAll}
+                className="flex min-h-[56px] items-center font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400 transition-colors"
+              >
+                About
+              </Link>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <Link
+                href="/contact"
+                onClick={closeAll}
+                className="flex min-h-[56px] items-center font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400 transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
           </nav>
 
-          <div className="mt-auto px-6 pb-10 pt-6">
+          {/* CTA */}
+          <div className="mt-auto px-6 pb-10 pt-6 shrink-0">
             <a
               href={siteConfig.phone.href}
               className="flex items-center justify-center gap-3 rounded-md bg-accent-600 px-6 py-4 font-display text-lg font-bold uppercase tracking-wide text-white shadow-[var(--shadow-cta)]"
               aria-label={`Call ${siteConfig.name} at ${siteConfig.phone.display}`}
-              onClick={() => setOpen(false)}
+              onClick={closeAll}
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               Call Now · {siteConfig.phone.display}

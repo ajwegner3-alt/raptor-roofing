@@ -1,8 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone } from "lucide-react";
+import { Phone, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/content/site";
+import { services } from "@/content/services";
+import { serviceAreas } from "@/content/service-areas";
 import { MobileMenuButton } from "./MobileMenuButton";
+
+const serviceLinks = services.map((s) => ({
+  label: s.shortTitle,
+  href: `/services/${s.slug}`,
+}));
+
+const areaLinks = serviceAreas.map((a) => ({
+  label: a.name,
+  href: `/service-areas/${a.slug}`,
+}));
 
 export function Header() {
   return (
@@ -33,14 +45,71 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-8">
           <nav aria-label="Primary">
             <ul className="flex items-center gap-6 font-display text-sm font-medium uppercase tracking-wider text-white">
-              <li>
-                <Link
-                  href="/#services"
-                  className="flex min-h-[48px] items-center px-2 hover:text-accent-400 transition-colors"
+
+              {/* Services dropdown */}
+              <li className="group/services relative">
+                <button
+                  type="button"
+                  className="flex min-h-[48px] items-center gap-1 px-2 hover:text-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 rounded"
+                  aria-haspopup="true"
                 >
                   Services
-                </Link>
+                  <ChevronDown
+                    className="h-4 w-4 transition-transform duration-200 group-hover/services:rotate-180"
+                    aria-hidden="true"
+                  />
+                </button>
+                {/* Dropdown panel — visible on hover or focus-within */}
+                <ul
+                  className="absolute left-0 top-full z-10 hidden min-w-[180px] flex-col rounded-b-md bg-primary-800 py-1 shadow-lg group-hover/services:flex group-focus-within/services:flex"
+                  role="menu"
+                >
+                  {serviceLinks.map((link) => (
+                    <li key={link.href} role="none">
+                      <Link
+                        href={link.href}
+                        role="menuitem"
+                        className="flex min-h-[48px] items-center px-4 py-2 text-sm text-white hover:bg-primary-700 hover:text-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent-500"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </li>
+
+              {/* Service Areas dropdown */}
+              <li className="group/areas relative">
+                <button
+                  type="button"
+                  className="flex min-h-[48px] items-center gap-1 px-2 hover:text-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 rounded"
+                  aria-haspopup="true"
+                >
+                  Service Areas
+                  <ChevronDown
+                    className="h-4 w-4 transition-transform duration-200 group-hover/areas:rotate-180"
+                    aria-hidden="true"
+                  />
+                </button>
+                {/* Dropdown panel */}
+                <ul
+                  className="absolute left-0 top-full z-10 hidden min-w-[180px] flex-col rounded-b-md bg-primary-800 py-1 shadow-lg group-hover/areas:flex group-focus-within/areas:flex"
+                  role="menu"
+                >
+                  {areaLinks.map((link) => (
+                    <li key={link.href} role="none">
+                      <Link
+                        href={link.href}
+                        role="menuitem"
+                        className="flex min-h-[48px] items-center px-4 py-2 text-sm text-white hover:bg-primary-700 hover:text-accent-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent-500"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
               <li>
                 <Link
                   href="/about"
