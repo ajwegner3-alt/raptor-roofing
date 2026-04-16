@@ -5,6 +5,7 @@
 import type { Metadata } from 'next';
 import { Phone, MapPin, Clock } from 'lucide-react';
 import { ContactForm } from '@/components/sections/ContactForm';
+import { MapFacade } from '@/components/sections/MapFacade';
 import { siteConfig } from '@/content/site';
 import { serviceAreas } from '@/content/service-areas';
 import { buildMetadata } from '@/lib/metadata';
@@ -180,23 +181,19 @@ export default function ContactPage() {
       </section>
 
       {/* ------------------------------------------------------------------ */}
-      {/* Map section — static Google Maps iframe, no API key                 */}
-      {/* Degrades to Omaha, NE 68102 when street is placeholder             */}
+      {/* Map section — facade pattern: static placeholder until user clicks  */}
+      {/* Google Maps iframe loads on demand (eliminates ~300 kB Maps API JS  */}
+      {/* from initial page load — required for Lighthouse Performance ≥ 90)  */}
       {/* ------------------------------------------------------------------ */}
       <section aria-labelledby="map-heading" className="bg-white">
         <h2 id="map-heading" className="sr-only">
           Raptor Roofing Location Map
         </h2>
-        <iframe
-          src={buildMapEmbedUrl(siteConfig.address)}
-          title="Raptor Roofing location map"
-          loading="lazy"
-          width="100%"
-          height="320"
-          style={{ border: 0 }}
-          allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-          className="block w-full"
+        <MapFacade
+          embedUrl={buildMapEmbedUrl(siteConfig.address)}
+          directionsUrl={directionsUrl}
+          locationLabel={`${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`}
+          height={320}
         />
       </section>
 
