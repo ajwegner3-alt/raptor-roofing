@@ -5,6 +5,7 @@ import type { Testimonial } from "@/content/testimonials";
 import { ServiceBreadcrumb } from "@/components/sections/ServiceBreadcrumb";
 import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ServiceCTABand } from "@/components/sections/ServiceCTABand";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 import { BeforeAfterGallery } from "@/components/sections/BeforeAfterGallery";
 import { RelatedServicesBlock } from "@/components/sections/RelatedServicesBlock";
 import { TrustStrip } from "@/components/layout/TrustStrip";
@@ -161,6 +162,13 @@ export function ServicePageTemplate({
       {/* Section 5: Mid-page CTA band */}
       <ServiceCTABand />
 
+      {/* Mid-page FinalCTA — appears after process steps to capture readers mid-scroll */}
+      <FinalCTA
+        heading="Like What You See?"
+        subheading={`Get a free estimate for your ${service.shortTitle.toLowerCase()} project. We'll have a crew member — not a call center — call you back within 2 hours.`}
+        variant="dark"
+      />
+
       {/* Section 6: TrustStrip */}
       <TrustStrip />
 
@@ -187,6 +195,13 @@ export function ServicePageTemplate({
           <LeadForm defaultService={service.slug} />
         </div>
       </section>
+
+      {/* Bottom FinalCTA — last touchpoint before the footer */}
+      <FinalCTA
+        heading="Talk to the Crew Behind the Name"
+        subheading="Call us today or request your free estimate online."
+        variant="accent"
+      />
     </>
   );
 }
