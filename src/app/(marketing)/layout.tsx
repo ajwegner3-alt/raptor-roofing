@@ -7,7 +7,7 @@ export default function MarketingLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />
-      <main id="main-content" className="pb-[var(--sticky-cta-height)] md:pb-0">
+      <main id="main" tabIndex={-1} className="pb-[var(--sticky-cta-height)] md:pb-0">
         {children}
       </main>
       <Footer />

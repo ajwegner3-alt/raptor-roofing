@@ -83,7 +83,7 @@ export default function RootLayout({
       className={`${displayFont.variable} ${bodyFont.variable}`}
     >
       <body>
-        <a href="#main-content" className="skip-to-main">
+        <a href="#main" className="skip-to-main">
           Skip to main content
         </a>
         {children}
