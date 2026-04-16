@@ -255,29 +255,29 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | CNT-06 | Phase 5: About + Contact | Complete |
 | CNT-07 | Phase 5: About + Contact | Complete |
 | CNT-08 | Phase 5: About + Contact | Complete |
-| SEO-01 | Phase 6: SEO + Performance + Accessibility | Pending |
-| SEO-02 | Phase 6: SEO + Performance + Accessibility | Pending |
-| SEO-03 | Phase 6: SEO + Performance + Accessibility | Pending |
-| SEO-04 | Phase 6: SEO + Performance + Accessibility | Pending |
-| SEO-05 | Phase 6: SEO + Performance + Accessibility | Pending |
-| SEO-06 | Phase 6: SEO + Performance + Accessibility | Pending |
-| SEO-07 | Phase 6: SEO + Performance + Accessibility | Pending |
-| SEO-08 | Phase 6: SEO + Performance + Accessibility | Pending |
-| SEO-09 | Phase 6: SEO + Performance + Accessibility | Pending |
-| A11Y-01 | Phase 6: SEO + Performance + Accessibility | Pending |
-| A11Y-02 | Phase 6: SEO + Performance + Accessibility | Pending |
-| A11Y-03 | Phase 6: SEO + Performance + Accessibility | Pending |
-| A11Y-04 | Phase 6: SEO + Performance + Accessibility | Pending |
-| A11Y-05 | Phase 6: SEO + Performance + Accessibility | Pending |
-| A11Y-06 | Phase 6: SEO + Performance + Accessibility | Pending |
-| PRF-01 | Phase 6: SEO + Performance + Accessibility | Pending |
-| PRF-02 | Phase 6: SEO + Performance + Accessibility | Pending |
-| PRF-03 | Phase 6: SEO + Performance + Accessibility | Pending |
-| PRF-04 | Phase 6: SEO + Performance + Accessibility | Pending |
-| PRF-05 | Phase 6: SEO + Performance + Accessibility | Pending |
-| PRF-06 | Phase 6: SEO + Performance + Accessibility | Pending |
-| PRF-07 | Phase 6: SEO + Performance + Accessibility | Pending |
-| PRF-08 | Phase 6: SEO + Performance + Accessibility | Pending |
+| SEO-01 | Phase 6: SEO + Performance + Accessibility | Complete |
+| SEO-02 | Phase 6: SEO + Performance + Accessibility | Complete |
+| SEO-03 | Phase 6: SEO + Performance + Accessibility | Complete |
+| SEO-04 | Phase 6: SEO + Performance + Accessibility | Complete |
+| SEO-05 | Phase 6: SEO + Performance + Accessibility | Complete |
+| SEO-06 | Phase 6: SEO + Performance + Accessibility | Complete |
+| SEO-07 | Phase 6: SEO + Performance + Accessibility | Complete |
+| SEO-08 | Phase 6: SEO + Performance + Accessibility | Complete |
+| SEO-09 | Phase 6: SEO + Performance + Accessibility | Complete |
+| A11Y-01 | Phase 6: SEO + Performance + Accessibility | Complete |
+| A11Y-02 | Phase 6: SEO + Performance + Accessibility | Complete |
+| A11Y-03 | Phase 6: SEO + Performance + Accessibility | Complete |
+| A11Y-04 | Phase 6: SEO + Performance + Accessibility | Complete |
+| A11Y-05 | Phase 6: SEO + Performance + Accessibility | Complete |
+| A11Y-06 | Phase 6: SEO + Performance + Accessibility | Complete |
+| PRF-01 | Phase 6: SEO + Performance + Accessibility | Complete |
+| PRF-02 | Phase 6: SEO + Performance + Accessibility | Complete |
+| PRF-03 | Phase 6: SEO + Performance + Accessibility | Complete |
+| PRF-04 | Phase 6: SEO + Performance + Accessibility | Complete |
+| PRF-05 | Phase 6: SEO + Performance + Accessibility | Complete |
+| PRF-06 | Phase 6: SEO + Performance + Accessibility | Complete |
+| PRF-07 | Phase 6: SEO + Performance + Accessibility | Complete |
+| PRF-08 | Phase 6: SEO + Performance + Accessibility | Complete |
 | DPL-01 | Phase 7: Deploy | Pending |
 | DPL-02 | Phase 7: Deploy | Pending |
 | DPL-03 | Phase 7: Deploy | Pending |

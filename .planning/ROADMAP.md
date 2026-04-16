@@ -15,7 +15,7 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 - [x] **Phase 3: Homepage** ✓ — Full homepage compose with all sections and schema (completed 2026-04-14)
 - [x] **Phase 4: Service Pages** ✓ — Four dedicated service pages from shared template (completed 2026-04-14)
 - [x] **Phase 5: About + Contact** ✓ — About narrative, contact form, API handler, end-to-end test (completed 2026-04-15)
-- [ ] **Phase 6: SEO + Performance + Accessibility** — Sitewide audit, sitemap/robots, schema validation, a11y pass
+- [x] **Phase 6: SEO + Performance + Accessibility** ✓ — Sitewide audit, sitemap/robots, schema validation, a11y pass, service area pages, header nav, CTAs, urgency bar (completed 2026-04-15)
 - [ ] **Phase 7: Deploy** — GitHub repo, Vercel link, env vars, preview URL verification
 - [ ] **Phase 8: Manual QA + Handoff** — Live device testing, Lighthouse audit, signoff, handoff docs
 
@@ -135,7 +135,7 @@ Plans:
 - [ ] 06-02-PLAN.md — Add Review/AggregateRating regression guard script; verify schema.tsx has no fake-rating emission
 - [ ] 06-03-PLAN.md — Source + commit 6 WebP hero photos + og/default.jpg + SOURCES.md; update Hero.tsx and services.ts paths
 - [ ] 06-04-PLAN.md — Accessibility pass: fix skip-to-main target, focus-visible rings, 48×48 tap targets (dot buttons, footer, nav, forms), neutral-500 contrast audit
-- [ ] 06-05-PLAN.md — Bundle-size script + Lighthouse mobile sweep on all 7 routes, hard gate 90+ on 28 scores, fix any sub-90 inline
+- [x] 06-05-PLAN.md ✓ — Bundle-size script + Lighthouse mobile sweep on all 7 routes, hard gate 90+ on 28 scores, fix any sub-90 inline
 
 ---
 
@@ -187,6 +187,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | 3. Homepage | 4/4 | ✓ Complete | 2026-04-14 |
 | 4. Service Pages | 3/3 | ✓ Complete | 2026-04-14 |
 | 5. About + Contact | 3/3 | ✓ Complete | 2026-04-15 |
-| 6. SEO + Performance + Accessibility | 0/5 | Not started | - |
+| 6. SEO + Performance + Accessibility | 5/5 | ✓ Complete | 2026-04-15 |
 | 7. Deploy | 0/2 | Not started | - |
 | 8. Manual QA + Handoff | 0/2 | Not started | - |
