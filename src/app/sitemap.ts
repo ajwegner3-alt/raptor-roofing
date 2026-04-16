@@ -5,14 +5,8 @@
 // so Phase 7 deployment cannot silently produce a sitemap with relative URLs.
 import type { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
-if (!BASE_URL) {
-  throw new Error(
-    "[raptor-roofing] NEXT_PUBLIC_SITE_URL is not set — sitemap.ts cannot build absolute URLs. " +
-      "Set it in .env.local (development) or Vercel Project Settings > Environment Variables (deploy). " +
-      "See .env.local.example."
-  );
-}
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://raptor-roofing.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
