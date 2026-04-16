@@ -82,7 +82,7 @@ export function TestimonialCarousel({ testimonials: propTestimonials }: Testimon
           </button>
 
           {/* Dot indicators */}
-          <div className="flex items-center gap-2" role="tablist" aria-label="Select testimonial">
+          <div className="flex items-center gap-0" role="tablist" aria-label="Select testimonial">
             {testimonials.map((_, i) => (
               <button
                 key={i}
@@ -91,12 +91,17 @@ export function TestimonialCarousel({ testimonials: propTestimonials }: Testimon
                 onClick={() => setActive(i)}
                 aria-label={`Go to testimonial ${i + 1} of ${total}`}
                 aria-selected={i === active}
-                className={`h-3 w-3 rounded-full transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500 ${
-                  i === active
-                    ? "bg-accent-600"
-                    : "bg-neutral-300 hover:bg-neutral-400"
-                }`}
-              />
+                className="flex h-12 w-12 items-center justify-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500"
+              >
+                <span
+                  className={`h-3 w-3 rounded-full transition-colors ${
+                    i === active
+                      ? "bg-accent-600"
+                      : "bg-neutral-300 hover:bg-neutral-400"
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
             ))}
           </div>
 

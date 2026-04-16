@@ -47,7 +47,7 @@ export function ServiceGrid() {
                 </p>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="mt-6 inline-flex items-center gap-1 font-display text-sm font-semibold uppercase tracking-wider text-accent-600 hover:text-accent-700"
+                  className="mt-4 inline-flex min-h-[48px] items-center gap-1 font-display text-sm font-semibold uppercase tracking-wider text-accent-600 hover:text-accent-700"
                 >
                   Learn more
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />

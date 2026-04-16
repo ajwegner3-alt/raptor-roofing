@@ -25,7 +25,7 @@ export function FaqAccordion({ faqs }: FaqAccordionProps) {
               key={faq.id}
               className="group rounded-lg border border-neutral-200 bg-surface p-6 shadow-[var(--shadow-card)] open:border-primary-300"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-semibold text-primary-900">
+              <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-semibold text-primary-900">
                 <span>{faq.question}</span>
                 <ChevronDown
                   className="h-5 w-5 flex-shrink-0 text-primary-600 transition-transform group-open:rotate-180"

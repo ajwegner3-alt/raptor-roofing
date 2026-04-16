@@ -52,7 +52,7 @@ export function Footer() {
                 <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="hover:text-accent-400"
+                  className="inline-flex min-h-[48px] items-center hover:text-accent-400 transition-colors"
                 >
                   {siteConfig.email}
                 </a>
@@ -82,12 +82,12 @@ export function Footer() {
             <h2 className="font-display text-lg font-bold uppercase tracking-wide text-white">
               Services
             </h2>
-            <ul className="mt-4 space-y-2 font-body text-sm">
+            <ul className="mt-4 font-body text-sm">
               {services.map((s) => (
                 <li key={s.slug}>
                   <Link
                     href={`/services/${s.slug}`}
-                    className="text-white/80 hover:text-accent-400"
+                    className="flex min-h-[48px] items-center py-1 text-white/80 transition-colors hover:text-accent-400"
                   >
                     {s.shortTitle}
                   </Link>
@@ -101,12 +101,12 @@ export function Footer() {
             <h2 className="font-display text-lg font-bold uppercase tracking-wide text-white">
               Service Areas
             </h2>
-            <ul className="mt-4 space-y-2 font-body text-sm">
+            <ul className="mt-4 font-body text-sm">
               {areas.map((a) => (
                 <li key={a.slug}>
                   <Link
                     href={`/service-areas/${a.slug}`}
-                    className="text-white/80 hover:text-accent-400"
+                    className="flex min-h-[48px] items-center py-1 text-white/80 transition-colors hover:text-accent-400"
                   >
                     {a.name}
                   </Link>
@@ -120,12 +120,12 @@ export function Footer() {
             <h2 className="font-display text-lg font-bold uppercase tracking-wide text-white">
               Trust &amp; Legal
             </h2>
-            <ul className="mt-4 space-y-2 font-body text-sm text-white/80">
-              <li>NE License #{siteConfig.license.number}</li>
-              <li>Bonded &amp; Insured</li>
-              <li>BBB Accredited</li>
+            <ul className="mt-4 font-body text-sm text-white/80">
+              <li className="flex min-h-[48px] items-center py-1">NE License #{siteConfig.license.number}</li>
+              <li className="flex min-h-[48px] items-center py-1">Bonded &amp; Insured</li>
+              <li className="flex min-h-[48px] items-center py-1">BBB Accredited</li>
               <li>
-                <Link href="/privacy" className="hover:text-accent-400">
+                <Link href="/privacy" className="flex min-h-[48px] items-center py-1 hover:text-accent-400 transition-colors">
                   Privacy Policy
                 </Link>
               </li>

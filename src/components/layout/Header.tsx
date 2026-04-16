@@ -36,7 +36,7 @@ export function Header() {
               <li>
                 <Link
                   href="/#services"
-                  className="hover:text-accent-400 transition-colors"
+                  className="flex min-h-[48px] items-center px-2 hover:text-accent-400 transition-colors"
                 >
                   Services
                 </Link>
@@ -44,7 +44,7 @@ export function Header() {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-accent-400 transition-colors"
+                  className="flex min-h-[48px] items-center px-2 hover:text-accent-400 transition-colors"
                 >
                   About
                 </Link>
@@ -52,7 +52,7 @@ export function Header() {
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-accent-400 transition-colors"
+                  className="flex min-h-[48px] items-center px-2 hover:text-accent-400 transition-colors"
                 >
                   Contact
                 </Link>

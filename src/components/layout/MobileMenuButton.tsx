@@ -116,21 +116,21 @@ export function MobileMenuButton() {
             <Link
               href="/#services"
               onClick={() => setOpen(false)}
-              className="font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
+              className="flex min-h-[48px] items-center font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
             >
               Services
             </Link>
             <Link
               href="/about"
               onClick={() => setOpen(false)}
-              className="font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
+              className="flex min-h-[48px] items-center font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
             >
               About
             </Link>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
+              className="flex min-h-[48px] items-center font-display text-2xl font-semibold uppercase tracking-wide text-white hover:text-accent-400"
             >
               Contact
             </Link>
