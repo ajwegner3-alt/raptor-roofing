@@ -128,12 +128,14 @@ Plans:
   3. Tabbing through any page reaches every interactive element with a visible focus ring — skip-to-main link fires correctly
   4. Lighthouse mobile report on homepage shows Performance, Accessibility, Best Practices, and SEO all at 90 or above (run locally before deploy)
   5. Total JS bundle per route is under 200KB gzipped; hero image has `priority` set; no `"use client"` on section wrapper components
-**Plans**: 3 plans
+**Plans**: 5 plans
 
 Plans:
-- [ ] 06-01: Generate `app/sitemap.ts` and `app/robots.ts`; audit every page for unique title/description/H1/canonical; add `BreadcrumbList` to all inner pages; confirm `robots: { index: true, follow: true }` in root layout
-- [ ] 06-02: Accessibility pass — verify 4.5:1 contrast on all text, add skip-to-main link, audit form labels, verify focus-visible states, check tap targets, confirm hero overlay contrast
-- [ ] 06-03: Performance pass — verify `priority` on hero images, lazy loading on below-fold images, `next/font/google` usage, client component scope, bundle size check; run Lighthouse mobile and hit 90+ targets
+- [ ] 06-01-PLAN.md — Create `app/sitemap.ts` + `app/robots.ts` with build-time env guard; verify existing canonical + robots metadata
+- [ ] 06-02-PLAN.md — Add Review/AggregateRating regression guard script; verify schema.tsx has no fake-rating emission
+- [ ] 06-03-PLAN.md — Source + commit 6 WebP hero photos + og/default.jpg + SOURCES.md; update Hero.tsx and services.ts paths
+- [ ] 06-04-PLAN.md — Accessibility pass: fix skip-to-main target, focus-visible rings, 48×48 tap targets (dot buttons, footer, nav, forms), neutral-500 contrast audit
+- [ ] 06-05-PLAN.md — Bundle-size script + Lighthouse mobile sweep on all 7 routes, hard gate 90+ on 28 scores, fix any sub-90 inline
 
 ---
 
@@ -185,6 +187,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | 3. Homepage | 4/4 | ✓ Complete | 2026-04-14 |
 | 4. Service Pages | 3/3 | ✓ Complete | 2026-04-14 |
 | 5. About + Contact | 3/3 | ✓ Complete | 2026-04-15 |
-| 6. SEO + Performance + Accessibility | 0/3 | Not started | - |
+| 6. SEO + Performance + Accessibility | 0/5 | Not started | - |
 | 7. Deploy | 0/2 | Not started | - |
 | 8. Manual QA + Handoff | 0/2 | Not started | - |
