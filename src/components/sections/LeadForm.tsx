@@ -138,7 +138,7 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
                   }
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="mt-2 block w-full rounded-md border border-neutral-300 bg-surface px-4 py-3 font-body text-base text-neutral-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="mt-2 block min-h-[48px] w-full rounded-md border border-neutral-300 bg-surface px-4 py-3 font-body text-base text-neutral-900 focus:outline-none focus-visible:border-accent-500 focus-visible:ring-2 focus-visible:ring-accent-500"
                 />
                 {errors.name && (
                   <p
@@ -173,7 +173,7 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="(402) 555-1234"
-                  className="mt-2 block w-full rounded-md border border-neutral-300 bg-surface px-4 py-3 font-body text-base text-neutral-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="mt-2 block min-h-[48px] w-full rounded-md border border-neutral-300 bg-surface px-4 py-3 font-body text-base text-neutral-900 focus:outline-none focus-visible:border-accent-500 focus-visible:ring-2 focus-visible:ring-accent-500"
                 />
                 {errors.phone && (
                   <p
@@ -205,7 +205,7 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
                   }
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  className="mt-2 block w-full rounded-md border border-neutral-300 bg-surface px-4 py-3 font-body text-base text-neutral-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="mt-2 block min-h-[48px] w-full rounded-md border border-neutral-300 bg-surface px-4 py-3 font-body text-base text-neutral-900 focus:outline-none focus-visible:border-accent-500 focus-visible:ring-2 focus-visible:ring-accent-500"
                 >
                   <option value="">Choose a service...</option>
                   {services.map((s) => (
@@ -249,7 +249,7 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
                   value={zip}
                   onChange={(e) => setZip(e.target.value)}
                   placeholder="68102"
-                  className="mt-2 block w-full rounded-md border border-neutral-300 bg-surface px-4 py-3 font-body text-base text-neutral-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="mt-2 block min-h-[48px] w-full rounded-md border border-neutral-300 bg-surface px-4 py-3 font-body text-base text-neutral-900 focus:outline-none focus-visible:border-accent-500 focus-visible:ring-2 focus-visible:ring-accent-500"
                 />
                 {errors.zip && (
                   <p

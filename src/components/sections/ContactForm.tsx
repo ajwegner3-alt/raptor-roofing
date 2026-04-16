@@ -173,7 +173,7 @@ function ContactFormInner() {
             aria-describedby={errors.name ? 'contact-name-error' : undefined}
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className={`mt-2 block w-full rounded-md border px-4 py-3 font-body text-base text-neutral-900 bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 ${errors.name ? 'border-accent-600 focus:border-accent-600' : 'border-neutral-300 focus:border-primary-500'}`}
+            className={`mt-2 block min-h-[48px] w-full rounded-md border px-4 py-3 font-body text-base text-neutral-900 bg-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 ${errors.name ? 'border-accent-600 focus-visible:border-accent-600' : 'border-neutral-300 focus-visible:border-accent-500'}`}
           />
           {errors.name && (
             <p id="contact-name-error" role="alert" className="mt-1 font-body text-sm text-accent-700">
@@ -203,7 +203,7 @@ function ContactFormInner() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="(402) 555-1234"
-            className={`mt-2 block w-full rounded-md border px-4 py-3 font-body text-base text-neutral-900 bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 ${errors.phone ? 'border-accent-600 focus:border-accent-600' : 'border-neutral-300 focus:border-primary-500'}`}
+            className={`mt-2 block min-h-[48px] w-full rounded-md border px-4 py-3 font-body text-base text-neutral-900 bg-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 ${errors.phone ? 'border-accent-600 focus-visible:border-accent-600' : 'border-neutral-300 focus-visible:border-accent-500'}`}
           />
           {errors.phone && (
             <p id="contact-phone-error" role="alert" className="mt-1 font-body text-sm text-accent-700">
@@ -229,7 +229,7 @@ function ContactFormInner() {
             aria-describedby={errors.service ? 'contact-service-error' : undefined}
             value={service}
             onChange={(e) => setService(e.target.value)}
-            className={`mt-2 block w-full rounded-md border px-4 py-3 font-body text-base text-neutral-900 bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 ${errors.service ? 'border-accent-600 focus:border-accent-600' : 'border-neutral-300 focus:border-primary-500'}`}
+            className={`mt-2 block min-h-[48px] w-full rounded-md border px-4 py-3 font-body text-base text-neutral-900 bg-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 ${errors.service ? 'border-accent-600 focus-visible:border-accent-600' : 'border-neutral-300 focus-visible:border-accent-500'}`}
           >
             {SERVICE_OPTIONS.map((opt) => (
               <option key={opt.value} value={opt.value}>
@@ -266,7 +266,7 @@ function ContactFormInner() {
             value={zip}
             onChange={(e) => setZip(e.target.value)}
             placeholder="68102"
-            className={`mt-2 block w-full rounded-md border px-4 py-3 font-body text-base text-neutral-900 bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 ${errors.zip ? 'border-accent-600 focus:border-accent-600' : 'border-neutral-300 focus:border-primary-500'}`}
+            className={`mt-2 block min-h-[48px] w-full rounded-md border px-4 py-3 font-body text-base text-neutral-900 bg-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 ${errors.zip ? 'border-accent-600 focus-visible:border-accent-600' : 'border-neutral-300 focus-visible:border-accent-500'}`}
           />
           {errors.zip && (
             <p id="contact-zip-error" role="alert" className="mt-1 font-body text-sm text-accent-700">
