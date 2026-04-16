@@ -243,18 +243,18 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | SVC-08 | Phase 4: Service Pages | Complete |
 | SVC-09 | Phase 4: Service Pages | Complete |
 | SVC-10 | Phase 4: Service Pages | Complete |
-| ABT-01 | Phase 5: About + Contact | Pending |
-| ABT-02 | Phase 5: About + Contact | Pending |
-| ABT-03 | Phase 5: About + Contact | Pending |
-| ABT-04 | Phase 5: About + Contact | Pending |
-| CNT-01 | Phase 5: About + Contact | Pending |
-| CNT-02 | Phase 5: About + Contact | Pending |
-| CNT-03 | Phase 5: About + Contact | Pending |
-| CNT-04 | Phase 5: About + Contact | Pending |
-| CNT-05 | Phase 5: About + Contact | Pending |
-| CNT-06 | Phase 5: About + Contact | Pending |
-| CNT-07 | Phase 5: About + Contact | Pending |
-| CNT-08 | Phase 5: About + Contact | Pending |
+| ABT-01 | Phase 5: About + Contact | Complete |
+| ABT-02 | Phase 5: About + Contact | Complete |
+| ABT-03 | Phase 5: About + Contact | Complete |
+| ABT-04 | Phase 5: About + Contact | Complete |
+| CNT-01 | Phase 5: About + Contact | Complete |
+| CNT-02 | Phase 5: About + Contact | Complete |
+| CNT-03 | Phase 5: About + Contact | Complete |
+| CNT-04 | Phase 5: About + Contact | Complete |
+| CNT-05 | Phase 5: About + Contact | Complete |
+| CNT-06 | Phase 5: About + Contact | Complete |
+| CNT-07 | Phase 5: About + Contact | Complete |
+| CNT-08 | Phase 5: About + Contact | Complete |
 | SEO-01 | Phase 6: SEO + Performance + Accessibility | Pending |
 | SEO-02 | Phase 6: SEO + Performance + Accessibility | Pending |
 | SEO-03 | Phase 6: SEO + Performance + Accessibility | Pending |
