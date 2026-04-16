@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 ## Current Position
 
 Phase: 6 of 8 (SEO + Performance + Accessibility) — In progress
-Plan: 2 of N in Phase 6 — 06-01 ✓, 06-02 ✓
-Status: In progress — 06-02 complete (schema regression guard: scripts/check-no-review-schema.mjs + npm run check:schema)
-Last activity: 2026-04-15 — Completed 06-02-PLAN.md (Node ESM guard catches Review/AggregateRating JSON-LD emission; exits 1 on regression)
+Plan: 4 of N in Phase 6 — 06-01 ✓, 06-02 ✓, 06-04 ✓
+Status: In progress — 06-04 complete (full a11y sweep: skip-to-main fired, focus-visible rings, 48×48 tap targets sitewide, A11Y-01..06 closed)
+Last activity: 2026-04-15 — Completed 06-04-PLAN.md (10 files modified, 3 atomic commits, zero min-h-[44px], TestimonialCarousel dots 48×48)
 
 Progress: [██████░░░░] 54% (13/24 plans complete)
 
@@ -46,6 +46,11 @@ Progress: [██████░░░░] 54% (13/24 plans complete)
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
+- Phase 6 (06-04): Skip link target id changed to "main" (not "main-content") + tabIndex={-1} on <main> — programmatically focusable without adding tab stop
+- Phase 6 (06-04): form fields use focus-visible: (not focus:) — focus:outline-none preserved alongside focus-visible:ring to suppress browser default while adding brand crimson ring on keyboard only
+- Phase 6 (06-04): TestimonialCarousel dot pattern = h-12 w-12 wrapper button + inner h-3 w-3 span (Pattern A). 48x48 hit area, 12px visual dot. gap-0 on container keeps visual spacing unchanged.
+- Phase 6 (06-04): neutral-500 contrast = 6.55:1 on background #faf7f2 (PASS — no upgrade to neutral-600)
+- Phase 6 (06-04): min-h-[48px] is the ONLY allowed tap floor — CONTEXT.md lock, 44px never used anywhere
 - Phase 6: scripts/check-no-review-schema.mjs uses Node fs/path builtins (NOT execSync+grep) — shell-quoting of double-quoted patterns breaks grep; Node regex avoids the issue entirely
 - Phase 6: npm run check:schema NOT chained into build/lint — runs as explicit manual check; no husky hooks (YAGNI)
 - Phase 2: next/link Link required for all internal page navigation — raw `<a>` on page routes triggers @next/next/no-html-link-for-pages lint error
@@ -86,8 +91,8 @@ Recent decisions affecting current work:
 - Phase 3 COMPLETE — Homepage live with all sections, pushed to GitHub for Vercel deployment
 - Phase 4 COMPLETE — all 4 service pages built: /services/roofing, /services/siding, /services/gutters, /services/emergency-tarping
 - Phase 5 COMPLETE — /about + /contact live, email pipeline verified end-to-end to Gmail Primary (approved 2026-04-15). 05-01 ✓, 05-02 ✓, 05-03 ✓
-- Phase 6 IN PROGRESS — 06-01 ✓: app/sitemap.ts + app/robots.ts added. /sitemap.xml (7 routes) + /robots.txt (Allow: /) both live. All SEO metadata (canonical, robots, noindex audit) verified clean.
-- Phase 6 NEXT — (06-02+): Remaining SEO/performance/accessibility plans
+- Phase 6 IN PROGRESS — 06-01 ✓: app/sitemap.ts + app/robots.ts added. 06-02 ✓: schema regression guard. 06-04 ✓: A11Y-01..06 closed (skip-to-main, focus-visible, 48x48 tap targets sitewide).
+- Phase 6 NEXT — remaining plans (performance, image optimization, or Phase 7 deploy)
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
 ### Post-Phase-2 layout-chrome SEO + Conversion audit (2026-04-14)
