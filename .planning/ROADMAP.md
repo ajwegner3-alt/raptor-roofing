@@ -152,8 +152,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 07-01: Create dedicated GitHub repo, push `main` branch; link Vercel project with automatic deploy; scope all env vars to Preview + Production
-- [ ] 07-02: Enable Vercel Analytics; verify preview URL is accessible without auth; run Google Rich Results Test against live URL; confirm URL is NOT submitted to Google Search Console
+- [ ] 07-01-PLAN.md — Apply demo-mode form stubs (ContactForm + LeadForm), verify deploy infrastructure (git remote, live URL, sitemap), local build, commit + push to trigger Vercel auto-deploy
+- [ ] 07-02-PLAN.md — Enable Vercel Web Analytics (manual dashboard toggle), run Google Rich Results Test against 3 live URLs, capture results in 07-RICH-RESULTS.md, confirm URL NOT submitted to Google Search Console
 
 ---
 
