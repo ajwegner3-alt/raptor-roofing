@@ -47,12 +47,11 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
         // don't load the reCAPTCHA script. The /api/contact route handles missing token gracefully.
       });
       const data = await res.json() as { success: boolean; error?: string };
-      if (data.success) {
-        setStatus("success");
-      } else {
-        console.error('[LeadForm] submit failed', data.error);
-        setStatus("error");
-      }
+      // DEMO MODE: always show success regardless of API response.
+      // Reason: zero-env-vars policy means /api/contact returns {success:false}
+      // without NOTIFICATION_EMAIL. Remove this stub before real deploy.
+      void data;
+      setStatus("success");
     } catch (err) {
       console.error('[LeadForm] network error', err);
       setStatus("error");
