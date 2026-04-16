@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Omaha homeowner trusts Raptor Roofing over every competitor within 10 seconds of landing
-**Current focus:** Phase 6 — Technical SEO (Phase 5 complete — /about + /contact live, email pipeline verified end-to-end to Gmail Primary)
+**Current focus:** Phase 6 — Technical SEO (06-01 ✓ sitemap.xml + robots.txt live)
 
 ## Current Position
 
-Phase: 5 of 8 (About + Contact) — COMPLETE
-Plan: 3 of 3 in Phase 5 — 05-01 ✓, 05-02 ✓, 05-03 ✓
-Status: Phase 5 COMPLETE — /about + /contact + email pipeline verified end-to-end to Gmail Primary (approved 2026-04-15)
-Last activity: 2026-04-15 — Completed 05-03-PLAN.md (/contact page + manual Gmail SMTP end-to-end test — email landed in Primary on first try)
+Phase: 6 of 8 (SEO + Performance + Accessibility) — In progress
+Plan: 1 of N in Phase 6 — 06-01 ✓
+Status: In progress — 06-01 complete (sitemap.xml + robots.txt + canonical + noindex audit)
+Last activity: 2026-04-16 — Completed 06-01-PLAN.md (sitemap.ts + robots.ts created, all SEO metadata verified)
 
-Progress: [█████░░░░░] 46% (11/24 plans complete)
+Progress: [█████░░░░░] 50% (12/24 plans complete)
 
 ## Performance Metrics
 
@@ -67,6 +67,8 @@ Recent decisions affecting current work:
 - Phase 5: ContactForm wraps itself in GoogleReCaptchaProvider — reCAPTCHA only loads on /contact, not sitewide
 - Phase 5: reCAPTCHA score threshold 0.3 (permissive) — minimizes false positives on roofing form submissions
 - Phase 5: .env.local.example force-committed (git add -f) because .gitignore has .env* glob
+- Phase 6 (06-01): sitemap.ts reads process.env.NEXT_PUBLIC_SITE_URL DIRECTLY with top-level throw — NOT siteConfig.url (silent fallback defeats the guard). Phase 7 domain flip = one env var change, zero code edits.
+- Phase 6 (06-01): robots.ts uses ?? fallback (not throw) — /robots.txt is low-stakes; sitemap.ts throw guard catches missing env first
 - Phase 7: Deploy target is Vercel preview URL only; do NOT submit to Google Search Console during pitch
 - Phase 4: Static route folders (services/roofing/page.tsx) not [slug] dynamic route — four known pages, no generateStaticParams needed
 - Phase 4: ServicePageTemplate faqs+testimonials passed from page file so JSON-LD schema factories receive same data as rendered component
@@ -82,7 +84,8 @@ Recent decisions affecting current work:
 - Phase 3 COMPLETE — Homepage live with all sections, pushed to GitHub for Vercel deployment
 - Phase 4 COMPLETE — all 4 service pages built: /services/roofing, /services/siding, /services/gutters, /services/emergency-tarping
 - Phase 5 COMPLETE — /about + /contact live, email pipeline verified end-to-end to Gmail Primary (approved 2026-04-15). 05-01 ✓, 05-02 ✓, 05-03 ✓
-- Phase 6 NEXT — (06-01): Add app/sitemap.ts + app/robots.ts — must include all routes: /, /about, /contact, all 4 service pages, all 8 service-area pages when created
+- Phase 6 IN PROGRESS — 06-01 ✓: app/sitemap.ts + app/robots.ts added. /sitemap.xml (7 routes) + /robots.txt (Allow: /) both live. All SEO metadata (canonical, robots, noindex audit) verified clean.
+- Phase 6 NEXT — (06-02+): Remaining SEO/performance/accessibility plans
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
 ### Post-Phase-2 layout-chrome SEO + Conversion audit (2026-04-14)
@@ -112,6 +115,6 @@ Conversion observations:
 
 ## Session Continuity
 
-Last session: 2026-04-15
-Stopped at: Phase 5 COMPLETE — /about + /contact + email pipeline verified. Email landed in Gmail Primary on first try (approved 2026-04-15). Ready for Phase 6 planning.
+Last session: 2026-04-16
+Stopped at: Completed 06-01-PLAN.md — sitemap.ts + robots.ts created and committed. All SEO metadata verified. Ready for 06-02+.
 Resume file: None
