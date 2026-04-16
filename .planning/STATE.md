@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** Omaha homeowner trusts Raptor Roofing over every competitor within 10 seconds of landing
-**Current focus:** Phase 6 — Technical SEO (06-01 ✓ sitemap.xml + robots.txt live)
+**Current focus:** Phase 6 — Technical SEO + Assets (06-01 ✓ 06-02 ✓ 06-03 ✓ 06-04 ✓)
 
 ## Current Position
 
 Phase: 6 of 8 (SEO + Performance + Accessibility) — In progress
-Plan: 4 of N in Phase 6 — 06-01 ✓, 06-02 ✓, 06-04 ✓
-Status: In progress — 06-04 complete (full a11y sweep: skip-to-main fired, focus-visible rings, 48×48 tap targets sitewide, A11Y-01..06 closed)
-Last activity: 2026-04-15 — Completed 06-04-PLAN.md (10 files modified, 3 atomic commits, zero min-h-[44px], TestimonialCarousel dots 48×48)
+Plan: 4 of N in Phase 6 — 06-01 ✓, 06-02 ✓, 06-03 ✓, 06-04 ✓
+Status: In progress — 06-03 complete (7 placeholder hero images + OG card sourced, Hero.tsx + services.ts paths updated, build green)
+Last activity: 2026-04-15 — Completed 06-03-PLAN.md (7 new image files, 2 deleted, 2 code files updated, 3 atomic commits, npm build clean)
 
-Progress: [██████░░░░] 54% (13/24 plans complete)
+Progress: [██████░░░░] 58% (14/24 plans complete)
 
 ## Performance Metrics
 
@@ -46,6 +46,9 @@ Progress: [██████░░░░] 54% (13/24 plans complete)
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
+- Phase 6 (06-03): All 6 WebP hero files = single Unsplash photo (photo-1604709177225-055f99402ea3) with Imgix crop params — training-data limitation prevents reliable slug prediction; Phase 8 handoff replaces all with real Raptor photos
+- Phase 6 (06-03): Final WebP params w=1280 q=50 (~70 KB/file) — high-texture roofing photo resisted budget at w=1920 q=75 (281 KB) and q=60 (192 KB); three retries required before hitting 100 KB target
+- Phase 6 (06-03): public/images/SOURCES.md created as canonical license doc + Phase 8 handoff checklist for all 7 image files
 - Phase 6 (06-04): Skip link target id changed to "main" (not "main-content") + tabIndex={-1} on <main> — programmatically focusable without adding tab stop
 - Phase 6 (06-04): form fields use focus-visible: (not focus:) — focus:outline-none preserved alongside focus-visible:ring to suppress browser default while adding brand crimson ring on keyboard only
 - Phase 6 (06-04): TestimonialCarousel dot pattern = h-12 w-12 wrapper button + inner h-3 w-3 span (Pattern A). 48x48 hit area, 12px visual dot. gap-0 on container keeps visual spacing unchanged.
@@ -91,7 +94,7 @@ Recent decisions affecting current work:
 - Phase 3 COMPLETE — Homepage live with all sections, pushed to GitHub for Vercel deployment
 - Phase 4 COMPLETE — all 4 service pages built: /services/roofing, /services/siding, /services/gutters, /services/emergency-tarping
 - Phase 5 COMPLETE — /about + /contact live, email pipeline verified end-to-end to Gmail Primary (approved 2026-04-15). 05-01 ✓, 05-02 ✓, 05-03 ✓
-- Phase 6 IN PROGRESS — 06-01 ✓: app/sitemap.ts + app/robots.ts added. 06-02 ✓: schema regression guard. 06-04 ✓: A11Y-01..06 closed (skip-to-main, focus-visible, 48x48 tap targets sitewide).
+- Phase 6 IN PROGRESS — 06-01 ✓: app/sitemap.ts + app/robots.ts added. 06-02 ✓: schema regression guard. 06-03 ✓: 7 placeholder hero images (6 WebP + OG card), Hero.tsx + services.ts paths updated, build clean. 06-04 ✓: A11Y-01..06 closed (skip-to-main, focus-visible, 48x48 tap targets sitewide).
 - Phase 6 NEXT — remaining plans (performance, image optimization, or Phase 7 deploy)
 - 22 PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8 handoff audit)
 
@@ -122,6 +125,6 @@ Conversion observations:
 
 ## Session Continuity
 
-Last session: 2026-04-16
-Stopped at: Completed 06-01-PLAN.md — sitemap.ts + robots.ts created and committed. All SEO metadata verified. Ready for 06-02+.
+Last session: 2026-04-15
+Stopped at: Completed 06-03-PLAN.md — 7 placeholder images downloaded and committed, code paths updated, npm build clean.
 Resume file: None
