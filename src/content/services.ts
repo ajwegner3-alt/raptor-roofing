@@ -204,7 +204,7 @@ export const services: Service[] = [
     title: "Emergency Tarping & Board-Up",
     shortTitle: "Emergency Tarping",
     headline: "24/7 Emergency Roof Tarping in Omaha",
-    subheadline: "Storm hit tonight? We respond immediately — day or night.",
+    subheadline: "Storm hit tonight? We dispatch a crew as fast as conditions allow — day or night.",
     description:
       "A damaged roof doesn't wait for business hours. Raptor Roofing provides 24/7 emergency tarping and board-up services throughout the Omaha metro. We secure your home against further water intrusion until a permanent repair can be scheduled.",
     problemCopy:
