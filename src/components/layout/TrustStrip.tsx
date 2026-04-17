@@ -12,7 +12,7 @@ export function TrustStrip() {
         <div className="flex items-center gap-2">
           <Star className="h-5 w-5 fill-accent-500 text-accent-500" aria-hidden="true" />
           <span className="font-display text-sm font-semibold uppercase tracking-wide text-primary-900">
-            {siteConfig.reviews.rating}&#x2605; &middot; {siteConfig.reviews.count} Google Reviews
+            {siteConfig.reviews.count} Google Reviews
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -38,9 +38,9 @@ export function TrustStrip() {
           <Image
             src="/images/bbb-accredited.png"
             alt="BBB Accredited Business"
-            width={100}
-            height={40}
-            className="h-10 w-auto object-contain"
+            width={160}
+            height={64}
+            className="h-14 w-auto object-contain"
           />
         </div>
       </div>

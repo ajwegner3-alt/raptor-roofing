@@ -125,8 +125,7 @@ export function Hero() {
                 ))}
               </span>
               <span className="font-display text-sm font-semibold text-white">
-                {siteConfig.reviews.rating} · {siteConfig.reviews.count} Google
-                Reviews
+                {siteConfig.reviews.count} Google Reviews
               </span>
             </li>
 
@@ -135,9 +134,9 @@ export function Hero() {
               <Image
                 src="/images/bbb-accredited.png"
                 alt="BBB Accredited Business"
-                width={120}
-                height={48}
-                className="h-12 w-auto object-contain"
+                width={180}
+                height={72}
+                className="h-16 w-auto object-contain"
               />
             </li>
 
