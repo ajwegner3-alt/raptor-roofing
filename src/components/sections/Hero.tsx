@@ -134,9 +134,9 @@ export function Hero() {
               <Image
                 src="/images/bbb-accredited.png"
                 alt="BBB Accredited Business"
-                width={180}
-                height={72}
-                className="h-16 w-auto object-contain"
+                width={240}
+                height={96}
+                className="h-20 w-auto object-contain"
               />
             </li>
 
