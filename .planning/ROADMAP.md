@@ -16,7 +16,7 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 - [x] **Phase 4: Service Pages** ✓ — Four dedicated service pages from shared template (completed 2026-04-14)
 - [x] **Phase 5: About + Contact** ✓ — About narrative, contact form, API handler, end-to-end test (completed 2026-04-15)
 - [x] **Phase 6: SEO + Performance + Accessibility** ✓ — Sitewide audit, sitemap/robots, schema validation, a11y pass, service area pages, header nav, CTAs, urgency bar (completed 2026-04-15)
-- [ ] **Phase 7: Deploy** — GitHub repo, Vercel link, env vars, preview URL verification
+- [x] **Phase 7: Deploy** ✓ — Demo-mode form stubs, Vercel Analytics enabled, Rich Results Test passed, preview URL live (completed 2026-04-16)
 - [ ] **Phase 8: Manual QA + Handoff** — Live device testing, Lighthouse audit, signoff, handoff docs
 
 ---
@@ -152,8 +152,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 07-01-PLAN.md — Apply demo-mode form stubs (ContactForm + LeadForm), verify deploy infrastructure (git remote, live URL, sitemap), local build, commit + push to trigger Vercel auto-deploy
-- [ ] 07-02-PLAN.md — Enable Vercel Web Analytics (manual dashboard toggle), run Google Rich Results Test against 3 live URLs, capture results in 07-RICH-RESULTS.md, confirm URL NOT submitted to Google Search Console
+- [x] 07-01-PLAN.md ✓ — Apply demo-mode form stubs (ContactForm + LeadForm), verify deploy infrastructure (git remote, live URL, sitemap), local build, commit + push to trigger Vercel auto-deploy
+- [x] 07-02-PLAN.md ✓ — Enable Vercel Web Analytics (manual dashboard toggle), run Google Rich Results Test against 3 live URLs, capture results in 07-RICH-RESULTS.md, confirm URL NOT submitted to Google Search Console
 
 ---
 
@@ -188,5 +188,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | 4. Service Pages | 3/3 | ✓ Complete | 2026-04-14 |
 | 5. About + Contact | 3/3 | ✓ Complete | 2026-04-15 |
 | 6. SEO + Performance + Accessibility | 5/5 | ✓ Complete | 2026-04-15 |
-| 7. Deploy | 0/2 | Not started | - |
+| 7. Deploy | 2/2 | ✓ Complete | 2026-04-16 |
 | 8. Manual QA + Handoff | 0/2 | Not started | - |

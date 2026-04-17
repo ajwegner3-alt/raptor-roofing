@@ -115,14 +115,14 @@
 
 ### Deploy (DPL)
 
-- [ ] **DPL-01**: Dedicated GitHub repo created for this project (not added to parent workspace repo)
-- [ ] **DPL-02**: Repo pushed to GitHub `main` branch with initial commit history
-- [ ] **DPL-03**: Vercel project linked to the GitHub repo with automatic deploys on push
-- [ ] **DPL-04**: Preview URL working, shareable, no authentication gate
-- [ ] **DPL-05**: All environment variables (form handler webhook/key, reCAPTCHA keys) scoped to Preview + Production
-- [ ] **DPL-06**: Vercel Analytics enabled for the deployment
-- [ ] **DPL-07**: Google Rich Results Test run against preview URL with zero errors
-- [ ] **DPL-08**: Preview URL NOT submitted to Google Search Console during pitch phase (avoids indexing placeholder content)
+- [x] **DPL-01**: Dedicated GitHub repo created for this project (not added to parent workspace repo)
+- [x] **DPL-02**: Repo pushed to GitHub `main` branch with initial commit history
+- [x] **DPL-03**: Vercel project linked to the GitHub repo with automatic deploys on push
+- [x] **DPL-04**: Preview URL working, shareable, no authentication gate
+- [x] **DPL-05**: All environment variables (form handler webhook/key, reCAPTCHA keys) scoped to Preview + Production
+- [x] **DPL-06**: Vercel Analytics enabled for the deployment
+- [x] **DPL-07**: Google Rich Results Test run against preview URL with zero errors
+- [x] **DPL-08**: Preview URL NOT submitted to Google Search Console during pitch phase (avoids indexing placeholder content)
 
 ### Manual QA (QA)
 
@@ -278,14 +278,14 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | PRF-06 | Phase 6: SEO + Performance + Accessibility | Complete |
 | PRF-07 | Phase 6: SEO + Performance + Accessibility | Complete |
 | PRF-08 | Phase 6: SEO + Performance + Accessibility | Complete |
-| DPL-01 | Phase 7: Deploy | Pending |
-| DPL-02 | Phase 7: Deploy | Pending |
-| DPL-03 | Phase 7: Deploy | Pending |
-| DPL-04 | Phase 7: Deploy | Pending |
-| DPL-05 | Phase 7: Deploy | Pending |
-| DPL-06 | Phase 7: Deploy | Pending |
-| DPL-07 | Phase 7: Deploy | Pending |
-| DPL-08 | Phase 7: Deploy | Pending |
+| DPL-01 | Phase 7: Deploy | Complete |
+| DPL-02 | Phase 7: Deploy | Complete |
+| DPL-03 | Phase 7: Deploy | Complete |
+| DPL-04 | Phase 7: Deploy | Complete |
+| DPL-05 | Phase 7: Deploy | Complete |
+| DPL-06 | Phase 7: Deploy | Complete |
+| DPL-07 | Phase 7: Deploy | Complete |
+| DPL-08 | Phase 7: Deploy | Complete |
 | QA-01 | Phase 8: Manual QA + Handoff | Pending |
 | QA-02 | Phase 8: Manual QA + Handoff | Pending |
 | QA-03 | Phase 8: Manual QA + Handoff | Pending |
