@@ -8,7 +8,7 @@ export function TrustStrip() {
       aria-label="Trust and credentials"
       className="border-y border-black/5 bg-neutral-50"
     >
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-3 px-4 py-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-2 px-4 py-6 lg:px-8">
         <div className="flex items-center gap-2">
           <Star className="h-5 w-5 fill-accent-500 text-accent-500" aria-hidden="true" />
           <span className="font-display text-sm font-semibold uppercase tracking-wide text-primary-900">
@@ -38,9 +38,9 @@ export function TrustStrip() {
           <Image
             src="/images/bbb-accredited.png"
             alt="BBB Accredited Business"
-            width={200}
-            height={80}
-            className="h-20 w-auto object-contain"
+            width={400}
+            height={160}
+            className="h-40 w-auto object-contain"
           />
         </div>
       </div>
