@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 
 ## Current Position
 
-Phase: 7 of 8 (Deploy) — COMPLETE
-Plan: 2 of 2 in Phase 7 — 07-01 ✓, 07-02 ✓
-Status: Phase 7 complete. All 8 DPL requirements verified PASS. Ready for Phase 8.
-Last activity: 2026-04-16 — Completed 07-02 (Vercel Analytics enabled, Rich Results Test 3/3 PASS, GSC negative test confirmed)
+Phase: 8 of 8 (Manual QA + Handoff) — In Progress
+Plan: 1 of 2 in Phase 8 — 08-01 ✓, 08-02 pending
+Status: Phase 8 wave 1 complete. Copy audit done, lint clean, device test passed. Ready for handoff docs.
+Last activity: 2026-04-15 — Completed 08-01 (Storm-Chaser Copy Audit, lint fixes, placeholder tags, device test confirmed)
 
-Progress: [████████░░] 75% (18/24 plans complete)
+Progress: [█████████░] 79% (19/24 plans complete)
 
 ## Performance Metrics
 
@@ -58,14 +58,23 @@ Recent decisions affecting current work:
 - Phase 7-02: Rich Results Test passed 3/3 URLs (homepage, /services/roofing, /service-areas/omaha) — zero errors
 - Phase 7-02: Vercel Web Analytics enabled (free tier) — Speed Insights NOT enabled
 - Phase 7-02: GSC submission negative test confirmed — no code in repo, no submission action taken
+- Phase 8-01: Storm-Chaser Copy Audit complete — 7 PASS, 1 FIX (emergency tarping subhead), 1 FLAGGED (2-hour promise) for Raptor confirmation
+- Phase 8-01: Emergency tarping hero subhead softened from "respond immediately" to "as fast as conditions allow" — matches process step copy
+- Phase 8-01: 2-hour response promise NOT changed — not storm-chaser language, but operationally needs Raptor confirmation; flagged for HANDOFF.md
+- Phase 8-01: UrgencyBar lint fix uses lazy useState initializer (SSR-safe, eliminates setState-in-effect)
+- Phase 8-01: MobileMenuButton lint fix moves accordion state resets into close handler (not open-state effect)
+- Phase 8-01: 26 // PLACEHOLDER: tags added across src/ — grep -rn "// PLACEHOLDER:" src/ now finds all 26 locations
+- Phase 8-01: ContactForm.tsx and LeadForm.tsx have hardcoded license number strings — updating siteConfig alone is NOT enough; both files also need manual update when license # is known
+- Phase 8-01: Andrew confirmed iPhone Safari + Android Chrome device test — visual pass on both
 
 ### Pending Todos
 
 - Phase 6 COMPLETE
 - Phase 7-01 COMPLETE — demo-mode form stubs live, Vercel deploy triggered (97124b2)
 - Phase 7-02 COMPLETE — Vercel Analytics enabled, Rich Results Test 3/3 PASS, GSC negative confirmed
-- Phase 8 NEXT — Manual QA + Handoff
-- 22+ PLACEHOLDER tags in src/content/ must be resolved before public launch (Phase 8)
+- Phase 8-01 COMPLETE — Copy audit done (1 fix, 1 flagged), lint clean, 26 placeholder tags, device test ✓
+- Phase 8-02 NEXT — HANDOFF.md, README.md, FUTURE_DIRECTIONS.md
+- 38 PLACEHOLDER tags in src/ — all require Raptor input, none resolvable without direct confirmation
 - Blog section identified as SEO gap but not yet built (post-milestone)
 
 ### Blockers/Concerns
@@ -81,6 +90,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-16
-Stopped at: Phase 7-02 complete. Vercel Analytics enabled. Rich Results Test 3/3 PASS. Phase 7 COMPLETE. Ready for Phase 8 (Manual QA + Handoff).
+Last session: 2026-04-15
+Stopped at: Phase 8-01 complete. Copy audit done. Lint clean. 26 placeholder tags applied. Device test confirmed by Andrew. Ready for 08-02 (handoff docs).
 Resume file: None
