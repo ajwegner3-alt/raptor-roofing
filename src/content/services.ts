@@ -37,9 +37,9 @@ export const services: Service[] = [
     shortTitle: "Roofing",
     headline: "Roof Replacement & Repair in Omaha",
     subheadline:
-      "15 years local. No subcontractors. Every crew member is a Raptor employee.",
+      "Locally owned in Omaha. No subcontractors. Every crew member is a Raptor employee.",
     description:
-      "Whether you need a full roof replacement after storm damage or a targeted repair on an aging system, Raptor Roofing brings the same in-house crew and 15-year track record to every job. We work with all major insurance carriers and walk you through the claims process at no extra charge.",
+      "Whether you need a full roof replacement after storm damage or a targeted repair on an aging system, Raptor Roofing brings the same in-house crew to every job. We work with all major insurance carriers and walk you through the claims process at no extra charge.",
     problemCopy:
       "Most Omaha homeowners don't know their roof is failing until water appears on the ceiling — by which point the damage often extends to decking, insulation, and drywall. A roof inspection costs nothing. Waiting costs significantly more.",
     problemChecklist: [

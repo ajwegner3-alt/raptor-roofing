@@ -10,7 +10,7 @@ interface FinalCTAProps {
 
 export function FinalCTA({
   heading = "Ready to Get Started?",
-  subheading = "Call us or request a free estimate — a real Raptor crew member will follow up within 2 hours.",
+  subheading = "Call us or request a free estimate — a real Raptor crew member will follow up same business day.",
   variant = "dark",
 }: FinalCTAProps) {
   const isDark = variant === "dark";

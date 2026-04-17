@@ -88,9 +88,7 @@ export function AboutHero({
 
         {/* Micro-trust line */}
         <p className="mt-3 font-body text-sm text-white/60">
-          Family-Owned Since{" "}
-          <span className="text-white/80">[PLACEHOLDER: founding year]</span>
-          {" "}&middot; No Subcontractors &middot; Locally Owned in Omaha
+          Family-Owned &middot; No Subcontractors &middot; Locally Owned in Omaha
         </p>
 
         {/* Single primary CTA — tel: only, no estimate form */}

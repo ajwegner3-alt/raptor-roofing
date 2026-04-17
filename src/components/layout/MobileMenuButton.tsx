@@ -233,8 +233,7 @@ export function MobileMenuButton() {
               Call Now · {siteConfig.phone.display}
             </a>
             <p className="mt-4 text-center font-body text-sm text-white/70">
-              Licensed · Insured · {siteConfig.founding.yearsInBusiness} Years
-              in Omaha
+              Licensed · Insured · Locally Owned in Omaha
             </p>
           </div>
         </div>

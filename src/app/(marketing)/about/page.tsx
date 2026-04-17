@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
   path: "/about",
   title: "About Raptor Roofing | Family-Owned, No Subs, Omaha NE",
   description:
-    "Meet the family behind Raptor Roofing. Every crew member works for us — no subcontractors. Omaha\u2019s locally-owned roofer since [PLACEHOLDER: founding year]. Call for a free estimate.",
+    "Meet the family behind Raptor Roofing. Every crew member works for us — no subcontractors. Locally owned and operated in Omaha, NE. Call for a free estimate.",
   useAbsoluteTitle: true,
 });
 
@@ -59,18 +59,14 @@ export default function AboutPage() {
 
           <div className="mt-8 space-y-6 font-body text-lg leading-relaxed text-neutral-700">
             <p>
-              Founded in{" "}
-              <span className="font-semibold text-primary-900">
-                [PLACEHOLDER: founding year]
-              </span>{" "}
-              by{" "}
+              Founded by{" "}
               <span className="font-semibold text-primary-900">
                 [PLACEHOLDER: founder name]
               </span>
-              , Raptor Roofing began as a small family operation with one truck,
-              a handful of trusted crew members, and a straightforward idea:
-              treat every Omaha homeowner the same way you&rsquo;d treat your
-              own family. No shortcuts. No strangers on the roof. No excuses.
+              , Raptor Roofing is a small family operation with one guiding
+              idea: treat every Omaha homeowner the same way you&rsquo;d treat
+              your own family. No shortcuts. No strangers on the roof. No
+              excuses.
             </p>
 
             <p>
@@ -261,8 +257,7 @@ export default function AboutPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl font-body text-lg text-white/80">
             Ready to get a straight answer on your roof? Call us directly or
-            fill out our quick estimate request — we respond within two hours
-            during business hours.
+            fill out our quick estimate request — we respond same business day.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

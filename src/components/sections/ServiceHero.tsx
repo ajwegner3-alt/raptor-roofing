@@ -73,7 +73,7 @@ export function ServiceHero({ service }: ServiceHeroProps) {
 
           {/* Micro-trust line */}
           <p className="mx-auto mt-3 max-w-xl font-body text-sm text-white/60 lg:mx-0">
-            Licensed NE &middot; Bonded &amp; Insured &middot; 15 Years Local
+            Licensed NE &middot; Bonded &amp; Insured &middot; Locally Owned in Omaha
           </p>
 
           {/* Dual CTAs */}

@@ -52,9 +52,9 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Raptor Roofing",
-  tagline: "Omaha's Anti-Chaser Roofer Since 2009",
+  tagline: "Omaha's Anti-Chaser Roofer — Locally Owned & Operated",
   description:
-    "Family-owned Omaha roofing contractor. 15+ years local, no subcontractors, licensed and insured. Free storm damage inspections. Call (402) 885-1462.",
+    "Family-owned Omaha roofing contractor. Locally owned and operated, no subcontractors, licensed and insured. Free storm damage inspections. Call (402) 885-1462.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://raptor-roofing.vercel.app",
 
   phone: {
@@ -91,13 +91,13 @@ export const siteConfig: SiteConfig = {
   },
 
   founding: {
-    year: 2009,
-    yearsInBusiness: new Date().getFullYear() - 2009,
+    year: 2025,
+    yearsInBusiness: 0, // LLC registered 2025 — locally owned and operated
   },
 
   reviews: {
-    count: 127,   // PLACEHOLDER: verify on Google Business Profile before launch
-    rating: 4.9,  // PLACEHOLDER: verify on Google Business Profile before launch
+    count: 9,     // Confirmed: 9 Google reviews as of 2026-04-15
+    rating: 5.0,  // Confirmed: 5.0 star rating as of 2026-04-15
     platform: "Google",
   },
 
@@ -119,7 +119,7 @@ export const siteConfig: SiteConfig = {
   ],
 
   certifications: [
-    "GAF Certified Contractor",         // PLACEHOLDER: confirm Raptor certifications
-    "Owens Corning Preferred Contractor", // PLACEHOLDER: confirm if applicable
+    // GAF and Owens Corning certifications removed — Raptor uses Atlas shingles (unconfirmed programs)
+    // Add confirmed manufacturer certifications here when Raptor provides them
   ],
 };

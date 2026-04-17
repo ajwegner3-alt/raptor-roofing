@@ -63,8 +63,7 @@ export default function ContactPage() {
             Get a Free Estimate from Raptor Roofing
           </h1>
           <p className="mt-4 max-w-2xl font-body text-lg leading-relaxed text-white/75">
-            Family-owned. Locally crewed. We answer every call within 2 hours
-            during business hours.
+            Family-owned. Locally crewed. We respond same business day.
           </p>
         </div>
       </section>
@@ -107,7 +106,7 @@ export default function ContactPage() {
                   {siteConfig.phone.display}
                 </a>
                 <p className="mt-2 font-body text-sm text-neutral-500">
-                  We respond within 2 hours during business hours.
+                  We respond same business day.
                 </p>
               </div>
 

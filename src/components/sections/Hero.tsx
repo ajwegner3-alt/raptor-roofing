@@ -66,7 +66,7 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl font-body text-lg text-white/90 sm:text-xl lg:mx-0">
-            Fifteen years in the neighborhood. Same crew from estimate to final
+            Locally owned in Omaha. Same crew from estimate to final
             walkthrough. No subcontractors, no pressure, no disappearing act
             after the storm.
           </p>
@@ -126,73 +126,19 @@ export function Hero() {
               </span>
               <span className="font-display text-sm font-semibold text-white">
                 {siteConfig.reviews.rating} · {siteConfig.reviews.count} Google
-                Reviews{" "}
-                <span className="font-normal text-white/50">[Placeholder]</span>
+                Reviews
               </span>
             </li>
 
-            {/* BBB Accredited Business — A- rating */}
+            {/* BBB Accredited Business — real logo */}
             <li>
-              <svg
-                role="img"
-                aria-label="BBB Accredited Business, A-minus rating"
-                width="158"
-                height="40"
-                viewBox="0 0 158 40"
-                className="shrink-0"
-              >
-                <rect width="158" height="40" rx="3" fill="#00607B" />
-                {/* Torch icon */}
-                <g transform="translate(8, 7)" fill="#ffffff">
-                  <path d="M10 0 C7 3 5 6 7 10 C5 9 4 5 6 2 C3 5 2 9 4 13 L16 13 C18 9 17 5 14 2 C16 5 15 9 13 10 C15 6 13 3 10 0 Z" />
-                  <rect x="7" y="15" width="6" height="10" rx="0.5" />
-                  <rect x="5" y="25" width="10" height="1.5" />
-                </g>
-                {/* BBB wordmark */}
-                <text
-                  x="34"
-                  y="19"
-                  fontFamily="Arial, Helvetica, sans-serif"
-                  fontSize="14"
-                  fontWeight="900"
-                  fill="#ffffff"
-                  letterSpacing="-0.3"
-                >
-                  BBB
-                </text>
-                {/* ACCREDITED BUSINESS */}
-                <text
-                  x="34"
-                  y="31"
-                  fontFamily="Arial, Helvetica, sans-serif"
-                  fontSize="6"
-                  fontWeight="700"
-                  fill="#ffffff"
-                  letterSpacing="0.5"
-                >
-                  ACCREDITED BUSINESS
-                </text>
-                {/* Rating badge */}
-                <rect
-                  x="118"
-                  y="7"
-                  width="32"
-                  height="26"
-                  rx="2"
-                  fill="#ffffff"
-                />
-                <text
-                  x="134"
-                  y="27"
-                  fontFamily="Arial, Helvetica, sans-serif"
-                  fontSize="16"
-                  fontWeight="900"
-                  fill="#00607B"
-                  textAnchor="middle"
-                >
-                  A-
-                </text>
-              </svg>
+              <Image
+                src="/images/bbb-accredited.png"
+                alt="BBB Accredited Business"
+                width={120}
+                height={48}
+                className="h-12 w-auto object-contain"
+              />
             </li>
 
             {/* License & Insured shield */}

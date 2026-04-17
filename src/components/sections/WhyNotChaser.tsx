@@ -3,7 +3,7 @@ import { X, Check, XCircle, CheckCircle } from "lucide-react";
 const comparison = [
   {
     chaser: "Based out of state — here this week, gone next",
-    raptor: "Omaha-owned since 2009 — same address for 15+ years",
+    raptor: "Omaha-owned and operated — this is our community, our home",
   },
   {
     chaser: "Work subcontracted to day labor — quality varies job to job",

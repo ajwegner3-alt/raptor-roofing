@@ -29,7 +29,7 @@ export const faqs: FAQ[] = [
     id: "faq-2",
     question: "What is the difference between a legitimate roofer and a storm chaser?",
     answer:
-      "Storm chasers are out-of-state contractors who follow severe weather events, take deposits from homeowners, and disappear or do poor-quality work before the next storm rolls through. Legitimate Omaha roofers have a permanent address, a Nebraska contractor license, and references from customers you can call. Raptor has been in Omaha since 2009 and we'll still be here in 2034.",
+      "Storm chasers are out-of-state contractors who follow severe weather events, take deposits from homeowners, and disappear or do poor-quality work before the next storm rolls through. Legitimate Omaha roofers have a permanent address, a Nebraska contractor license, and references from customers you can call. Raptor Roofing is locally owned and operated — we live here and we'll still be here when you need warranty service.",
     category: "storm-damage",
   },
   {

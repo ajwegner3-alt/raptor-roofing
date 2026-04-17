@@ -20,7 +20,7 @@ import { FinancingCallout } from "@/components/sections/FinancingCallout";
 export const metadata = buildMetadata({
   title: "Omaha Roofing Services | Raptor Roofing",
   description:
-    "Family-owned Omaha roofer since 2009. Roof replacement, siding, gutters & 24/7 emergency tarping. Licensed & insured. Call for a free estimate.",
+    "Family-owned Omaha roofer. Roof replacement, siding, gutters & 24/7 emergency tarping. Locally owned, licensed & insured. Call for a free estimate.",
   path: "/",
   useAbsoluteTitle: true,
 });

@@ -38,11 +38,11 @@ export const metadata: Metadata = {
 
   title: {
     template: "%s | Raptor Roofing — Omaha Roofer",
-    default: "Raptor Roofing — Omaha's Trusted Local Roofer Since 2009",
+    default: "Raptor Roofing — Omaha's Locally Owned Roofer",
   },
 
   description:
-    "Family-owned Omaha roofing contractor. 15+ years local, no subcontractors, licensed and insured. Free storm damage inspections and insurance claim help. Call (402) 885-1462.",
+    "Family-owned Omaha roofing contractor. Locally owned and operated, no subcontractors, licensed and insured. Free storm damage inspections and insurance claim help. Call (402) 885-1462.",
 
   openGraph: {
     siteName: "Raptor Roofing",
