@@ -21,7 +21,7 @@ The pitch demo is deployed on Vercel at https://raptor-roofing.vercel.app.
 | Forms | DEMO MODE — success card shows regardless of API response |
 | Email delivery | NO — no env vars configured, leads go nowhere |
 | reCAPTCHA | NO — site key not set, fallback mode active |
-| Real business data | NO — 38 placeholders, all require Raptor input |
+| Real business data | PARTIAL — Google reviews confirmed (5.0/9), certifications corrected. ~35 placeholders remain (address, license, testimonials, etc.) |
 | Analytics | Vercel Web Analytics only (no GA4, no GTM) |
 | Custom domain | NO — Vercel preview URL only |
 
@@ -34,59 +34,34 @@ The pitch demo is deployed on Vercel at https://raptor-roofing.vercel.app.
 
 ---
 
-## Section 2: Critical Flags — Confirm With Raptor Before Launch
+## Section 2: Critical Flags — Status
 
-These three items require a direct conversation with Raptor. Do not launch without resolving them.
+All three pre-pitch flags have been resolved. They are documented here for reference only.
 
-### Flag 1: Certifications Mismatch (HIGH PRIORITY)
+### Flag 1: Certifications Mismatch — RESOLVED (2026-04-15)
 
-**What the site says:** `siteConfig.certifications` in `src/content/site.ts` lists:
-- GAF Certified Contractor
-- Owens Corning Preferred Contractor
+**Resolution:** GAF Certified Contractor and Owens Corning Preferred Contractor badges removed from the site. The `certifications` array in `src/content/site.ts` is now empty. TrustStrip updated to show "Locally Owned in Omaha" + real BBB logo instead.
 
-**What their real website says:** raptorroofingllc.com references Atlas Briarwood Pro shingles (Atlas brand, NOT GAF or Owens Corning).
-
-**What to do:** Ask Raptor directly:
-- Are you enrolled in the GAF Certified Contractor program?
-- Are you enrolled in the Owens Corning Preferred Contractor program?
-- If neither — what manufacturer programs (if any) are you actually certified under?
-
-**File to update:** `src/content/site.ts` lines 120–130 (the `certifications` array).
-
-If they hold no manufacturer certifications, remove that section from the UI entirely (the trust strip and footer both consume `siteConfig.certifications`).
+**Still needed:** Ask Raptor if they hold any Atlas manufacturer certifications or other programs. If yes, add to `siteConfig.certifications` array and update TrustStrip/Footer accordingly.
 
 ---
 
-### Flag 2: Founding Year Inconsistency (MEDIUM PRIORITY)
+### Flag 2: Founding Year — RESOLVED (2026-04-15)
 
-**Three conflicting data points:**
-- `src/content/site.ts` says: `founded: 2009`
-- Their real website says: "15+ years" (no specific year stated)
-- BBB profile shows: LLC formally registered 6/30/2025 (very recently — the LLC entity is new)
+**Resolution:** Founding year changed to 2025 (LLC registration date). All "Since 2009," "15 years," and "Fifteen years" copy replaced with "Locally Owned in Omaha" across all pages. The About page "Our Story" section still has a `[PLACEHOLDER: founding year]` for the narrative — fill this in once Raptor confirms when they personally started doing roofing work.
 
-**Likely explanation:** The owners have ~15+ years of personal roofing experience, but the LLC entity "Raptor Roofing, LLC" was registered in 2025. The "2009" figure in site.ts is editorial, not confirmed.
-
-**Impact:** The founding year appears in:
-- `src/app/(marketing)/about/page.tsx` lines 22, 64 (meta description + body copy)
-- `src/components/sections/AboutHero.tsx` line 92 (micro-trust line "Family-Owned Since XXXX")
-
-**What to do:** Ask Raptor: "When was the roofing business founded — not the LLC registration date, but when did you first start doing roofing work under this brand or similar?"
-
-If they say 2015 (15 years back from 2030), adjust the founding year in `src/content/site.ts` and confirm the "15+ years" language tracks.
+**Still needed:** Confirm actual founding story from owners for the About page narrative (lines referencing founding year and neighborhood).
 
 ---
 
-### Flag 3: 2-Hour Response Promise (MEDIUM PRIORITY)
+### Flag 3: 2-Hour Response Promise — RESOLVED (2026-04-15)
 
-**Where it appears:**
-- `src/components/sections/FinalCTA.tsx` — default subheading: "a real Raptor crew member will follow up within 2 hours"
-- `src/app/(marketing)/contact/page.tsx` — subhead: "We answer every call within 2 hours during business hours"
+**Resolution:** Softened to "same business day" across all instances:
+- `src/components/sections/FinalCTA.tsx`
+- `src/app/(marketing)/contact/page.tsx`
+- `src/app/(marketing)/about/page.tsx`
 
-**Assessment:** This is not storm-chaser language. It is a legitimate service promise that differentiates Raptor. But it is an operational commitment they must be able to keep consistently.
-
-**What to do:** Ask Raptor: "Can you reliably follow up with every web lead within 2 hours during business hours?" If yes, keep the copy. If no, soften to "same business day" or "within 4 hours."
-
-**Do NOT change the copy without Raptor's answer.** The 2-hour promise is a strong conversion element — removing it without reason would weaken the site.
+**Still needed:** Nothing — this is a safe, achievable promise. If Raptor confirms they can reliably respond in 2 hours, restore the original copy.
 
 ---
 
@@ -94,7 +69,7 @@ If they say 2015 (15 years back from 2030), adjust the founding year in `src/con
 
 Run `grep -rn "// PLACEHOLDER:" src/` at any time to find all tagged locations.
 
-**Total count: 38 placeholders. Zero are resolvable without Raptor's direct input.**
+**Estimated remaining: ~35 placeholders.** Google reviews (count/rating) resolved. Certifications corrected. All year-based claims removed. Remaining items all require Raptor's direct input.
 
 ---
 
@@ -157,10 +132,10 @@ FinalCTA.tsx (line 67) and ServiceCTABand.tsx (line 40) DO read dynamically from
 
 | File | Line | Current Placeholder | What to Provide |
 |------|------|---------------------|-----------------|
-| `src/content/site.ts` | 99 | `127` (invented review count) | Actual Google review count |
-| `src/content/site.ts` | 100 | `4.9` (invented rating) | Actual Google rating |
+| `src/content/site.ts` | 99 | ~~127 (invented)~~ **9 — CONFIRMED 2026-04-15** | Done |
+| `src/content/site.ts` | 100 | ~~4.9 (invented)~~ **5.0 — CONFIRMED 2026-04-15** | Done |
 
-**Schema unlock:** When real review data is provided, uncomment the `AggregateRating` block in `src/lib/schema.tsx` (lines 85–90). The guard script at `scripts/check-no-review-schema.mjs` will fail until you do this deliberately. After uncommenting, update the script to expect the AggregateRating block.
+**Schema unlock:** Review count and rating are now real. However, the AggregateRating block in `src/lib/schema.tsx` (lines 85–90) remains commented out because the 6 testimonials in `src/content/testimonials.ts` are still placeholders. Uncomment the AggregateRating block ONLY after replacing placeholder testimonials with real verbatim Google reviews. The guard script at `scripts/check-no-review-schema.mjs` enforces this.
 
 ---
 
@@ -346,12 +321,12 @@ NE_LICENSE_NUMBER=                  # e.g., "NE-2024-00123"
 FOUNDING_YEAR=                      # e.g., "2015"
 FOUNDER_NAMES=                      # e.g., "Karen Colin Jaimes and Homero Flores"
 FOUNDING_NEIGHBORHOOD=              # e.g., "West Omaha"
-GOOGLE_REVIEW_COUNT=                # e.g., "89"
-GOOGLE_REVIEW_RATING=               # e.g., "4.8"
+GOOGLE_REVIEW_COUNT=9               # CONFIRMED 2026-04-15
+GOOGLE_REVIEW_RATING=5.0            # CONFIRMED 2026-04-15
 FACEBOOK_URL=                       # e.g., "https://facebook.com/raptorroofingllc"
 INSTAGRAM_URL=                      # e.g., "https://instagram.com/raptor_roofing" or "NONE"
 GBP_URL=                            # e.g., "https://g.page/r/CdXXXXXXXXXX"
-CERTIFICATIONS=                     # e.g., "Atlas Certified Contractor" or "NONE"
+CERTIFICATIONS=                     # Ask Raptor — GAF/OC removed. Confirm any Atlas or other programs.
 FINANCING_MONTHLY=                  # e.g., "$89/mo for 12 months" or "NONE"
 REAL_TESTIMONIALS=                  # paste 6 verbatim Google reviews with reviewer first name, city
 ROOFING_PHOTO_PATH=                 # local path to real roofing project photo (webp preferred)
@@ -362,7 +337,7 @@ ABOUT_PHOTO_PATH=                   # local path to crew or family photo
 SIDING_COST_RANGE=                  # e.g., "$8–$14 per square foot installed"
 LP_WARRANTY_YEARS=                  # e.g., "5/50 limited warranty"
 EMERGENCY_TARPING_COST=             # e.g., "$300–$600 depending on roof size"
-TWO_HOUR_PROMISE_CONFIRMED=         # "YES" or "NO - soften to [alternative]"
+TWO_HOUR_PROMISE_CONFIRMED=         # Currently "same business day". Restore to "2 hours" if Raptor confirms operationally feasible.
 ```
 
 ## Instructions for Claude Code
@@ -458,5 +433,6 @@ After deploy, verify on the live URL:
 ---
 
 *Generated: 2026-04-15*  
-*Placeholder count at time of writing: 38 (all requiring Raptor input)*  
+*Updated: 2026-04-15 — applied real client data (reviews, certifications, founding year, BBB logo, response promise)*  
+*Placeholder count at time of writing: 38 → reduced to ~35 after pitch signoff corrections*  
 *Demo stub pattern: void data + unconditional setStatus — see Section 4 for revert*
