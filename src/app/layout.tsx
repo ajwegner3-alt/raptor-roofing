@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og/default.jpg", // PLACEHOLDER: create in Phase 6
+        url: "/og/default.jpg",
         width: 1200,
         height: 630,
         alt: "Raptor Roofing — Omaha's trusted local roofer",

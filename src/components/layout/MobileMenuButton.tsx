@@ -52,6 +52,9 @@ export function MobileMenuButton() {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
+        setServicesOpen(false);
+        setAreasOpen(false);
+        setTimeout(() => hamburgerRef.current?.focus(), 0);
         return;
       }
       if (e.key !== "Tab") return;
@@ -71,16 +74,16 @@ export function MobileMenuButton() {
     return () => document.removeEventListener("keydown", handleKey);
   }, [open]);
 
-  // Return focus to hamburger on close + reset accordion state
-  useEffect(() => {
-    if (!open) {
-      hamburgerRef.current?.focus();
-      setServicesOpen(false);
-      setAreasOpen(false);
-    }
-  }, [open]);
-
-  const closeAll = () => setOpen(false);
+  // closeAll: close menu and reset all accordion state
+  // State resets live here rather than in a useEffect to avoid react-hooks/set-state-in-effect
+  const closeAll = () => {
+    setOpen(false);
+    setServicesOpen(false);
+    setAreasOpen(false);
+    // Return focus to hamburger button after menu closes
+    // Use setTimeout to let React flush state before focusing
+    setTimeout(() => hamburgerRef.current?.focus(), 0);
+  };
 
   return (
     <>

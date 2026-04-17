@@ -103,6 +103,7 @@ export const faqs: FAQ[] = [
   {
     id: "faq-11",
     question: "How much does siding replacement cost in Omaha?",
+    // PLACEHOLDER: answer contains inline pricing placeholder — needs real material cost ranges from Raptor
     answer:
       "Siding replacement costs vary based on the material chosen, home size, and extent of existing damage. Vinyl is typically the most affordable option; fiber cement and LP SmartSide are more durable but carry a higher material cost. For an accurate range, we provide free written estimates — and if storm damage is involved, your insurance adjuster's estimate is the starting point. [PLACEHOLDER: confirm price ranges once current material costs are available]",
     category: "process",
@@ -127,6 +128,7 @@ export const faqs: FAQ[] = [
   {
     id: "faq-14",
     question: "What warranty comes with new siding?",
+    // PLACEHOLDER: answer contains inline warranty years placeholder — needs fiber cement / LP SmartSide warranty specs from Raptor
     answer:
       "Raptor provides a written workmanship warranty covering installation. Material warranties vary by product: vinyl siding typically carries a lifetime limited warranty from the manufacturer, while fiber cement and LP SmartSide offer [PLACEHOLDER: confirm warranty years] coverage. Both warranties transfer to new homeowners if you sell. We register manufacturer warranties on your behalf and give you written documentation before we leave.",
     category: "warranty",
@@ -195,6 +197,7 @@ export const faqs: FAQ[] = [
   {
     id: "faq-22",
     question: "What does emergency tarping cost?",
+    // PLACEHOLDER: answer contains inline pricing placeholder — needs current emergency tarping cost range from Raptor
     answer:
       "Emergency tarping costs vary based on the size of the damaged area and roof accessibility. We provide a written estimate before work begins. In many cases, emergency tarping is a covered expense under your homeowner's policy as part of the storm damage claim — your adjuster can confirm what your specific policy covers. [PLACEHOLDER: add current pricing range once confirmed]",
     category: "process",

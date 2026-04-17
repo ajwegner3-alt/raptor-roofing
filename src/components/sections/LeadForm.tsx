@@ -270,6 +270,7 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
             {status === "loading" ? "Sending\u2026" : "Get My Free Estimate"}
           </button>
 
+          {/* PLACEHOLDER: hardcoded license string — replace with siteConfig.license.number when confirmed */}
           <p className="mt-3 text-center font-body text-xs text-neutral-500">
             Licensed NE #[PLACEHOLDER] · Bonded &amp; Insured
           </p>

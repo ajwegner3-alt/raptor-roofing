@@ -9,14 +9,14 @@ const SCROLL_THRESHOLD = 500;
 
 export function UrgencyBar() {
   const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  // Lazy initializer reads sessionStorage once on mount — avoids setState-in-effect lint error
+  const [dismissed, setDismissed] = useState(
+    () => typeof window !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1"
+  );
 
   useEffect(() => {
-    // Check sessionStorage on mount — stay hidden if already dismissed this session
-    if (sessionStorage.getItem(SESSION_KEY) === "1") {
-      setDismissed(true);
-      return;
-    }
+    // Already dismissed — no scroll listener needed
+    if (dismissed) return;
 
     const handleScroll = () => {
       if (window.scrollY >= SCROLL_THRESHOLD) {
@@ -26,7 +26,7 @@ export function UrgencyBar() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [dismissed]);
 
   const handleDismiss = () => {
     setDismissed(true);

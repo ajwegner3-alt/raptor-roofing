@@ -283,6 +283,7 @@ function ContactFormInner() {
         {status === 'loading' ? 'Sending\u2026' : 'Get a free estimate'}
       </button>
 
+      {/* PLACEHOLDER: hardcoded license string — replace with siteConfig.license.number when confirmed */}
       <p className="mt-3 text-center font-body text-xs text-neutral-500">
         Licensed NE #[PLACEHOLDER] · Bonded &amp; Insured
       </p>
