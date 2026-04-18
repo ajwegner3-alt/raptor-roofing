@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { LeadForm } from "./LeadForm";
-import { HeroReviewCarousel } from "./HeroReviewCarousel";
+
 
 // 5-layer visual stack per hero-section-contractor skill:
 //  0. Background photo
@@ -147,9 +147,6 @@ export function Hero() {
               </span>
             </li>
           </ul>
-
-          {/* Review carousel — client component so Hero stays a Server Component */}
-          <HeroReviewCarousel />
         </div>
 
         {/* Right column: Lead capture form card */}
