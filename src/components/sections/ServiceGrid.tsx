@@ -14,7 +14,7 @@ const serviceImageMap: Record<string, string> = {
   roofing:
     "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=400&h=250&fit=crop",
   siding:
-    "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=250&fit=crop",
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=250&fit=crop",
   gutters:
     "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=250&fit=crop",
   "emergency-tarping":
