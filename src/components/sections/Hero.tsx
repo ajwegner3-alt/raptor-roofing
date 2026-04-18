@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { LeadForm } from "./LeadForm";
+import { HeroReviewCarousel } from "./HeroReviewCarousel";
 
 // 5-layer visual stack per hero-section-contractor skill:
 //  0. Background photo
@@ -57,7 +58,7 @@ export function Hero() {
       />
 
       {/* Layer 4: Content grid (two-column on lg+, stacked on mobile) */}
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 pt-16 pb-28 lg:min-h-[calc(100dvh-5rem)] lg:grid-cols-[1.15fr_1fr] lg:gap-12 lg:px-8 lg:pt-20 lg:pb-40">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 pt-16 pb-36 lg:min-h-[calc(100dvh-5rem)] lg:grid-cols-[1.15fr_1fr] lg:gap-12 lg:px-8 lg:pt-20 lg:pb-48">
         {/* Left column: Headline + sub + call CTA + trust signals */}
         <div className="text-center lg:text-left">
           <h1 className="font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
@@ -147,6 +148,9 @@ export function Hero() {
               </span>
             </li>
           </ul>
+
+          {/* Review carousel — client component so Hero stays a Server Component */}
+          <HeroReviewCarousel />
         </div>
 
         {/* Right column: Lead capture form card */}
@@ -155,7 +159,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Layer 3: Roof-peak SVG divider transitioning into TrustStrip (bg-neutral-50) */}
+      {/* Layer 3: Roof-peak SVG divider transitioning into ServiceGrid (bg-background = #faf7f2) */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 z-0 leading-none"
@@ -167,7 +171,7 @@ export function Hero() {
         >
           <path
             d="M0,80 L0,55 L820,0 L1440,55 L1440,80 Z"
-            fill="#f4f6f7"
+            fill="#faf7f2"
           />
         </svg>
       </div>

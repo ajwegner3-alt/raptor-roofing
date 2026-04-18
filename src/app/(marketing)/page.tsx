@@ -4,7 +4,6 @@ import { JsonLd, faqPageSchema } from "@/lib/schema";
 import { faqs, type FAQ } from "@/content/faqs";
 
 import { Hero } from "@/components/sections/Hero";
-import { TrustStrip } from "@/components/layout/TrustStrip";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { WhyNotChaser } from "@/components/sections/WhyNotChaser";
 import { Insurance3Step } from "@/components/sections/Insurance3Step";
@@ -55,7 +54,6 @@ export default function HomePage() {
       <JsonLd data={faqPageSchema(homepageFaqs)} />
 
       <Hero />
-      <TrustStrip />
       <ServiceGrid />
       <WhyNotChaser />
       <Insurance3Step />

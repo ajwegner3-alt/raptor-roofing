@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Home, Layers, Droplets, AlertTriangle, ArrowRight } from "lucide-react";
 import { services } from "@/content/services";
 
@@ -8,6 +9,17 @@ const iconMap = {
   Droplets,
   AlertTriangle,
 } as const;
+
+const serviceImageMap: Record<string, string> = {
+  roofing:
+    "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=400&h=250&fit=crop",
+  siding:
+    "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=250&fit=crop",
+  gutters:
+    "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=250&fit=crop",
+  "emergency-tarping":
+    "https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=400&h=250&fit=crop",
+};
 
 type IconKey = keyof typeof iconMap;
 
@@ -32,8 +44,21 @@ export function ServiceGrid() {
             return (
               <article
                 key={service.slug}
-                className="group relative flex flex-col rounded-lg border border-neutral-200 bg-surface p-6 shadow-[var(--shadow-card)] transition-shadow hover:shadow-lg"
+                className="group relative flex flex-col overflow-hidden rounded-lg border border-neutral-200 bg-surface shadow-[var(--shadow-card)] transition-shadow hover:shadow-lg"
               >
+                {/* Service image */}
+                {serviceImageMap[service.slug] && (
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image
+                      src={serviceImageMap[service.slug]}
+                      alt={service.shortTitle}
+                      fill
+                      unoptimized
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary-600 text-white">
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </div>
@@ -52,6 +77,7 @@ export function ServiceGrid() {
                   Learn more
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
+                </div>
               </article>
             );
           })}

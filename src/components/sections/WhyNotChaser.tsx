@@ -26,15 +26,15 @@ const comparison = [
 export function WhyNotChaser() {
   return (
     <section
-      aria-labelledby="why-not-chaser-heading"
+      aria-labelledby="family-vs-chaser-heading"
       className="bg-neutral-50 py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <h2
-          id="why-not-chaser-heading"
+          id="family-vs-chaser-heading"
           className="font-display text-3xl font-bold uppercase tracking-tight text-primary-900 sm:text-4xl"
         >
-          Why We&apos;re Not a Storm Chaser
+          Family-Owned Businesses Care More Than Storm Chasers
         </h2>
         <p className="mt-4 max-w-2xl font-body text-lg text-neutral-600">
           After every major Omaha hailstorm, out-of-state crews flood the
