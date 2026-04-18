@@ -117,9 +117,9 @@ export function Hero() {
               <Image
                 src="/images/bbb-accredited.png"
                 alt="BBB Accredited Business"
-                width={140}
-                height={33}
-                className="h-8 w-auto object-contain"
+                width={200}
+                height={48}
+                className="h-10 w-auto object-contain"
               />
             </li>
 
