@@ -1,15 +1,256 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { Phone } from "lucide-react";
+import { Phone, ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
 import { services } from "@/content/services";
 import { siteConfig } from "@/content/site";
 
-type Status = "idle" | "loading" | "success" | "error";
+type Status = "idle" | "loading" | "success" | "booked" | "error";
 type FieldErrors = Partial<Record<"name" | "phone" | "service" | "zip", string>>;
 
 interface LeadFormProps {
   defaultService?: string;
+}
+
+const DAYS_SHORT = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+const TIME_SLOTS = [
+  "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM",
+  "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM",
+];
+
+function formatDayFull(date: Date): string {
+  return date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
+}
+
+interface DemoCalendarProps {
+  name: string;
+  onBooked: (date: Date, time: string) => void;
+}
+
+function DemoCalendar({ name, onBooked }: DemoCalendarProps) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const [viewYear, setViewYear] = useState(today.getFullYear());
+  const [viewMonth, setViewMonth] = useState(today.getMonth());
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
+
+  function prevMonth() {
+    if (viewMonth === 0) { setViewMonth(11); setViewYear(y => y - 1); }
+    else setViewMonth(m => m - 1);
+  }
+
+  function nextMonth() {
+    if (viewMonth === 11) { setViewMonth(0); setViewYear(y => y + 1); }
+    else setViewMonth(m => m + 1);
+  }
+
+  // Build calendar grid
+  const firstOfMonth = new Date(viewYear, viewMonth, 1);
+  const startDow = firstOfMonth.getDay(); // 0=Sun
+  const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+  // Cells: nulls for padding, then 1..daysInMonth
+  const cells: (number | null)[] = [
+    ...Array<null>(startDow).fill(null),
+    ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
+  ];
+  // Pad to complete last row
+  while (cells.length % 7 !== 0) cells.push(null);
+
+  function isDisabled(day: number): boolean {
+    const d = new Date(viewYear, viewMonth, day);
+    if (d < today) return true; // past
+    if (d.getDay() === 0) return true; // Sunday
+    return false;
+  }
+
+  function isSelected(day: number): boolean {
+    if (!selectedDate) return false;
+    return (
+      selectedDate.getFullYear() === viewYear &&
+      selectedDate.getMonth() === viewMonth &&
+      selectedDate.getDate() === day
+    );
+  }
+
+  function isToday(day: number): boolean {
+    return (
+      today.getFullYear() === viewYear &&
+      today.getMonth() === viewMonth &&
+      today.getDate() === day
+    );
+  }
+
+  function handleDayClick(day: number) {
+    if (isDisabled(day)) return;
+    setSelectedDate(new Date(viewYear, viewMonth, day));
+    setSelectedTime(null);
+  }
+
+  function handleTimeClick(time: string) {
+    setSelectedTime(time);
+    if (selectedDate) {
+      // Small delay so user sees the selection highlight before transition
+      setTimeout(() => onBooked(selectedDate, time), 300);
+    }
+  }
+
+  return (
+    <div role="region" aria-label="Schedule your estimate appointment" className="mt-6">
+      <h3 className="font-display text-lg font-bold uppercase tracking-tight text-primary-900 text-center">
+        Book Your Estimate
+      </h3>
+      <p className="mt-1 text-center font-body text-sm text-neutral-600">
+        Pick a date and time — {name ? `we'll see you then, ${name.split(" ")[0]}` : "we'll confirm same business day"}.
+      </p>
+
+      {/* Month navigation */}
+      <div className="mt-5 flex items-center justify-between">
+        <button
+          type="button"
+          onClick={prevMonth}
+          aria-label="Previous month"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-neutral-500 hover:bg-neutral-100 transition-colors"
+        >
+          <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+        </button>
+        <span className="font-display text-base font-semibold text-primary-900">
+          {MONTHS[viewMonth]} {viewYear}
+        </span>
+        <button
+          type="button"
+          onClick={nextMonth}
+          aria-label="Next month"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-neutral-500 hover:bg-neutral-100 transition-colors"
+        >
+          <ChevronRight className="h-5 w-5" aria-hidden="true" />
+        </button>
+      </div>
+
+      {/* Day-of-week headers */}
+      <div className="mt-3 grid grid-cols-7 text-center">
+        {DAYS_SHORT.map((d) => (
+          <div
+            key={d}
+            className={`font-display text-xs font-semibold uppercase tracking-wide pb-2 ${
+              d === "Sun" ? "text-neutral-300" : "text-neutral-500"
+            }`}
+          >
+            {d}
+          </div>
+        ))}
+      </div>
+
+      {/* Calendar grid */}
+      <div className="grid grid-cols-7 gap-y-1">
+        {cells.map((day, idx) => {
+          if (day === null) {
+            return <div key={`empty-${idx}`} />;
+          }
+          const disabled = isDisabled(day);
+          const selected = isSelected(day);
+          const todayCell = isToday(day);
+          return (
+            <button
+              key={day}
+              type="button"
+              disabled={disabled}
+              onClick={() => handleDayClick(day)}
+              aria-label={`${MONTHS[viewMonth]} ${day}, ${viewYear}${disabled ? " (unavailable)" : ""}`}
+              aria-pressed={selected}
+              className={[
+                "mx-auto flex h-12 w-12 items-center justify-center rounded-full font-body text-sm transition-colors",
+                selected
+                  ? "bg-accent-600 text-white font-semibold shadow"
+                  : disabled
+                  ? "text-neutral-300 cursor-not-allowed"
+                  : todayCell
+                  ? "ring-1 ring-accent-600 text-accent-600 font-semibold hover:bg-accent-50"
+                  : "text-primary-900 hover:bg-neutral-100",
+              ].join(" ")}
+            >
+              {day}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Time slots */}
+      {selectedDate && (
+        <div className="mt-6">
+          <p className="font-display text-sm font-semibold uppercase tracking-wide text-primary-900">
+            Available times for {formatDayFull(selectedDate)}
+          </p>
+          <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {TIME_SLOTS.map((slot) => (
+              <button
+                key={slot}
+                type="button"
+                onClick={() => handleTimeClick(slot)}
+                aria-pressed={selectedTime === slot}
+                className={[
+                  "flex min-h-[48px] items-center justify-center rounded-md border font-body text-sm font-medium transition-colors",
+                  selectedTime === slot
+                    ? "border-accent-600 bg-accent-600 text-white shadow"
+                    : "border-neutral-300 bg-surface text-primary-900 hover:border-accent-500 hover:bg-accent-50",
+                ].join(" ")}
+              >
+                {slot}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+interface ConfirmationProps {
+  name: string;
+  date: Date;
+  time: string;
+}
+
+function BookingConfirmation({ name, date, time }: ConfirmationProps) {
+  const firstName = name ? name.split(" ")[0] : "there";
+  const dateStr = formatDayFull(date);
+
+  return (
+    <div role="status" aria-live="polite" className="mt-8 text-center">
+      <div className="flex justify-center">
+        <CheckCircle className="h-12 w-12 text-accent-600" aria-hidden="true" />
+      </div>
+      <h3 className="mt-3 font-display text-xl font-bold uppercase tracking-tight text-primary-900">
+        Estimate Scheduled!
+      </h3>
+      <div className="mt-3 rounded-md bg-neutral-50 p-4 ring-1 ring-neutral-200">
+        <p className="font-display text-base font-semibold text-primary-900">{dateStr}</p>
+        <p className="font-display text-lg font-bold text-accent-600">{time}</p>
+      </div>
+      <p className="mt-4 font-body text-sm text-neutral-700">
+        {firstName}, we&apos;ll see you on {dateStr} at {time}.
+      </p>
+      <p className="mt-1 font-body text-xs text-neutral-500">
+        A confirmation will be sent to your phone.
+      </p>
+      <a
+        href={siteConfig.phone.href}
+        className="mt-5 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-md bg-accent-600 px-6 py-3 font-display text-sm font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
+      >
+        <Phone className="h-4 w-4" aria-hidden="true" />
+        Questions? Call {siteConfig.phone.display}
+      </a>
+      <p className="mt-3 font-body text-xs text-neutral-500">
+        Free estimate · No obligation · ~30 minutes
+      </p>
+    </div>
+  );
 }
 
 export function LeadForm({ defaultService = "" }: LeadFormProps) {
@@ -19,6 +260,8 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
   const [zip, setZip] = useState("");
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<Status>("idle");
+  const [bookedDate, setBookedDate] = useState<Date | null>(null);
+  const [bookedTime, setBookedTime] = useState<string | null>(null);
 
   function validate(): FieldErrors {
     const next: FieldErrors = {};
@@ -58,6 +301,12 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
     }
   }
 
+  function handleBooked(date: Date, time: string) {
+    setBookedDate(date);
+    setBookedTime(time);
+    setStatus("booked");
+  }
+
   return (
     <div
       id="estimate-form"
@@ -68,34 +317,21 @@ export function LeadForm({ defaultService = "" }: LeadFormProps) {
           Get a Free Estimate
         </h2>
         <p className="mt-2 font-body text-sm text-neutral-600 sm:text-base">
-          We&apos;ll call within 2 hours. No pressure, no obligation.
+          Book your free estimate appointment. No pressure, no obligation.
         </p>
       </div>
 
-      {status === "success" ? (
-        <div role="status" className="mt-8 text-center">
-          <h3 className="font-display text-xl font-bold uppercase tracking-tight text-primary-900">
-            Thanks, {name || "we got it"}!
-          </h3>
-          <p className="mt-3 font-body text-sm text-neutral-700">
-            We&apos;ll call you within 2 hours to schedule your free estimate.
-            Prefer to talk now?
-          </p>
-          <a
-            href={siteConfig.phone.href}
-            className="mt-4 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-md bg-accent-600 px-6 py-3 font-display text-sm font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
-          >
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            Call {siteConfig.phone.display}
-          </a>
-        </div>
+      {status === "booked" && bookedDate && bookedTime ? (
+        <BookingConfirmation name={name} date={bookedDate} time={bookedTime} />
+      ) : status === "success" ? (
+        <DemoCalendar name={name} onBooked={handleBooked} />
       ) : status === "error" ? (
         <div role="alert" className="mt-8 text-center">
           <h3 className="font-display text-xl font-bold uppercase tracking-tight text-primary-900">
             We couldn&apos;t send your request.
           </h3>
           <p className="mt-3 font-body text-sm text-neutral-700">
-            Please call us directly — we&apos;ll answer within 2 hours.
+            Please call us directly — we&apos;ll get back to you same business day.
           </p>
           <a
             href={siteConfig.phone.href}
