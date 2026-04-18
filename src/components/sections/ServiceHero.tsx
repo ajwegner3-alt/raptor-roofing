@@ -138,8 +138,8 @@ export function ServiceHero({ service }: ServiceHeroProps) {
           className="block h-16 w-full lg:h-20"
         >
           <path
-            d="M0,80 L600,80 L720,15 L840,80 L1440,80 L1440,80 L0,80 Z"
-            fill="#f4f6f7"
+            d="M0,80 L0,55 L820,0 L1440,55 L1440,80 Z"
+            fill="#faf7f2"
           />
         </svg>
       </div>

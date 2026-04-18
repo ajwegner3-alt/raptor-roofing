@@ -68,8 +68,7 @@ export function Hero() {
 
           <p className="mx-auto mt-6 max-w-xl font-body text-lg text-white/90 sm:text-xl lg:mx-0">
             Locally owned in Omaha. Same crew from estimate to final
-            walkthrough. No subcontractors, no pressure, no disappearing act
-            after the storm.
+            walkthrough. We treat everyone like family, no matter where we go!
           </p>
 
           {/* Primary call-to-action (phone) */}
