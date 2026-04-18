@@ -95,9 +95,11 @@ function DemoCalendar({ name, onBooked }: DemoCalendarProps) {
 
   function handleTimeClick(time: string) {
     setSelectedTime(time);
-    if (selectedDate) {
-      // Small delay so user sees the selection highlight before transition
-      setTimeout(() => onBooked(selectedDate, time), 300);
+  }
+
+  function handleConfirmBooking() {
+    if (selectedDate && selectedTime) {
+      onBooked(selectedDate, selectedTime);
     }
   }
 
@@ -205,6 +207,15 @@ function DemoCalendar({ name, onBooked }: DemoCalendarProps) {
               </button>
             ))}
           </div>
+          {selectedTime && (
+            <button
+              type="button"
+              onClick={handleConfirmBooking}
+              className="mt-4 flex min-h-[48px] w-full items-center justify-center rounded-md bg-accent-600 px-6 py-3 font-display text-base font-semibold uppercase tracking-wide text-white shadow-[var(--shadow-cta)] hover:bg-accent-700 transition-colors"
+            >
+              Confirm {formatDayFull(selectedDate)} at {selectedTime}
+            </button>
+          )}
         </div>
       )}
     </div>
