@@ -126,20 +126,20 @@
 
 ### Manual QA (QA)
 
-- [ ] **QA-01**: Homepage loads on real mobile device (iPhone Safari + Android Chrome), no layout shift, phone tap works
-- [ ] **QA-02**: Every service page loads, passes keyboard navigation, form submits successfully
-- [ ] **QA-03**: Form submission lands in Andrew's Gmail Primary inbox (not Spam/Promotions)
-- [ ] **QA-04**: Every page audited with Lighthouse mobile, Performance/Accessibility/Best Practices/SEO all 90+
-- [ ] **QA-05**: Storm-Chaser Copy Audit Checklist run against every headline, CTA, and hero subtext
-- [ ] **QA-06**: Every placeholder testimonial visibly labeled; no unlabeled fake reviews remain
-- [ ] **QA-07**: Andrew signs off on the pitch URL as ready to send to Raptor
+- [x] **QA-01**: Homepage loads on real mobile device (iPhone Safari + Android Chrome), no layout shift, phone tap works
+- [x] **QA-02**: Every service page loads, passes keyboard navigation, form submits successfully
+- [x] **QA-03**: Form submission lands in Andrew's Gmail Primary inbox (not Spam/Promotions)
+- [x] **QA-04**: Every page audited with Lighthouse mobile, Performance/Accessibility/Best Practices/SEO all 90+
+- [x] **QA-05**: Storm-Chaser Copy Audit Checklist run against every headline, CTA, and hero subtext
+- [x] **QA-06**: Every placeholder testimonial visibly labeled; no unlabeled fake reviews remain
+- [x] **QA-07**: Andrew signs off on the pitch URL as ready to send to Raptor
 
 ### Handoff (HDF)
 
-- [ ] **HDF-01**: `HANDOFF.md` listing every placeholder content item requiring replacement before real launch (testimonials, photos, license number, review count, financing partner, phone if inaccurate)
-- [ ] **HDF-02**: `FUTURE_DIRECTIONS.md` with known limitations, assumptions, future improvements, and technical debt (per Andrew's global instructions)
-- [ ] **HDF-03**: Project README with setup, run, and deploy instructions
-- [ ] **HDF-04**: Every placeholder item in the codebase tagged with a searchable comment (`// PLACEHOLDER:`) for easy batch replacement
+- [x] **HDF-01**: `HANDOFF.md` listing every placeholder content item requiring replacement before real launch (testimonials, photos, license number, review count, financing partner, phone if inaccurate)
+- [x] **HDF-02**: `FUTURE_DIRECTIONS.md` with known limitations, assumptions, future improvements, and technical debt (per Andrew's global instructions)
+- [x] **HDF-03**: Project README with setup, run, and deploy instructions
+- [x] **HDF-04**: Every placeholder item in the codebase tagged with a searchable comment (`// PLACEHOLDER:`) for easy batch replacement
 
 ---
 
@@ -286,17 +286,17 @@ Populated by `gsd-roadmapper` on 2026-04-13.
 | DPL-06 | Phase 7: Deploy | Complete |
 | DPL-07 | Phase 7: Deploy | Complete |
 | DPL-08 | Phase 7: Deploy | Complete |
-| QA-01 | Phase 8: Manual QA + Handoff | Pending |
-| QA-02 | Phase 8: Manual QA + Handoff | Pending |
-| QA-03 | Phase 8: Manual QA + Handoff | Pending |
-| QA-04 | Phase 8: Manual QA + Handoff | Pending |
-| QA-05 | Phase 8: Manual QA + Handoff | Pending |
-| QA-06 | Phase 8: Manual QA + Handoff | Pending |
-| QA-07 | Phase 8: Manual QA + Handoff | Pending |
-| HDF-01 | Phase 8: Manual QA + Handoff | Pending |
-| HDF-02 | Phase 8: Manual QA + Handoff | Pending |
-| HDF-03 | Phase 8: Manual QA + Handoff | Pending |
-| HDF-04 | Phase 8: Manual QA + Handoff | Pending |
+| QA-01 | Phase 8: Manual QA + Handoff | Complete |
+| QA-02 | Phase 8: Manual QA + Handoff | Complete |
+| QA-03 | Phase 8: Manual QA + Handoff | Complete |
+| QA-04 | Phase 8: Manual QA + Handoff | Complete |
+| QA-05 | Phase 8: Manual QA + Handoff | Complete |
+| QA-06 | Phase 8: Manual QA + Handoff | Complete |
+| QA-07 | Phase 8: Manual QA + Handoff | Complete |
+| HDF-01 | Phase 8: Manual QA + Handoff | Complete |
+| HDF-02 | Phase 8: Manual QA + Handoff | Complete |
+| HDF-03 | Phase 8: Manual QA + Handoff | Complete |
+| HDF-04 | Phase 8: Manual QA + Handoff | Complete |
 
 **Coverage:**
 - v1 requirements: 98 total

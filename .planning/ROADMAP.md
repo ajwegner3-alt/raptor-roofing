@@ -17,7 +17,7 @@ Eight phases build a deployed Next.js pitch site from scaffolding to a shareable
 - [x] **Phase 5: About + Contact** ✓ — About narrative, contact form, API handler, end-to-end test (completed 2026-04-15)
 - [x] **Phase 6: SEO + Performance + Accessibility** ✓ — Sitewide audit, sitemap/robots, schema validation, a11y pass, service area pages, header nav, CTAs, urgency bar (completed 2026-04-15)
 - [x] **Phase 7: Deploy** ✓ — Demo-mode form stubs, Vercel Analytics enabled, Rich Results Test passed, preview URL live (completed 2026-04-16)
-- [ ] **Phase 8: Manual QA + Handoff** — Live device testing, Lighthouse audit, signoff, handoff docs
+- [x] **Phase 8: Manual QA + Handoff** ✓ — Copy audit, device testing, handoff docs, demo calendar, Andrew signoff (completed 2026-04-17)
 
 ---
 
@@ -170,8 +170,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 08-01: Manual QA checklist — real device testing (QA-01 through QA-06), Storm-Chaser Copy Audit on all headlines and CTAs, placeholder audit
-- [ ] 08-02: Handoff documentation — write `HANDOFF.md`, `FUTURE_DIRECTIONS.md`, `README.md`; audit codebase for `// PLACEHOLDER:` tags; Andrew signs off (QA-07)
+- [x] 08-01 ✓ — Storm-Chaser Copy Audit (1 fix), lint errors fixed, placeholder tags, Andrew device test passed
+- [x] 08-02 ✓ — HANDOFF.md + FUTURE_DIRECTIONS.md + README.md + signoff refinements (real data, trust signals, calendar, review carousel) + Andrew approved
 
 ---
 
@@ -189,4 +189,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | 5. About + Contact | 3/3 | ✓ Complete | 2026-04-15 |
 | 6. SEO + Performance + Accessibility | 5/5 | ✓ Complete | 2026-04-15 |
 | 7. Deploy | 2/2 | ✓ Complete | 2026-04-16 |
-| 8. Manual QA + Handoff | 0/2 | Not started | - |
+| 8. Manual QA + Handoff | 2/2 | ✓ Complete | 2026-04-17 |
