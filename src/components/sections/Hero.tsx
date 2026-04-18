@@ -83,8 +83,8 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Visual trust signals — stacked for clean, equal-weight alignment */}
-          <ul className="mt-8 flex flex-col items-center gap-3 lg:items-start">
+          {/* Visual trust signals — horizontal row matching roofing template */}
+          <ul className="mt-8 flex flex-wrap items-center justify-center gap-5 lg:justify-start">
             {/* Google reviews */}
             <li className="flex items-center gap-3">
               <svg
@@ -130,13 +130,13 @@ export function Hero() {
             </li>
 
             {/* BBB Accredited Business — real logo */}
-            <li>
+            <li className="flex items-center">
               <Image
                 src="/images/bbb-accredited.png"
                 alt="BBB Accredited Business"
-                width={480}
-                height={192}
-                className="h-40 w-auto object-contain"
+                width={140}
+                height={33}
+                className="h-8 w-auto object-contain"
               />
             </li>
 
